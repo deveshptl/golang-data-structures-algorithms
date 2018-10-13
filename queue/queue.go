@@ -13,7 +13,7 @@ var r, n, f int
 var q [6]string
 
 // SimpleQueue implements simple queue
-func SimpleQueue() {
+func main() {
 	r = 0
 	f = 0
 	n = 5
