@@ -12,6 +12,12 @@ import (
 var r, n, f int
 var q [5]string
 
+func init() {
+	for i := 0; i < len(q); i++ {
+		q[i] = "nil"
+	}
+}
+
 func main() {
 	r = -1
 	f = -1
@@ -92,7 +98,7 @@ func delete() {
 
 	// delete the element
 	y := q[f]
-	q[f] = ""
+	q[f] = "nil"
 
 	// check if queue is empty
 	if f == r {

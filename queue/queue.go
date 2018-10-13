@@ -10,13 +10,19 @@ import (
 // q - queue
 
 var r, n, f int
-var q [6]string
+var q [5]string
+
+func init() {
+	for i := 0; i < len(q); i++ {
+		q[i] = "nil"
+	}
+}
 
 // SimpleQueue implements simple queue
 func main() {
-	r = 0
-	f = 0
-	n = 5
+	r = -1
+	f = -1
+	n = 4
 	i := 0
 	var choice int
 	for i == 0 {
@@ -38,6 +44,7 @@ func main() {
 			display()
 			break
 		case 3:
+			fmt.Println("\nFRONT:", f, "REAR:", r)
 			display()
 		case 4:
 			i = 1
@@ -49,46 +56,59 @@ func main() {
 }
 
 func insert() {
+
+	// check for overflow
 	if r >= n {
-		fmt.Println("Overflow")
+		fmt.Println("\n-- Overflow --")
 		return
 	}
 
+	// increment rear pointer
 	r = r + 1
+
+	// scan the element
 	var y string
 	fmt.Print("Enter the element that you want to insert: ")
 	fmt.Scanf("%s", &y)
+
+	// insert the element
 	q[r] = y
 
-	if f == 0 {
-		f = 1
+	// set front pointer
+	if f == -1 {
+		f = 0
 	}
 
 	return
 }
 
 func delete() {
-	if f == 0 {
-		fmt.Println("Underflow")
+
+	// check for underflow
+	if f == -1 {
+		fmt.Println("\n-- Underflow --")
 		return
 	}
 
+	// delete element
 	y := q[f]
+	q[f] = "nil"
 
+	// check if queue is empty
 	if f == r {
-		f = 0
-		r = 0
+		f = -1
+		r = -1
 	} else {
 		f = f + 1
 	}
 
+	// print deleted element
 	fmt.Println("Element deleted", y)
-
-	return
 }
 
 func display() {
-	for i := f; i <= r; i++ {
+	for i := 0; i < len(q); i++ {
 		fmt.Print(q[i], " ")
 	}
+	fmt.Println("")
 }
