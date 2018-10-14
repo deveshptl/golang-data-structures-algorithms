@@ -79,12 +79,10 @@ func insertRear() {
 	// increment rear pointer
 	r = r + 1
 
-	// scan the element
+	// insert the element
 	var y string
 	fmt.Print("Enter the element that you want to insert: ")
 	fmt.Scanf("%s", &y)
-
-	// insert the element
 	q[r] = y
 
 	// set front pointer
@@ -117,12 +115,10 @@ func insertFront() {
 	// decrement front pointer
 	f = f - 1
 
-	// scan the element
+	// insert the element
 	var element string
 	fmt.Print("Enter the element that you want to insert: ")
 	fmt.Scanf("%s", &element)
-
-	// insert the element
 	q[f] = element
 
 	return

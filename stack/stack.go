@@ -2,18 +2,22 @@ package main
 
 import "fmt"
 
+// size - size of stack
+// top - top pointer
+// stack - stack array
+
 var stack [5]string
 var size, top int
 
 func init() {
-	for i := 0; i < len(stack); i++ {
+	size = 4
+	top = -1
+	for i := range stack {
 		stack[i] = "nil"
 	}
 }
 
 func main() {
-	size = 4
-	top = -1
 	i := 0
 	for i == 0 {
 		var choice int
@@ -88,7 +92,7 @@ func pop() {
 }
 
 func display() {
-	for i := 0; i < len(stack); i++ {
+	for i := range stack {
 		fmt.Print(stack[i], " ")
 	}
 	fmt.Println("")

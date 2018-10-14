@@ -13,16 +13,15 @@ var r, n, f int
 var q [5]string
 
 func init() {
-	for i := 0; i < len(q); i++ {
+	r = -1
+	f = -1
+	n = 4
+	for i := range q {
 		q[i] = "nil"
 	}
 }
 
-// SimpleQueue implements simple queue
 func main() {
-	r = -1
-	f = -1
-	n = 4
 	i := 0
 	var choice int
 	for i == 0 {
@@ -66,12 +65,10 @@ func insert() {
 	// increment rear pointer
 	r = r + 1
 
-	// scan the element
+	// insert the element
 	var y string
 	fmt.Print("Enter the element that you want to insert: ")
 	fmt.Scanf("%s", &y)
-
-	// insert the element
 	q[r] = y
 
 	// set front pointer
@@ -109,7 +106,7 @@ func delete() {
 }
 
 func display() {
-	for i := 0; i < len(q); i++ {
+	for i := range q {
 		fmt.Print(q[i], " ")
 	}
 	fmt.Println("")

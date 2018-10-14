@@ -6,22 +6,22 @@ import (
 
 // r - rear pointer
 // f - front pointer
-// n - size of queue
-// q - queue
+// n - size of circular queue
+// q - circular queue
 
 var r, n, f int
 var q [5]string
 
 func init() {
-	for i := 0; i < len(q); i++ {
+	r = -1
+	f = -1
+	n = 4
+	for i := range q {
 		q[i] = "nil"
 	}
 }
 
 func main() {
-	r = -1
-	f = -1
-	n = 4
 	i := 0
 	for i == 0 {
 		fmt.Println("\n1. INSERT")
@@ -77,7 +77,7 @@ func insert() {
 
 	// insert element
 	var y string
-	fmt.Print("Enter the element you want to insert: ")
+	fmt.Print("Enter the element that you want to insert: ")
 	fmt.Scanf("%s", &y)
 	q[r] = y
 
@@ -105,7 +105,7 @@ func delete() {
 	if f == r {
 		f = -1
 		r = -1
-		fmt.Println("Element deleted: ", y)
+		fmt.Println("\nElement deleted: ", y)
 		return
 	}
 
@@ -115,14 +115,15 @@ func delete() {
 	} else {
 		f = f + 1
 	}
-	fmt.Println("Element deleted: ", y)
+
+	fmt.Println("\nElement deleted: ", y)
 
 	return
 }
 
 func display() {
 	fmt.Println("Displaying elements: ")
-	for i := 0; i < len(q); i++ {
+	for i := range q {
 		fmt.Print(q[i], " ")
 	}
 	fmt.Println("")
