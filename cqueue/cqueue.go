@@ -85,6 +85,7 @@ func insert() {
 	if f == -1 {
 		f = 0
 	}
+
 	return
 }
 
@@ -115,6 +116,7 @@ func delete() {
 		f = f + 1
 	}
 	fmt.Println("Element deleted: ", y)
+
 	return
 }
 

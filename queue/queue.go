@@ -104,6 +104,8 @@ func delete() {
 
 	// print deleted element
 	fmt.Println("Element deleted", y)
+
+	return
 }
 
 func display() {
