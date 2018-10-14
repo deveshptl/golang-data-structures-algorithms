@@ -12,6 +12,13 @@
 
 This repo is for learning data structures and algorithms which is the base of any programming language.
 
+**FOLDER NAMES**
+1. _cdqueue_ - Circular Double ended Queue
+2. _cqueue_ - Circular Queue
+3. _dqueue_ - Double ended Queue
+4. _queue_ - Simple Queue
+5. _stack_ - Stack
+
 ### Contribution
 
 Feel free to make PR if you find a better way to solve/implement any algorithm or data structure. I will be more than happy to merge your PR. :smile:
