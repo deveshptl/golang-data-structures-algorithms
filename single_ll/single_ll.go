@@ -19,24 +19,28 @@ type Node struct {
 // Push pushes new node at the end of the list
 func (l *List) Push(value int) {
 	node := &Node{value: value}
-	if l.head == nil {
+
+	if l.head == nil { // check if list is empty
 		l.head = node
-	} else {
+	} else { // assign next pointer of tail to new node
 		l.tail.next = node
 	}
+
+	// assign new tail as
 	l.tail = node
 }
 
 // Pop deletes a node from the end of the list
 func (l *List) Pop() {
-	if l.head == nil {
+
+	if l.head == nil { // check if list is empty
 		fmt.Println("\n-- Underflow --")
-	} else if l.head.next == nil {
+	} else if l.head.next == nil { // check if only one node is present
 		l.head = nil
 		l.tail = nil
-	} else {
+	} else { // loop over the list
 		for list := l.head; list != nil; list = list.next {
-			if list.next.next == nil {
+			if list.next.next == nil { // check if list pointer is pointing to second last node of the list
 				list.next = nil
 				l.tail = list
 				return
@@ -47,12 +51,14 @@ func (l *List) Pop() {
 
 // Shift deletes a node from the begining of the list
 func (l *List) Shift() {
+
+	// check if list is empty
 	if l.head == nil {
 		fmt.Println("\n-- Underflow --")
-	} else if l.head.next == nil {
+	} else if l.head.next == nil { // check if only one node is present
 		l.head = nil
 		l.tail = nil
-	} else {
+	} else { // assign new head to the list
 		l.head = l.head.next
 	}
 }
@@ -60,10 +66,11 @@ func (l *List) Shift() {
 // Unshift inserts a node at the begining of the list
 func (l *List) Unshift(value int) {
 	node := &Node{value: value}
-	if l.head == nil {
+
+	if l.head == nil { // check if list is empty
 		l.head = node
 		l.tail = node
-	} else {
+	} else { // assign new node as head
 		node.next = l.head
 		l.head = node
 	}
@@ -71,22 +78,27 @@ func (l *List) Unshift(value int) {
 
 // InsMiddle inserts a node in the middle of the list
 func (l *List) InsMiddle(value, place int) {
+
+	// check if insertion place is 1 or list is empty
 	if place == 1 || l.head == nil {
 		l.Unshift(value)
-	} else {
+	} else { // loop over list
 		list := l.head
 		node := &Node{value: value}
 		for i := 0; i <= place; i++ {
-			if list == l.tail && i != place-1 {
+
+			if list == l.tail && i != place-1 { // check if tail is encountered
 				l.tail.next = node
 				l.tail = node
 				return
-			} else if i+1 == place-1 {
+			} else if i+1 == place-1 { // check if list pointer is pointing to correct node
 				temp := list.next
 				list.next = node
 				node.next = temp
 				return
 			}
+
+			// increment list pointer to next node
 			list = list.next
 		}
 	}
@@ -94,25 +106,31 @@ func (l *List) InsMiddle(value, place int) {
 
 // DelMiddle deletes a node from the middle of the list
 func (l *List) DelMiddle(place int) {
+
+	// check if deletion place is 1 or list is empty
 	if place == 1 || l.head == nil {
 		l.Shift()
-	} else if l.head.next == nil && place > 1 {
+	} else if l.head.next == nil && place > 1 { // check if only one node is present and deletion place is greater than 1
 		fmt.Println("\n-- Index out of range", place, "--")
-	} else {
+	} else { // loop over the list
 		list := l.head
 		for i := 0; i <= place; i++ {
+
+			// check if tail is encountered
 			if list.next == nil {
 				fmt.Println("\n-- Index out of range", place, "--")
 				return
-			} else if i+1 == place-1 {
+			} else if i+1 == place-1 { // check is list is pointing to correct node
+
+				// check if list is pointing to second last element
 				if list.next == l.tail {
 					list.next = nil
 					l.tail = list
-				} else {
+				} else { // assign new next pointer to nodes
 					list.next = list.next.next
 				}
 				return
-			} else {
+			} else { // increment list pointer to next node
 				list = list.next
 			}
 		}
