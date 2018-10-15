@@ -17,6 +17,7 @@ This repo is for learning data structures and algorithms which is the base of an
 2. _cqueue_ - Circular Queue
 3. _dqueue_ - Double ended Queue
 4. _queue_ - Simple Queue
+5. *single_ll* - Single Linked List
 5. _stack_ - Stack
 
 ### Contribution
