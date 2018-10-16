@@ -13,12 +13,13 @@
 This repo is for learning data structures and algorithms which is the base of any programming language.
 
 **FOLDER NAMES**
-1. _cdqueue_ - Circular Double ended Queue
-2. _cqueue_ - Circular Queue
-3. _dqueue_ - Double ended Queue
-4. _queue_ - Simple Queue
+1. *cdqueue* - Circular Double ended Queue
+2. *cqueue* - Circular Queue
+3. *dqueue* - Double ended Queue
+4. *queue* - Simple Queue
+5. *rev_single_ll* - Reversing Single Linked List
 5. *single_ll* - Single Linked List
-5. _stack_ - Stack
+5. *stack* - Stack
 
 ### Contribution
 
