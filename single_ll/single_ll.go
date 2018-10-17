@@ -55,11 +55,13 @@ func (l *List) Shift() {
 	// check if list is empty
 	if l.head == nil {
 		fmt.Println("\n-- Underflow --")
-	} else if l.head.next == nil { // check if only one node is present
-		l.head = nil
+		return
+	}
+
+	// assign next pointer as head
+	l.head = l.head.next
+	if l.head == nil { // check if head is nil
 		l.tail = nil
-	} else { // assign second node of the list as head
-		l.head = l.head.next
 	}
 }
 
@@ -79,27 +81,31 @@ func (l *List) Unshift(value int) {
 // InsMiddle inserts a node in the middle of the list
 func (l *List) InsMiddle(value, place int) {
 
-	// check if insertion place is 1 or list is empty
-	if place == 1 || l.head == nil {
+	if (l.head == nil) && place > 1 { // check if insertion place greater than 1 and list is empty or only 1 node is present
+		fmt.Println("\n-- Index out of range --")
+	} else if place == 1 || l.head == nil { // check if list is empty and place is 1
 		l.Unshift(value)
 	} else { // loop over the list
 		list := l.head
 		node := &Node{value: value}
-		for i := 0; i <= place; i++ {
-
-			if list == l.tail && i != place-1 { // check if tail is encountered
-				l.tail.next = node
-				l.tail = node
-				return
-			} else if i+1 == place-1 { // check if list pointer is pointing to correct node
-				temp := list.next
-				list.next = node
-				node.next = temp
+		for i := 0; i < place-2; i++ {
+			if list.next == l.tail && i+1 != place-2 { // check if next pointer of list is pointing to tail and value of i and place are such that index out of range is satisfied
+				fmt.Println("\n-- Index out of range --")
 				return
 			}
 
-			// increment list pointer to next node
+			// increment next pointer
 			list = list.next
+		}
+
+		// check if list is pointing to tail
+		if list == l.tail {
+			l.tail.next = node
+			l.tail = node
+		} else { // insert the node
+			temp := list.next
+			list.next = node
+			node.next = temp
 		}
 	}
 }
@@ -111,29 +117,28 @@ func (l *List) DelMiddle(place int) {
 	if place == 1 || l.head == nil {
 		l.Shift()
 	} else if l.head.next == nil && place > 1 { // check if only one node is present and deletion place is greater than 1
-		fmt.Println("\n-- Index out of range", place, "--")
+		fmt.Println("\n-- Index out of range --")
 	} else { // loop over the list
 		list := l.head
-		for i := 0; i <= place; i++ {
+		for i := 0; i < place-2; i++ {
 
-			// check if tail is encountered
-			if list.next == nil {
-				fmt.Println("\n-- Index out of range", place, "--")
+			if list.next == l.tail { // check if next pointer of list is pointing to tail
+				fmt.Println("\n-- Index out of range --")
 				return
-			} else if i+1 == place-1 { // check if list is pointing to correct node
-
-				// check if list is pointing to second last element
-				if list.next == l.tail {
-					list.next = nil
-					l.tail = list
-				} else { // assign new next pointer to node
-					list.next = list.next.next
-				}
-				return
-			} else { // increment list pointer to next node
-				list = list.next
 			}
+
+			// increment next pointer
+			list = list.next
+
 		}
+
+		if list.next == l.tail { // check if next pointer of list is pointing to tail
+			list.next = nil
+			l.tail = list
+		} else { // delete the node
+			list.next = list.next.next
+		}
+
 	}
 }
 
