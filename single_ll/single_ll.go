@@ -89,7 +89,7 @@ func (l *List) InsMiddle(value, place int) {
 		list := l.head
 		node := &Node{value: value}
 		for i := 0; i < place-2; i++ {
-			if list.next == l.tail && i+1 != place-2 { // check if next pointer of list is pointing to tail and value of i and place are such that index out of range is satisfied
+			if list == l.tail { // check if next pointer of list is pointing to tail and value of i and place are such that index out of range is satisfied
 				fmt.Println("\n-- Index out of range --")
 				return
 			}
