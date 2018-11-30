@@ -18,6 +18,10 @@ type Node struct {
 
 // Insert inserts a node preserving the order of the list
 func (l *List) Insert(value int) {
+	if l.head != nil && l.head.value > l.tail.value {
+		fmt.Println("\n-- List was in reverse order. Performing reverse on list and then inserting the value. --")
+		l.Reverse()
+	}
 	node := &Node{value: value}
 	if l.head == nil { // check if list is empty
 		l.head = node
@@ -77,6 +81,27 @@ func (l *List) Delete(place int) {
 	list.next = list.next.next
 }
 
+// Reverse reverses a list
+func (l *List) Reverse() {
+	if l.head == nil {
+		fmt.Println("\n-- List is empty --")
+		return
+	}
+	var prev, next *Node
+	curr := l.head
+
+	tail := l.head
+	for curr != nil {
+		next = curr.next
+		curr.next = prev
+		prev = curr
+		curr = next
+	}
+	l.head = prev
+	l.tail = tail
+	l.tail.next = nil
+}
+
 var l *List
 
 func init() {
@@ -90,8 +115,9 @@ func main() {
 	for i == 0 {
 		fmt.Println("\n1. INSERT PRESERVING ORDER")
 		fmt.Println("2. DELETE PRESERVING ORDER")
-		fmt.Println("3. DISPLAY")
-		fmt.Println("4. EXIT")
+		fmt.Println("3. REVERSE")
+		fmt.Println("4. DISPLAY")
+		fmt.Println("5. EXIT")
 		fmt.Print("Enter your choice: ")
 		fmt.Scanf("%d", &choice)
 
@@ -103,9 +129,12 @@ func main() {
 			nodeDelete()
 			break
 		case 3:
-			display()
+			l.Reverse()
 			break
 		case 4:
+			display()
+			break
+		case 5:
 			i = 1
 		default:
 			fmt.Println("Command not recognized.")
