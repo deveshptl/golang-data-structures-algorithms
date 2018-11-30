@@ -19,11 +19,10 @@ This repo is for learning data structures and algorithms which is the base of an
 04. *cqueue* - Circular Queue
 05. *doubly_ll* - Doubly Linked List
 06. *dqueue* - Double ended Queue
-07. *pres_single_ll* - Preserve order Single Linked List
+07. *pres_rev_single_ll* - Preserve order during insertion on Single Linked List and Reversing Single Linked List
 08. *queue* - Simple Queue
-09. *rev_single_ll* - Reversing Single Linked List
-10. *single_ll* - Single Linked List
-11. *stack* - Stack
+09. *single_ll* - Single Linked List
+10. *stack* - Stack
 
 ### Contribution
 
