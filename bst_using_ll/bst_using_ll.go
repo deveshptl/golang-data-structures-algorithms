@@ -45,14 +45,44 @@ func (bst *BinarySearchTree) Insert(value int) {
 	}
 }
 
-// Delete deletes a node preserving bst
-func (bst *BinarySearchTree) Delete(value int) {
-	// TODO: implement delete function
-}
-
 // Find finds a key from the bst
 func (bst *BinarySearchTree) Find(value int) {
-	// TODO: implement find function
+	current := bst.root
+	for true {
+		if value < current.value {
+			if current.left == nil {
+				fmt.Println("\n-- Key not found. --")
+				return
+			} else if value == current.left.value {
+				fmt.Println("\n-- Key found. --")
+				fmt.Println("Parent is: ", current.value)
+				fmt.Println("Sibling is: ", current.right)
+				fmt.Println("Left child is: ", current.left.left)
+				fmt.Println("Right child is: ", current.left.right)
+				return
+			}
+			current = current.left
+		} else if value > current.value {
+			if current.right == nil {
+				fmt.Println("\n-- Key not found. --")
+				return
+			}
+			if value == current.right.value {
+				fmt.Println("\n-- Key found. --")
+				fmt.Println("Parent is: ", current.value)
+				fmt.Println("Sibling is: ", current.left)
+				fmt.Println("Left child is: ", current.right.left)
+				fmt.Println("Right child is: ", current.right.right)
+				return
+			}
+			current = current.right
+		} else if value == current.value {
+			fmt.Println("Key is root itself")
+			fmt.Println("Left child is: ", current.left)
+			fmt.Println("Right child is: ", current.right)
+			return
+		}
+	}
 }
 
 // BFS prints the tree using bfs traversal
@@ -73,7 +103,6 @@ func (bst *BinarySearchTree) BFS() []int {
 			data = append(data, node.value)
 			node.freq--
 		}
-		fmt.Println(node.left, node.right)
 		if node.left != nil {
 			queue = append(queue, node.left)
 		}
@@ -85,9 +114,55 @@ func (bst *BinarySearchTree) BFS() []int {
 }
 
 // DFS prints the tree using dfs traversal
-func (bst *BinarySearchTree) DFS() []int {
-	// TODO: implement dfs traversal
-	return nil
+func (bst *BinarySearchTree) DFS(traverseType string) []int {
+	if bst.root == nil {
+		fmt.Println("\n-- Tree is empty. --")
+		return nil
+	}
+
+	var data []int
+	current := bst.root
+	if traverseType == "pre" {
+		data = traversePre(data, current)
+	} else if traverseType == "in" {
+		data = traverseIn(data, current)
+	} else if traverseType == "pos" {
+		data = traversePos(data, current)
+	}
+	return data
+}
+
+func traversePre(data []int, node *Node) []int {
+	data = append(data, node.value)
+	if node.left != nil {
+		data = traversePre(data, node.left)
+	}
+	if node.right != nil {
+		data = traversePre(data, node.right)
+	}
+	return data
+}
+
+func traverseIn(data []int, node *Node) []int {
+	if node.left != nil {
+		data = traverseIn(data, node.left)
+	}
+	data = append(data, node.value)
+	if node.right != nil {
+		data = traverseIn(data, node.right)
+	}
+	return data
+}
+
+func traversePos(data []int, node *Node) []int {
+	if node.left != nil {
+		data = traversePos(data, node.left)
+	}
+	if node.right != nil {
+		data = traversePos(data, node.right)
+	}
+	data = append(data, node.value)
+	return data
 }
 
 var bst *BinarySearchTree
@@ -100,11 +175,12 @@ func main() {
 	i := 0
 	for i == 0 {
 		fmt.Println("\n1. INSERT")
-		fmt.Println("2. DELETE")
-		fmt.Println("3. DISPLAY using BFS")
-		fmt.Println("4. DISPLAY using BFS")
-		fmt.Println("5. FIND")
-		fmt.Println("5. EXIT")
+		fmt.Println("2. DISPLAY using BFS")
+		fmt.Println("3. DISPLAY using DFS Pre-order")
+		fmt.Println("4. DISPLAY using DFS In-order")
+		fmt.Println("5. DISPLAY using DFS Post-order")
+		fmt.Println("6. FIND")
+		fmt.Println("7. EXIT")
 
 		var choice int
 		fmt.Print("Enter your choice: ")
@@ -115,24 +191,21 @@ func main() {
 			insNode()
 			break
 		case 2:
-			deleteNode()
+			fmt.Println("\n", bst.BFS())
 			break
 		case 3:
-			data := bst.BFS()
-			if data != nil {
-				fmt.Println(data)
-			}
+			fmt.Println("\n", bst.DFS("pre"))
 			break
 		case 4:
-			data := bst.DFS()
-			if data != nil {
-				fmt.Println(data)
-			}
+			fmt.Println("\n", bst.DFS("in"))
 			break
 		case 5:
-			findNode()
+			fmt.Println("\n", bst.DFS("pos"))
 			break
 		case 6:
+			findNode()
+			break
+		case 7:
 			i = 1
 			break
 		default:
@@ -146,13 +219,6 @@ func insNode() {
 	fmt.Print("Enter the node value that you want to insert: ")
 	fmt.Scanf("%d", &element)
 	bst.Insert(element)
-}
-
-func deleteNode() {
-	var element int
-	fmt.Print("Enter the value that you want to delete: ")
-	fmt.Scanf("%d", &element)
-	bst.Delete(element)
 }
 
 func findNode() {
