@@ -23,9 +23,10 @@ This repo is for learning data structures and algorithms which is the base of an
 08. *dqueue* - Double ended Queue
 09. *pres_rev_single_ll* - Preserve order during insertion on Single Linked List and Reversing Single Linked List
 10. *queue* - Simple Queue
-11. *simple_bt_using_ll* - Simple Binary Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
-12. *single_ll* - Single Linked List
-13. *stack* - Stack
+11. *simple_bt_using_arr* - Simple Binary Tree using array with BFS and DFS (Pre, In, Post) order traversals.
+12. *simple_bt_using_ll* - Simple Binary Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
+13. *single_ll* - Single Linked List
+14. *stack* - Stack
 
 ### Contribution
 
