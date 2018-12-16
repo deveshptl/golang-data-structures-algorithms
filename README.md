@@ -7,6 +7,7 @@
 3. Now `cd <folder-name>` into the folder where the file you want to run is located.
 4. Now run `go run <file-name>`.
 
+**Note**: If a folder contains multiple `.go` extension files then use `go run <file-name> [<file-name>...]`. For e.g `bst_using_arr` folder contains two files: `bst_using_arr.go` and `traversal.go`. So use the command `go run bst_using_arr.go traversal.go`.
 
 ### Description
 
