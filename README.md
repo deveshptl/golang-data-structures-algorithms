@@ -13,18 +13,19 @@
 This repo is for learning data structures and algorithms which is the base of any programming language.
 
 **FOLDER NAMES**
-01. *bst_using_ll* - Binary Search Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
-02. *cdqueue* - Circular Double ended Queue
-03. *circular_doubly_ll* - Circular Doubly Linked List
-04. *circular_ll* - Circular Linked List
-05. *cqueue* - Circular Queue
-06. *doubly_ll* - Doubly Linked List
-07. *dqueue* - Double ended Queue
-08. *pres_rev_single_ll* - Preserve order during insertion on Single Linked List and Reversing Single Linked List
-09. *queue* - Simple Queue
-10. *simple_bt_using_ll* - Simple Binary Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
-11. *single_ll* - Single Linked List
-12. *stack* - Stack
+01. *bst_using_arr* - Binary Search Tree using array with BFS and DFS (Pre, In, Post) order traversals.
+02. *bst_using_ll* - Binary Search Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
+03. *cdqueue* - Circular Double ended Queue
+04. *circular_doubly_ll* - Circular Doubly Linked List
+05. *circular_ll* - Circular Linked List
+06. *cqueue* - Circular Queue
+07. *doubly_ll* - Doubly Linked List
+08. *dqueue* - Double ended Queue
+09. *pres_rev_single_ll* - Preserve order during insertion on Single Linked List and Reversing Single Linked List
+10. *queue* - Simple Queue
+11. *simple_bt_using_ll* - Simple Binary Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
+12. *single_ll* - Single Linked List
+13. *stack* - Stack
 
 ### Contribution
 
