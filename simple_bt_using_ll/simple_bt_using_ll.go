@@ -47,41 +47,45 @@ func (bt *BinaryTree) Insert(value int) {
 
 // Find finds a key from the bt
 func (bt *BinaryTree) Find(value int) {
-	current := bt.root
-	for true {
-		if value < current.value {
-			if current.left == nil {
-				fmt.Println("\n-- Key not found. --")
-				return
-			} else if value == current.left.value {
-				fmt.Println("\n-- Key found. --")
-				fmt.Println("Parent is: ", current.value)
-				fmt.Println("Sibling is: ", current.right)
-				fmt.Println("Left child is: ", current.left.left)
-				fmt.Println("Right child is: ", current.left.right)
-				return
-			}
-			current = current.left
-		} else if value > current.value {
-			if current.right == nil {
-				fmt.Println("\n-- Key not found. --")
-				return
-			}
-			if value == current.right.value {
-				fmt.Println("\n-- Key found. --")
-				fmt.Println("Parent is: ", current.value)
-				fmt.Println("Sibling is: ", current.left)
-				fmt.Println("Left child is: ", current.right.left)
-				fmt.Println("Right child is: ", current.right.right)
-				return
-			}
-			current = current.right
-		} else if value == current.value {
-			fmt.Println("Key is root itself")
-			fmt.Println("Left child is: ", current.left)
-			fmt.Println("Right child is: ", current.right)
-			return
+	if bt.root == nil {
+		fmt.Print("\n-- Tree is empty. --")
+		return
+	}
+	flag := 0
+	var queue []*Node
+	node := bt.root
+	queue = append(queue, node)
+
+	for len(queue) != 0 {
+		node = queue[0]
+		queue = queue[1:]
+		if node.left != nil && node.left.value == value {
+			flag = 1
+			fmt.Println("\n-- Key found. --")
+			fmt.Println("Key info is:", node.left)
+			fmt.Println("Parent is:", node)
+			fmt.Println("Sibling is:", node.right)
+			fmt.Println("Left Child is:", node.left.left)
+			fmt.Println("Right Child is:", node.left.right)
+		} else if node.right != nil && node.right.value == value {
+			flag = 1
+			fmt.Println("\n-- Key found. --")
+			fmt.Println("Key info is:", node.right)
+			fmt.Println("Parent is:", node)
+			fmt.Println("Sibling is:", node.left)
+			fmt.Println("Left Child is:", node.right.left)
+			fmt.Println("Right Child is:", node.right.right)
 		}
+		if node.left != nil {
+			queue = append(queue, node.left)
+		}
+		if node.right != nil {
+			queue = append(queue, node.right)
+		}
+	}
+
+	if flag == 0 {
+		fmt.Println("\n-- Key NOT found. --")
 	}
 }
 
