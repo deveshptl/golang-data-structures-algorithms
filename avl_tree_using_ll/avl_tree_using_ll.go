@@ -102,7 +102,7 @@ func rightRotate(node *Node) *Node {
 	node.left = t
 
 	node.height = int(math.Max(float64(Height(node.left)), float64(Height(node.right))) + 1)
-	node.height = int(math.Max(float64(Height(b.left)), float64(Height(b.right))) + 1)
+	b.height = int(math.Max(float64(Height(b.left)), float64(Height(b.right))) + 1)
 
 	return b
 }
