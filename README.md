@@ -14,23 +14,29 @@
 This repo is for learning data structures and algorithms which is the base of any programming language.
 
 **FOLDER NAMES**
-01. *avl_tree_using_ll* - AVL Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
-02. *bst_using_arr* - Binary Search Tree using array with BFS and DFS (Pre, In, Post) order traversals.
-03. *bst_using_ll* - Binary Search Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
-04. *cdqueue* - Circular Double ended Queue
-05. *circular_doubly_ll* - Circular Doubly Linked List
-06. *circular_ll* - Circular Linked List
-07. *cqueue* - Circular Queue
-08. *doubly_ll* - Doubly Linked List
-09. *dqueue* - Double ended Queue
-10. *max_binary_heap* - Max Binary Heap
-11. *min_binary_heap* - Min Binary Heap
-12. *pres_rev_single_ll* - Preserve order during insertion on Single Linked List and Reversing Single Linked List
-13. *queue* - Simple Queue
-14. *simple_bt_using_arr* - Simple Binary Tree using array with BFS and DFS (Pre, In, Post) order traversals.
-15. *simple_bt_using_ll* - Simple Binary Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
-16. *single_ll* - Single Linked List
-17. *stack* - Stack
+
+01. **heaps** -
+    * *max_binary_heap* - Max Binary Heap
+    * *min_binary_heap* - Min Binary Heap
+02. **linked_lists** -
+    * *circular_doubly_ll* - Circular Doubly Linked List
+    * *circular_ll* - Circular Linked List
+    * *doubly_ll* - Doubly Linked List
+    * *pres_rev_single_ll* - Preserve order during insertion on Single Linked List and Reversing Single Linked List
+    * *single_ll* - Single Linked List
+03. **queues** - 
+    * *cdqueue* - Circular Double ended Queue
+    * *cqueue* - Circular Queue
+    * *dqueue* - Double ended Queue
+    * *simple_queue* - Simple Queue
+04. **stack** - stack
+05. **trees** - 
+    * *avl_tree_using_ll* - AVL Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
+    * *bst_using_arr* - Binary Search Tree using array with BFS and DFS (Pre, In, Post) order traversals.
+    * *bst_using_ll* - Binary Search Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
+    * *simple_bt_using_arr* - Simple Binary Tree using array with BFS and DFS (Pre, In, Post) order traversals.
+    * *simple_bt_using_ll* - Simple Binary Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
+
 
 ### Contribution
 
