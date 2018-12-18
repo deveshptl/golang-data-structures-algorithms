@@ -28,6 +28,7 @@ This repo is for learning data structures and algorithms which is the base of an
     * *cdqueue* - Circular Double ended Queue
     * *cqueue* - Circular Queue
     * *dqueue* - Double ended Queue
+    * *priority_queue* - Priority Queue with the use of Min Heap
     * *simple_queue* - Simple Queue
 04. **stack** - stack
 05. **trees** - 
