@@ -23,12 +23,13 @@ This repo is for learning data structures and algorithms which is the base of an
 07. *cqueue* - Circular Queue
 08. *doubly_ll* - Doubly Linked List
 09. *dqueue* - Double ended Queue
-10. *pres_rev_single_ll* - Preserve order during insertion on Single Linked List and Reversing Single Linked List
-11. *queue* - Simple Queue
-12. *simple_bt_using_arr* - Simple Binary Tree using array with BFS and DFS (Pre, In, Post) order traversals.
-13. *simple_bt_using_ll* - Simple Binary Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
-14. *single_ll* - Single Linked List
-15. *stack* - Stack
+10. *max_binary_heap* - Max Binary Heap
+11. *pres_rev_single_ll* - Preserve order during insertion on Single Linked List and Reversing Single Linked List
+12. *queue* - Simple Queue
+13. *simple_bt_using_arr* - Simple Binary Tree using array with BFS and DFS (Pre, In, Post) order traversals.
+14. *simple_bt_using_ll* - Simple Binary Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
+15. *single_ll* - Single Linked List
+16. *stack* - Stack
 
 ### Contribution
 
