@@ -100,6 +100,40 @@ func dfsHelper(vtx string, visited map[string]bool, result []string) []string {
 	return result
 }
 
+// BFS traverses a graph using dfs technique
+func BFS(start string) []string {
+
+	if graph[start] == nil {
+		fmt.Println("\n-- No vertex named " + start + " present in graph. --")
+		return nil
+	}
+
+	visited := make(map[string]bool)
+
+	var queue []string
+	queue = append(queue, start)
+
+	var result []string
+	var currentVtx string
+	visited[start] = true
+
+	for len(queue) != 0 {
+		currentVtx = queue[0]               // get the element from the queue
+		queue = queue[1:len(queue)]         // remove element from the queue
+		result = append(result, currentVtx) // push the current vertex in result
+
+		for i := range graph[currentVtx] {
+			if !visited[graph[currentVtx][i]] {
+				visited[graph[currentVtx][i]] = true        // mark as visited
+				queue = append(queue, graph[currentVtx][i]) // push neighbors of current vertex in the queue
+			}
+		}
+
+	}
+
+	return result
+}
+
 var graph map[string][]string
 
 func init() {
@@ -107,6 +141,19 @@ func init() {
 }
 
 func main() {
+	addVertexToGraph("a")
+	addVertexToGraph("b")
+	addVertexToGraph("c")
+	addVertexToGraph("d")
+	addVertexToGraph("e")
+	addVertexToGraph("f")
+	addEdgeToGraph("a", "b")
+	addEdgeToGraph("a", "c")
+	addEdgeToGraph("b", "d")
+	addEdgeToGraph("c", "e")
+	addEdgeToGraph("d", "e")
+	addEdgeToGraph("d", "f")
+	addEdgeToGraph("e", "f")
 	i := 0
 	for i == 0 {
 		fmt.Println("\n1. ADD A VERTEX")
@@ -137,7 +184,8 @@ func main() {
 			fmt.Println(result)
 			break
 		case 6:
-			// display using bfs
+			result := displayBFS()
+			fmt.Println(result)
 			break
 		case 7:
 			i = 1
@@ -185,5 +233,13 @@ func displayDFS() []string {
 	fmt.Print("Enter the start vertex name: ")
 	fmt.Scanf("%s", &startVtx)
 	result := DFS(startVtx)
+	return result
+}
+
+func displayBFS() []string {
+	var startVtx string
+	fmt.Print("Enter the start vertex name: ")
+	fmt.Scanf("%s", &startVtx)
+	result := BFS(startVtx)
 	return result
 }
