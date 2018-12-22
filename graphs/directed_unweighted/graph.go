@@ -17,7 +17,7 @@ func addEdgeToGraph(fromVtx, toVtx string) {
 	}
 	for i := range graph[fromVtx] { // check if edge already exists
 		if graph[fromVtx][i] == toVtx {
-			fmt.Println("\n-- Edge between " + fromVtx + " and " + toVtx + " already exists. --")
+			fmt.Println("\n-- Edge from " + fromVtx + " to " + toVtx + " already exists. --")
 			return
 		}
 	}
@@ -26,22 +26,37 @@ func addEdgeToGraph(fromVtx, toVtx string) {
 	}
 
 	graph[fromVtx] = append(graph[fromVtx], toVtx)
-	graph[toVtx] = append(graph[toVtx], fromVtx)
 	return
 }
 
 func removeVertexFromGraph(vtx string) {
 	length := len(graph[vtx]) - 1
-	for length != -1 {
+	for length != -1 { // loop in reverse in order to avoid index out of range
 		removeEdgeFromGraph(vtx, graph[vtx][length])
 		length--
 	}
+
+	for i := range graph {
+		if i != vtx {
+			length := len(graph[i]) - 1
+			for length != -1 { // loop in reverse in order to avoid index out of range
+				if graph[i][length] == vtx {
+					removeEdgeFromGraph(i, vtx)
+				}
+				length--
+			}
+		}
+	}
+
 	delete(graph, vtx)
 }
 
 func removeEdgeFromGraph(fromVtx, toVtx string) {
-	if graph[fromVtx] == nil || graph[toVtx] == nil {
-		fmt.Println("\n-- Edge between " + fromVtx + " and " + toVtx + " does not exist. --")
+	if graph[fromVtx] == nil {
+		fmt.Println("\n-- Vertex " + fromVtx + " does not exists. --")
+		return
+	} else if graph[toVtx] == nil {
+		fmt.Println("\n-- Vertex " + toVtx + " does not exists. --")
 		return
 	}
 
@@ -59,21 +74,6 @@ func removeEdgeFromGraph(fromVtx, toVtx string) {
 			break
 		}
 	}
-
-	for i := range graph[toVtx] {
-		if graph[toVtx][i] == fromVtx {
-			if i == 0 {
-				graph[toVtx] = graph[toVtx][1:len(graph[toVtx])]
-			} else if i == (len(graph[toVtx]) - 1) {
-				graph[toVtx] = graph[toVtx][0:(len(graph[toVtx]) - 1)]
-			} else {
-				initial := graph[toVtx][0:i]
-				final := graph[toVtx][i+1 : len(graph[toVtx])]
-				graph[toVtx] = append(initial, final...)
-			}
-			break
-		}
-	}
 }
 
 var graph map[string][]string
@@ -83,6 +83,22 @@ func init() {
 }
 
 func main() {
+	addVertexToGraph("a")
+	addVertexToGraph("b")
+	addVertexToGraph("c")
+	addVertexToGraph("d")
+	addVertexToGraph("e")
+	addVertexToGraph("f")
+	addEdgeToGraph("a", "b")
+	addEdgeToGraph("a", "c")
+	addEdgeToGraph("b", "d")
+	addEdgeToGraph("c", "e")
+	addEdgeToGraph("d", "e")
+	addEdgeToGraph("d", "f")
+	addEdgeToGraph("e", "f")
+	addEdgeToGraph("d", "a")
+	addEdgeToGraph("e", "a")
+	addEdgeToGraph("b", "e")
 	i := 0
 	for i == 0 {
 		fmt.Println("\n1. ADD A VERTEX")
@@ -91,7 +107,8 @@ func main() {
 		fmt.Println("4. REMOVE AN EDGE")
 		fmt.Println("5. DISPLAY USING DFS")
 		fmt.Println("6. DISPLAY USING BFS")
-		fmt.Println("7. EXIT")
+		fmt.Println("7. SIMPLE DISPLAY")
+		fmt.Println("8. EXIT")
 		var choice int
 		fmt.Print("Enter your choice: ")
 		fmt.Scanf("%d", &choice)
@@ -117,6 +134,9 @@ func main() {
 			fmt.Println(result)
 			break
 		case 7:
+			simpleDisplay()
+			break
+		case 8:
 			i = 1
 			break
 		default:
@@ -172,3 +192,31 @@ func displayBFS() []string {
 	result := BFS(startVtx)
 	return result
 }
+
+func simpleDisplay() {
+	fmt.Println("")
+	for i := range graph {
+		fmt.Print(i, " => ")
+		for j := range graph[i] {
+			fmt.Print(graph[i][j] + " ")
+		}
+		fmt.Println("")
+	}
+}
+
+// addVertexToGraph("a")
+// addVertexToGraph("b")
+// addVertexToGraph("c")
+// addVertexToGraph("d")
+// addVertexToGraph("e")
+// addVertexToGraph("f")
+// addEdgeToGraph("a", "b")
+// addEdgeToGraph("a", "c")
+// addEdgeToGraph("b", "d")
+// addEdgeToGraph("c", "e")
+// addEdgeToGraph("d", "e")
+// addEdgeToGraph("d", "f")
+// addEdgeToGraph("e", "f")
+// addEdgeToGraph("d", "a")
+// addEdgeToGraph("e", "a")
+// addEdgeToGraph("b", "e")
