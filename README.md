@@ -17,6 +17,7 @@ This repo is for learning data structures and algorithms which is the base of an
 
 01. **graphs** -
     * *undirected_unweighted* - Undirected Unweighted graph
+    * *undirected_weighted* - Undirected Weighted graph
 02. **heaps** -
     * *max_binary_heap* - Max Binary Heap
     * *min_binary_heap* - Min Binary Heap
