@@ -17,6 +17,7 @@ This repo is for learning data structures and algorithms which is the base of an
 
 01. **graphs** -
     * *directed_unweighted* - Directed Unweighted graph
+    * *directed_weighted* - Directed Weighted graph
     * *undirected_unweighted* - Undirected Unweighted graph
     * *undirected_weighted* - Undirected Weighted graph
 02. **heaps** -
