@@ -15,28 +15,31 @@ This repo is for learning data structures and algorithms which is the base of an
 
 **FOLDER NAMES**
 
-01. **graphs** -
+01. **algorithms** -
+    * *sorting* - 
+        * *selection_sort* - Selection Sort
+02. **graphs** -
     * *directed_unweighted* - Directed Unweighted graph
     * *directed_weighted* - Directed Weighted graph
     * *undirected_unweighted* - Undirected Unweighted graph
     * *undirected_weighted* - Undirected Weighted graph
-02. **heaps** -
+03. **heaps** -
     * *max_binary_heap* - Max Binary Heap
     * *min_binary_heap* - Min Binary Heap
-03. **linked_lists** -
+04. **linked_lists** -
     * *circular_doubly_ll* - Circular Doubly Linked List
     * *circular_ll* - Circular Linked List
     * *doubly_ll* - Doubly Linked List
     * *pres_rev_single_ll* - Preserve order during insertion on Single Linked List and Reversing Single Linked List
     * *single_ll* - Single Linked List
-04. **queues** - 
+05. **queues** - 
     * *cdqueue* - Circular Double ended Queue
     * *cqueue* - Circular Queue
     * *dqueue* - Double ended Queue
     * *priority_queue* - Priority Queue with the use of Min Heap
     * *simple_queue* - Simple Queue
-05. **stack** - stack
-06. **trees** - 
+06. **stack** - stack
+07. **trees** - 
     * *avl_tree_using_ll* - AVL Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
     * *bst_using_arr* - Binary Search Tree using array with BFS and DFS (Pre, In, Post) order traversals.
     * *bst_using_ll* - Binary Search Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
