@@ -18,6 +18,7 @@ This repo is for learning data structures and algorithms which is the base of an
 01. **algorithms** -
     * *sorting* - 
         * *bubble_sort* - Bubble Sort
+        * *insertion_sort* - Insertion Sort
         * *selection_sort* - Selection Sort
 02. **graphs** -
     * *directed_unweighted* - Directed Unweighted graph
