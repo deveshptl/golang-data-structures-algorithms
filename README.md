@@ -21,6 +21,7 @@ This repo is for learning data structures and algorithms which is the base of an
         * *insertion_sort* - Insertion Sort
         * *merge_sort* - Merge Sort
         * *quick_sort* - Quick Sort
+        * *radix_sort* - Radix Sort
         * *selection_sort* - Selection Sort
 02. **graphs** -
     * *directed_unweighted* - Directed Unweighted graph
