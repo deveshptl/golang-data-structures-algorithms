@@ -18,6 +18,7 @@ This repo is for learning data structures and algorithms which is the base of an
 01. **algorithms** -
     * *sorting* - 
         * *bubble_sort* - Bubble Sort
+        * *counting_sort* - Counting Sort
         * *heap_sort* - Heap Sort
         * *insertion_sort* - Insertion Sort
         * *merge_sort* - Merge Sort
