@@ -17,6 +17,7 @@ This repo is for learning data structures and algorithms which is the base of an
 
 01. **algorithms** -
     * *searching* -
+        * *binary_search* - Binary Search
         * *linear_search* - Linear Search
     * *sorting* - 
         * *bubble_sort* - Bubble Sort
