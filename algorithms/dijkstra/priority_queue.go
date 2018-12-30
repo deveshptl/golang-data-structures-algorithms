@@ -8,7 +8,7 @@ import (
 // QueueNode is a single node in a queue
 type QueueNode struct {
 	name     string
-	priority int
+	priority float64
 }
 
 // Enqueue inserts a node in a heap
@@ -80,7 +80,7 @@ func bubbleDown() {
 	}
 }
 
-func insertNodeInQueue(name string, priority int) {
+func insertNodeInQueue(name string, priority float64) {
 	newNode := &QueueNode{name: name, priority: priority}
 	Enqueue(newNode)
 }

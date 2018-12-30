@@ -5,7 +5,7 @@ import "fmt"
 // Node is a single node in a graph list
 type Node struct {
 	node   string
-	weight int
+	weight float64
 }
 
 func addVertexToGraph(vtx string) {
@@ -16,7 +16,7 @@ func addVertexToGraph(vtx string) {
 	graph[vtx] = make([]Node, 0)
 }
 
-func addEdgeToGraph(fromVtx, toVtx string, edgeValue int) {
+func addEdgeToGraph(fromVtx, toVtx string, edgeValue float64) {
 	if graph[fromVtx] == nil { // check if initial vertex exists
 		fmt.Println("\n-- Initial vertex " + fromVtx + " does not exist. --")
 		return
@@ -52,5 +52,5 @@ func addEdge() {
 	fmt.Scanf("%s", &toVtx)
 	fmt.Print("Enter the weight of edge: ")
 	fmt.Scanf("%d", &edgeValue)
-	addEdgeToGraph(fromVtx, toVtx, edgeValue)
+	addEdgeToGraph(fromVtx, toVtx, float64(edgeValue))
 }

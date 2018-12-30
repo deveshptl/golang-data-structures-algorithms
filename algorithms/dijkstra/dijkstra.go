@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 // TODO: replace 999 with infinity
@@ -14,8 +15,8 @@ func Dijkstra(start, finish string) {
 			distances[vertex] = 0
 			insertNodeInQueue(vertex, 0)
 		} else {
-			distances[vertex] = 999
-			insertNodeInQueue(vertex, 999)
+			distances[vertex] = math.Inf(1)
+			insertNodeInQueue(vertex, math.Inf(1))
 		}
 		previous[vertex] = ""
 	}
@@ -23,12 +24,23 @@ func Dijkstra(start, finish string) {
 	for len(pqueue) != 0 {
 		smallest = Dequeue().name
 		if smallest == finish {
-			fmt.Println(distances)
-			fmt.Println(previous)
 			// Build path here
+			for i := range previous {
+				j := i
+				fmt.Print("\nCost: ", distances[i], " units")
+				fmt.Print(", Path: ")
+				for j != "" {
+					if previous[j] == "" {
+						fmt.Print(j, "\n")
+					} else {
+						fmt.Print(j, " <= ")
+					}
+					j = previous[j]
+				}
+			}
 			return
 		}
-		if smallest != "" || distances[smallest] != 999 {
+		if smallest != "" || distances[smallest] != math.Inf(1) {
 			for neighbor := range graph[smallest] {
 				nextNode := graph[smallest][neighbor]
 				least := distances[smallest] + nextNode.weight
@@ -45,12 +57,12 @@ func Dijkstra(start, finish string) {
 
 var graph map[string][]Node
 var pqueue []*QueueNode
-var distances map[string]int
+var distances map[string]float64
 var previous map[string]string
 
 func init() {
 	graph = make(map[string][]Node)
-	distances = make(map[string]int)
+	distances = make(map[string]float64)
 	previous = make(map[string]string)
 }
 
@@ -73,6 +85,7 @@ func main() {
 			break
 		case 3:
 			DijkstraInit()
+			break
 		case 4:
 			i = 1
 			break
@@ -110,12 +123,12 @@ func simpleDisplay() {
 // addVertexToGraph("d")
 // addVertexToGraph("e")
 // addVertexToGraph("f")
-// addEdgeToGraph("a", "b", 4)
-// addEdgeToGraph("a", "c", 2)
-// addEdgeToGraph("b", "e", 3)
-// addEdgeToGraph("c", "d", 2)
-// addEdgeToGraph("c", "f", 4)
-// addEdgeToGraph("d", "e", 3)
-// addEdgeToGraph("d", "f", 1)
-// addEdgeToGraph("e", "f", 1)
+// addEdgeToGraph("a", "b", float64(4))
+// addEdgeToGraph("a", "c", float64(2))
+// addEdgeToGraph("b", "e", float64(3))
+// addEdgeToGraph("c", "d", float64(2))
+// addEdgeToGraph("c", "f", float64(4))
+// addEdgeToGraph("d", "e", float64(3))
+// addEdgeToGraph("d", "f", float64(1))
+// addEdgeToGraph("e", "f", float64(1))
 // Dijkstra("a", "e")
