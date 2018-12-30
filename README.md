@@ -16,6 +16,7 @@ This repo is for learning data structures and algorithms which is the base of an
 **FOLDER NAMES**
 
 01. **algorithms** -
+    * *dijkstra* - Dijkstra's Algorithm
     * *searching* -
         * *binary_search* - Binary Search
         * *linear_search* - Linear Search
