@@ -19,6 +19,7 @@ This repo is for learning data structures and algorithms which is the base of an
     * *dijkstra* - Dijkstra's Algorithm
     * *infix_postfix* - Infix to Postfix Conversion
     * *infix_prefix* - Infix to Prefix Conversion
+    * *postfix_infix* - Postfix to Infix Conversion
     * *prefix_infix* - Prefix to Infix Conversion
     * *prefix_postfix* - Prefix to Postfix Conversion
     * *searching* -
