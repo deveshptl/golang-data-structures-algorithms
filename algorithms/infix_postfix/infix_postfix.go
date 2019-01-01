@@ -53,6 +53,8 @@ func main() {
 		fmt.Scanf("%s", &choice)
 		if choice == "N" || choice == "n" {
 			break
+		} else if choice == "Y" || choice == "y" {
+			continue
 		} else {
 			fmt.Println("Command not recognized.")
 		}
