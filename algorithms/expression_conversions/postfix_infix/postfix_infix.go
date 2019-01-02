@@ -4,6 +4,10 @@ import "fmt"
 
 // PosToIn will convert a given Postfix notation to Infix
 func PosToIn() {
+	if !validate(expression) {
+		fmt.Println("\n-- Invalid expression --")
+		return
+	}
 	for i := range expression {
 		char := string(expression[i])
 		if (expression[i] >= 65 && expression[i] <= 90) || (expression[i] >= 97 && expression[i] <= 122) {
@@ -42,4 +46,26 @@ func main() {
 			fmt.Println("Command not recognized.")
 		}
 	}
+}
+
+func isOperator(s string) bool {
+	if s == "^" || s == "*" || s == "/" || s == "+" || s == "-" {
+		return true
+	}
+	return false
+}
+
+func validate(c string) bool {
+	var check int
+	for i := range c {
+		if isOperator(string(c[i])) || string(c[i]) == ")" {
+			check += -1
+		} else {
+			check++
+		}
+	}
+	if check == 1 {
+		return true
+	}
+	return false
 }

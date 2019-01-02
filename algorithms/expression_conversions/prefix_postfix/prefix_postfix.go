@@ -4,6 +4,10 @@ import "fmt"
 
 // PreToPos will convert a given Prefix notation to Postfix
 func PreToPos() {
+	if !validate(expression) {
+		fmt.Println("\n-- Invalid expression --")
+		return
+	}
 	str := reverse(expression)
 	for i := range str {
 		char := string(str[i])
@@ -59,4 +63,26 @@ func reverse(s string) string {
 		j--
 	}
 	return reverseStr
+}
+
+func isOperator(s string) bool {
+	if s == "^" || s == "*" || s == "/" || s == "+" || s == "-" {
+		return true
+	}
+	return false
+}
+
+func validate(c string) bool {
+	var check int
+	for i := range c {
+		if isOperator(string(c[i])) || string(c[i]) == ")" {
+			check += -1
+		} else {
+			check++
+		}
+	}
+	if check == 1 {
+		return true
+	}
+	return false
 }

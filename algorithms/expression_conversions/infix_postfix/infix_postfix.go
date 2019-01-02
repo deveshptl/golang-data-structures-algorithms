@@ -4,6 +4,10 @@ import "fmt"
 
 // InToPos converts an infix expression to postfix expression
 func InToPos() {
+	if !validate(expression) {
+		fmt.Println("\n-- Invalid expression --")
+		return
+	}
 	postfix := ""
 	stack = append(stack, "N")
 	for i := range expression {
@@ -71,4 +75,26 @@ func Prec(c string) int {
 		return 1
 	}
 	return -1
+}
+
+func isOperator(s string) bool {
+	if s == "^" || s == "*" || s == "/" || s == "+" || s == "-" {
+		return true
+	}
+	return false
+}
+
+func validate(c string) bool {
+	var check int
+	for i := range c {
+		if isOperator(string(c[i])) || string(c[i]) == ")" {
+			check += -1
+		} else {
+			check++
+		}
+	}
+	if check == 1 {
+		return true
+	}
+	return false
 }

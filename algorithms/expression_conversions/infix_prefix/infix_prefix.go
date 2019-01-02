@@ -43,6 +43,10 @@ func InToPos(expression string) string {
 // InToPre will reverse the expression and will call postfix on it
 // will then reverse again the returned expression from postfix call
 func InToPre() {
+	if !validate(inputExp) {
+		fmt.Println("\n-- Invalid expression --")
+		return
+	}
 	reverseStr := reverse(inputExp)
 	postfix := InToPos(reverseStr)
 	prefix := reverse(postfix)
@@ -105,4 +109,19 @@ func reverse(s string) string {
 		j--
 	}
 	return reverseStr
+}
+
+func validate(c string) bool {
+	var check int
+	for i := range c {
+		if isOperator(string(c[i])) || string(c[i]) == ")" {
+			check += -1
+		} else {
+			check++
+		}
+	}
+	if check == 1 {
+		return true
+	}
+	return false
 }
