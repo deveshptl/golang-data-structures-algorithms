@@ -16,6 +16,7 @@ This repo is for learning data structures and algorithms which is the base of an
 **FOLDER NAMES**
 
 01. **algorithms** -
+    * *01knapsack_dp* - 0-1 Knapsack Problem using Dynamic Programming
     * *dijkstra* - Dijkstra's Algorithm
     * *expression_conversions* - 
         * *infix_postfix* - Infix to Postfix Conversion
