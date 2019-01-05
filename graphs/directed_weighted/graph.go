@@ -89,22 +89,6 @@ func init() {
 }
 
 func main() {
-	addVertexToGraph("a")
-	addVertexToGraph("b")
-	addVertexToGraph("c")
-	addVertexToGraph("d")
-	addVertexToGraph("e")
-	addVertexToGraph("f")
-	addEdgeToGraph("a", "b", 18)
-	addEdgeToGraph("a", "c", 20)
-	addEdgeToGraph("b", "d", 4)
-	addEdgeToGraph("c", "e", 10)
-	addEdgeToGraph("d", "e", 15)
-	addEdgeToGraph("d", "f", 23)
-	addEdgeToGraph("e", "f", 7)
-	addEdgeToGraph("d", "a", 5)
-	addEdgeToGraph("e", "a", 17)
-	addEdgeToGraph("b", "e", 21)
 	i := 0
 	for i == 0 {
 		fmt.Println("\n1. ADD A VERTEX")
