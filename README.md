@@ -25,6 +25,7 @@ This repo is for learning data structures and algorithms which is the base of an
         * *postfix_prefix* - Postfix to Prefix Conversion
         * *prefix_infix* - Prefix to Infix Conversion
         * *prefix_postfix* - Prefix to Postfix Conversion
+    * *floyd_warshall* - Floyd Warshall Algorithm (All points shortest path)
     * *naive_pattern_matching* - Naive Pattern/String Matching
     * *searching* -
         * *binary_search* - Binary Search
