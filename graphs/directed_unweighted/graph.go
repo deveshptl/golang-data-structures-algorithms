@@ -22,6 +22,7 @@ func addEdgeToGraph(fromVtx, toVtx string) {
 		}
 	}
 	if graph[toVtx] == nil { // create new destination vertext if it does not exists
+		graph[toVtx] = make([]string, 0)
 		fmt.Println("\n-- Destination vertex " + toVtx + " created. --")
 	}
 
