@@ -17,6 +17,7 @@ This repo is for learning data structures and algorithms which is the base of an
 
 01. **algorithms** -
     * *01knapsack_dp* - 0-1 Knapsack Problem using Dynamic Programming
+    * *bellman_ford* - Bellman Ford Algorithm
     * *dijkstra* - Dijkstra's Algorithm
     * *expression_conversions* - 
         * *infix_postfix* - Infix to Postfix Conversion
