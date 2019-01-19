@@ -15,9 +15,9 @@ func Prims(start string) {
 		node := Dequeue()
 		mstSet[node.name] = true
 		for _, graphNode := range graph[node.name] {
-			if (float64(graphNode.value) < vertexWeight[graphNode.name]) && !mstSet[graphNode.name] {
-				DecreaseKey(hashMap[graphNode.name], float64(graphNode.value))
-				vertexWeight[graphNode.name] = float64(graphNode.value)
+			if (graphNode.value < vertexWeight[graphNode.name]) && !mstSet[graphNode.name] {
+				DecreaseKey(hashMap[graphNode.name], graphNode.value)
+				vertexWeight[graphNode.name] = graphNode.value
 			}
 		}
 	}
@@ -85,7 +85,7 @@ func startPrims() {
 func printPrims(start string) {
 	for i := range graph {
 		for _, node := range graph[i] {
-			if float64(node.value) == vertexWeight[node.name] {
+			if node.value == vertexWeight[node.name] {
 				fmt.Println(i, "-", node.name, "=>", vertexWeight[node.name])
 			}
 		}

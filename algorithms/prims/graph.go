@@ -5,7 +5,7 @@ import "fmt"
 // GraphNode is a single node in a graph list
 type GraphNode struct {
 	name  string
-	value int
+	value float64
 }
 
 func addVertexToGraph(vtx string) {
@@ -16,7 +16,7 @@ func addVertexToGraph(vtx string) {
 	graph[vtx] = make([]GraphNode, 0)
 }
 
-func addEdgeToGraph(fromVtx, toVtx string, edgeValue int) {
+func addEdgeToGraph(fromVtx, toVtx string, edgeValue float64) {
 	if graph[fromVtx] == nil { // check if initial vertex exists
 		fmt.Println("\n-- Initial vertex " + fromVtx + " does not exist. --")
 		return
@@ -52,7 +52,7 @@ func addVertex() {
 
 func addEdge() {
 	var fromVtx, toVtx string
-	var edgeValue int
+	var edgeValue float64
 	fmt.Print("Enter the initial vertex name: ")
 	fmt.Scanf("%s", &fromVtx)
 	fmt.Print("Enter the destination vertex name: ")
