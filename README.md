@@ -28,6 +28,7 @@ This repo is for learning data structures and algorithms which is the base of an
         * *prefix_postfix* - Prefix to Postfix Conversion
     * *floyd_warshall* - Floyd Warshall Algorithm (All points shortest path)
     * *naive_pattern_matching* - Naive Pattern/String Matching
+    * *prims* - Prim's Algorithm (Finding Minimum Spanning Tree MST)
     * *searching* -
         * *binary_search* - Binary Search
         * *linear_search* - Linear Search
