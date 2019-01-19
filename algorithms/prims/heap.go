@@ -1,7 +1,5 @@
 package main
 
-// Note - Lower priority value processes will be run first. Hence this is implemented using min heap.
-
 import (
 	"fmt"
 	"math"

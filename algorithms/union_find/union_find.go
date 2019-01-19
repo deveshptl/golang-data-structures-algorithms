@@ -71,9 +71,6 @@ func main() {
 }
 
 func startUnionFind() {
-	// for i := range uniqueEdges {
-	// 	fmt.Println(i, uniqueEdges[i])
-	// }
 	for i := range vertices {
 		parent[i] = "-1"
 	}
