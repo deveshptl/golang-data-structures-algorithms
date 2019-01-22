@@ -15,8 +15,10 @@ type Edge struct {
 	value float64
 }
 
+// graph is a data structure which will be holding a graph
 type graph map[string][]GraphNode
 
+// addVertexToGraph adds a vertex to graph
 func (g graph) addVertexToGraph(vtx string) {
 	if g[vtx] != nil {
 		return
@@ -24,6 +26,7 @@ func (g graph) addVertexToGraph(vtx string) {
 	g[vtx] = make([]GraphNode, 0)
 }
 
+// addEdgeToGraph adds an edge to a graph
 func (g graph) addEdgeToGraph(fromVtx, toVtx string, edgeValue float64) {
 	if g[fromVtx] == nil { // check if initial vertex exists
 		return
@@ -44,6 +47,7 @@ func (g graph) addEdgeToGraph(fromVtx, toVtx string, edgeValue float64) {
 	return
 }
 
+// addVertex asks user to enter vertex name
 func (g graph) addVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
@@ -51,6 +55,7 @@ func (g graph) addVertex() {
 	g.addVertexToGraph(vtxName)
 }
 
+// addEdge asks user to enter necessary values before adding an edge to graph
 func (g graph) addEdge() {
 	var fromVtx, toVtx string
 	var edgeValue float64
@@ -63,6 +68,7 @@ func (g graph) addEdge() {
 	g.addEdgeToGraph(fromVtx, toVtx, edgeValue)
 }
 
+// removeEdgeFromGraph removes an edge from graph
 func (g graph) removeEdgeFromGraph(fromVtx, toVtx string) {
 	if g[fromVtx] == nil || g[toVtx] == nil {
 		fmt.Println("\n-- Edge between " + fromVtx + " and " + toVtx + " does not exist. --")
@@ -130,6 +136,7 @@ func (g graph) dfsHelper(vtx string, visited map[string]bool, parent string) boo
 	return false
 }
 
+// simpleDisplay simply displays a graph
 func (g graph) simpleDisplay() {
 	fmt.Println("")
 	for i := range g {

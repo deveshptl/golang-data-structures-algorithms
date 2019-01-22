@@ -2,14 +2,16 @@ package main
 
 import "fmt"
 
-// GraphNode is a single node in a graph list
+// GraphNode is a node in a graph list
 type GraphNode struct {
 	name  string
 	value float64
 }
 
+// graph is a data structure which will be holding a graph
 type graph map[string][]GraphNode
 
+// addVertexToGraph adds a vertex to graph
 func (g graph) addVertexToGraph(vtx string) {
 	if g[vtx] != nil {
 		fmt.Println("\n-- Vertex already exists. --")
@@ -18,6 +20,7 @@ func (g graph) addVertexToGraph(vtx string) {
 	g[vtx] = make([]GraphNode, 0)
 }
 
+// addEdgeToGraph adds an edge to a graph
 func (g graph) addEdgeToGraph(fromVtx, toVtx string, edgeValue float64) {
 	if g[fromVtx] == nil { // check if initial vertex exists
 		fmt.Println("\n-- Initial vertex " + fromVtx + " does not exist. --")
@@ -39,6 +42,7 @@ func (g graph) addEdgeToGraph(fromVtx, toVtx string, edgeValue float64) {
 	return
 }
 
+// addVertex asks user to enter vertex name
 func (g graph) addVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
@@ -46,6 +50,7 @@ func (g graph) addVertex() {
 	g.addVertexToGraph(vtxName)
 }
 
+// addEdge asks user to enter necessary values before adding an edge to graph
 func (g graph) addEdge() {
 	var fromVtx, toVtx string
 	var edgeValue float64
@@ -58,6 +63,7 @@ func (g graph) addEdge() {
 	g.addEdgeToGraph(fromVtx, toVtx, edgeValue)
 }
 
+// simpleDisplay simply displays a graph
 func (g graph) simpleDisplay() {
 	fmt.Println("")
 	for i := range g {
