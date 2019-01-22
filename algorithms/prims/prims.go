@@ -6,22 +6,22 @@ import (
 )
 
 // Prims will run prim's algorithm on a given graph
-func Prims(start string) {
-	if len(graph) == 0 {
+func (g graph) Prims(start string) {
+	if len(g) == 0 {
 		fmt.Println("\n-- Graph is empty. --")
 		return
 	}
 	for len(heap) != 0 {
 		node := Dequeue()
 		mstSet[node.name] = true
-		for _, graphNode := range graph[node.name] {
+		for _, graphNode := range g[node.name] {
 			if (graphNode.value < vertexWeight[graphNode.name]) && !mstSet[graphNode.name] {
 				DecreaseKey(hashMap[graphNode.name], graphNode.value)
 				vertexWeight[graphNode.name] = graphNode.value
 			}
 		}
 	}
-	printPrims(start)
+	g.printPrims(start)
 }
 
 var mstSet map[string]bool
@@ -33,6 +33,7 @@ func init() {
 }
 
 func main() {
+	g := make(graph)
 	i := 0
 	for i == 0 {
 		fmt.Println("\n1. ADD A VERTEX")
@@ -45,16 +46,16 @@ func main() {
 		fmt.Scanf("%d", &choice)
 		switch choice {
 		case 1:
-			addVertex()
+			g.addVertex()
 			break
 		case 2:
-			addEdge()
+			g.addEdge()
 			break
 		case 3:
-			startPrims()
+			g.startPrims()
 			break
 		case 4:
-			simpleDisplay()
+			g.simpleDisplay()
 			break
 		case 5:
 			i = 1
@@ -65,11 +66,11 @@ func main() {
 	}
 }
 
-func startPrims() {
+func (g graph) startPrims() {
 	var start string
 	fmt.Print("Enter the source vertex: ")
 	fmt.Scanf("%s", &start)
-	for i := range graph {
+	for i := range g {
 		if i == start {
 			insertNode(i, 0)
 			vertexWeight[i] = 0
@@ -79,12 +80,12 @@ func startPrims() {
 		}
 		mstSet[i] = false
 	}
-	Prims(start)
+	g.Prims(start)
 }
 
-func printPrims(start string) {
-	for i := range graph {
-		for _, node := range graph[i] {
+func (g graph) printPrims(start string) {
+	for i := range g {
+		for _, node := range g[i] {
 			if node.value == vertexWeight[node.name] {
 				fmt.Println(i, "-", node.name, "=>", vertexWeight[node.name])
 			}
@@ -92,26 +93,26 @@ func printPrims(start string) {
 	}
 }
 
-// addVertexToGraph("0")
-// addVertexToGraph("1")
-// addVertexToGraph("2")
-// addVertexToGraph("3")
-// addVertexToGraph("4")
-// addVertexToGraph("5")
-// addVertexToGraph("6")
-// addVertexToGraph("7")
-// addVertexToGraph("8")
-// addEdgeToGraph("0", "1", 4)
-// addEdgeToGraph("0", "7", 8)
-// addEdgeToGraph("1", "2", 8)
-// addEdgeToGraph("1", "7", 11)
-// addEdgeToGraph("2", "3", 7)
-// addEdgeToGraph("2", "5", 4)
-// addEdgeToGraph("2", "8", 2)
-// addEdgeToGraph("3", "4", 9)
-// addEdgeToGraph("3", "5", 14)
-// addEdgeToGraph("4", "5", 10)
-// addEdgeToGraph("5", "6", 2)
-// addEdgeToGraph("6", "8", 6)
-// addEdgeToGraph("6", "7", 1)
-// addEdgeToGraph("7", "8", 7)
+// g.addVertexToGraph("0")
+// g.addVertexToGraph("1")
+// g.addVertexToGraph("2")
+// g.addVertexToGraph("3")
+// g.addVertexToGraph("4")
+// g.addVertexToGraph("5")
+// g.addVertexToGraph("6")
+// g.addVertexToGraph("7")
+// g.addVertexToGraph("8")
+// g.addEdgeToGraph("0", "1", 4)
+// g.addEdgeToGraph("0", "7", 8)
+// g.addEdgeToGraph("1", "2", 8)
+// g.addEdgeToGraph("1", "7", 11)
+// g.addEdgeToGraph("2", "3", 7)
+// g.addEdgeToGraph("2", "5", 4)
+// g.addEdgeToGraph("2", "8", 2)
+// g.addEdgeToGraph("3", "4", 9)
+// g.addEdgeToGraph("3", "5", 14)
+// g.addEdgeToGraph("4", "5", 10)
+// g.addEdgeToGraph("5", "6", 2)
+// g.addEdgeToGraph("6", "8", 6)
+// g.addEdgeToGraph("6", "7", 1)
+// g.addEdgeToGraph("7", "8", 7)

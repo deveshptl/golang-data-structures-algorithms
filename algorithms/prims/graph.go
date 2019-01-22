@@ -8,49 +8,45 @@ type GraphNode struct {
 	value float64
 }
 
-func addVertexToGraph(vtx string) {
-	if graph[vtx] != nil {
+type graph map[string][]GraphNode
+
+func (g graph) addVertexToGraph(vtx string) {
+	if g[vtx] != nil {
 		fmt.Println("\n-- Vertex already exists. --")
 		return
 	}
-	graph[vtx] = make([]GraphNode, 0)
+	g[vtx] = make([]GraphNode, 0)
 }
 
-func addEdgeToGraph(fromVtx, toVtx string, edgeValue float64) {
-	if graph[fromVtx] == nil { // check if initial vertex exists
+func (g graph) addEdgeToGraph(fromVtx, toVtx string, edgeValue float64) {
+	if g[fromVtx] == nil { // check if initial vertex exists
 		fmt.Println("\n-- Initial vertex " + fromVtx + " does not exist. --")
 		return
 	}
-	for i := range graph[fromVtx] { // check if edge already exists
-		if graph[fromVtx][i].name == toVtx {
+	for i := range g[fromVtx] { // check if edge already exists
+		if g[fromVtx][i].name == toVtx {
 			fmt.Println("\n-- Edge between " + fromVtx + " and " + toVtx + " already exists. --")
 			return
 		}
 	}
-	if graph[toVtx] == nil { // create new destination vertext if it does not exists
-		graph[toVtx] = make([]GraphNode, 0)
+	if g[toVtx] == nil { // create new destination vertext if it does not exists
+		g[toVtx] = make([]GraphNode, 0)
 		fmt.Println("\n-- Destination vertex " + toVtx + " created. --")
 	}
 
-	graph[fromVtx] = append(graph[fromVtx], GraphNode{name: toVtx, value: edgeValue})
-	graph[toVtx] = append(graph[toVtx], GraphNode{name: fromVtx, value: edgeValue})
+	g[fromVtx] = append(g[fromVtx], GraphNode{name: toVtx, value: edgeValue})
+	g[toVtx] = append(g[toVtx], GraphNode{name: fromVtx, value: edgeValue})
 	return
 }
 
-var graph map[string][]GraphNode
-
-func init() {
-	graph = make(map[string][]GraphNode)
-}
-
-func addVertex() {
+func (g graph) addVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
 	fmt.Scanf("%s", &vtxName)
-	addVertexToGraph(vtxName)
+	g.addVertexToGraph(vtxName)
 }
 
-func addEdge() {
+func (g graph) addEdge() {
 	var fromVtx, toVtx string
 	var edgeValue float64
 	fmt.Print("Enter the initial vertex name: ")
@@ -59,15 +55,15 @@ func addEdge() {
 	fmt.Scanf("%s", &toVtx)
 	fmt.Print("Enter the weight of edge: ")
 	fmt.Scanf("%d", &edgeValue)
-	addEdgeToGraph(fromVtx, toVtx, edgeValue)
+	g.addEdgeToGraph(fromVtx, toVtx, edgeValue)
 }
 
-func simpleDisplay() {
+func (g graph) simpleDisplay() {
 	fmt.Println("")
-	for i := range graph {
+	for i := range g {
 		fmt.Print(i, " => ")
-		for j := range graph[i] {
-			fmt.Print(graph[i][j])
+		for j := range g[i] {
+			fmt.Print(g[i][j])
 		}
 		fmt.Println("")
 	}
