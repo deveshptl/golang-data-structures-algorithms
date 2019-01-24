@@ -84,22 +84,6 @@ func init() {
 }
 
 func main() {
-	addVertexToGraph("a")
-	addVertexToGraph("b")
-	addVertexToGraph("c")
-	addVertexToGraph("d")
-	addVertexToGraph("e")
-	addVertexToGraph("f")
-	addEdgeToGraph("a", "b")
-	addEdgeToGraph("a", "c")
-	addEdgeToGraph("b", "d")
-	addEdgeToGraph("c", "e")
-	addEdgeToGraph("d", "e")
-	addEdgeToGraph("d", "f")
-	addEdgeToGraph("e", "f")
-	addEdgeToGraph("d", "a")
-	addEdgeToGraph("e", "a")
-	addEdgeToGraph("b", "e")
 	i := 0
 	for i == 0 {
 		fmt.Println("\n1. ADD A VERTEX")
@@ -179,10 +163,7 @@ func removeEdge() {
 }
 
 func displayDFS() []string {
-	var startVtx string
-	fmt.Print("Enter the start vertex name: ")
-	fmt.Scanf("%s", &startVtx)
-	result := DFS(startVtx)
+	result := DFS()
 	return result
 }
 
@@ -211,13 +192,19 @@ func simpleDisplay() {
 // addVertexToGraph("d")
 // addVertexToGraph("e")
 // addVertexToGraph("f")
+// addVertexToGraph("g")
+// addVertexToGraph("h")
+// addVertexToGraph("i")
+// addVertexToGraph("j")
 // addEdgeToGraph("a", "b")
-// addEdgeToGraph("a", "c")
-// addEdgeToGraph("b", "d")
-// addEdgeToGraph("c", "e")
+// addEdgeToGraph("a", "f")
+// addEdgeToGraph("b", "h")
 // addEdgeToGraph("d", "e")
-// addEdgeToGraph("d", "f")
-// addEdgeToGraph("e", "f")
-// addEdgeToGraph("d", "a")
-// addEdgeToGraph("e", "a")
-// addEdgeToGraph("b", "e")
+// addEdgeToGraph("d", "c")
+// addEdgeToGraph("d", "h")
+// addEdgeToGraph("e", "i")
+// addEdgeToGraph("g", "a")
+// addEdgeToGraph("g", "b")
+// addEdgeToGraph("g", "c")
+// addEdgeToGraph("i", "c")
+// addEdgeToGraph("j", "e")

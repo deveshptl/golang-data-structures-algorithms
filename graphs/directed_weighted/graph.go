@@ -174,10 +174,7 @@ func removeEdge() {
 }
 
 func displayDFS() ([]string, []int) {
-	var startVtx string
-	fmt.Print("Enter the start vertex name: ")
-	fmt.Scanf("%s", &startVtx)
-	result, weights := DFS(startVtx)
+	result, weights := DFS()
 	return result, weights
 }
 

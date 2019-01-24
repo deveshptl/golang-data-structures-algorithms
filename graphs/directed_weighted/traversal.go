@@ -3,17 +3,21 @@ package main
 import "fmt"
 
 // DFS traverses a graph using dfs technique
-func DFS(start string) ([]string, []int) {
+func DFS() ([]string, []int) {
 	visited := make(map[string]bool)
 
 	var result []string
 	var weights []int
 
-	if graph[start] == nil {
-		fmt.Println("\n-- No vertex named " + start + " present in graph. --")
+	if len(graph) == 0 {
+		fmt.Println("\n-- Graph is empty. --")
 		return nil, nil
 	}
-	result, weights = dfsHelper(start, visited, result, weights)
+	for i := range graph {
+		if !visited[i] {
+			result, weights = dfsHelper(i, visited, result, weights)
+		}
+	}
 	return result, weights
 }
 
