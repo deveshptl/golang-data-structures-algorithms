@@ -44,7 +44,7 @@ This repo is for learning data structures and algorithms which is the base of an
         * *selection_sort* - Selection Sort
         * *shell_sort* - Shell Sort
     * *toh* - Tower of Hanoi
-    * *union_find* - Union Find / Disjoint Sets (Detecting cycles in a graph)
+    * *union_find* - Union Find / Disjoint Sets (Detecting cycles in an undirected graph)
 02. **graphs** -
     * *directed_unweighted* - Directed Unweighted graph
     * *directed_weighted* - Directed Weighted graph
