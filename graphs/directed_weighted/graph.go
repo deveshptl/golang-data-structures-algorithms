@@ -179,10 +179,7 @@ func displayDFS() ([]string, []int) {
 }
 
 func displayBFS() ([]string, []int) {
-	var startVtx string
-	fmt.Print("Enter the start vertex name: ")
-	fmt.Scanf("%s", &startVtx)
-	result, weights := BFS(startVtx)
+	result, weights := BFS()
 	return result, weights
 }
 

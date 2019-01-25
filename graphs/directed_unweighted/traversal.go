@@ -31,34 +31,39 @@ func dfsHelper(vtx string, visited map[string]bool, result []string) []string {
 }
 
 // BFS traverses a graph using dfs technique
-func BFS(start string) []string {
+func BFS() []string {
 
-	if graph[start] == nil {
-		fmt.Println("\n-- No vertex named " + start + " present in graph. --")
+	if len(graph) == 0 {
+		fmt.Println("\n-- Graph is empty. --")
 		return nil
 	}
 
 	visited := make(map[string]bool)
 
 	var queue []string
-	queue = append(queue, start)
-
 	var result []string
 	var currentVtx string
-	visited[start] = true
 
-	for len(queue) != 0 {
-		currentVtx = queue[0]               // get the element from the queue
-		queue = queue[1:len(queue)]         // remove element from the queue
-		result = append(result, currentVtx) // push the current vertex in result
+	for i := range graph {
+		if !visited[i] {
+			visited[i] = true
+			queue = append(queue, i)
 
-		for i := range graph[currentVtx] {
-			if !visited[graph[currentVtx][i]] {
-				visited[graph[currentVtx][i]] = true        // mark as visited
-				queue = append(queue, graph[currentVtx][i]) // push neighbors of current vertex in the queue
+			for len(queue) != 0 {
+				currentVtx = queue[0]               // get the element from the queue
+				queue = queue[1:len(queue)]         // remove element from the queue
+				result = append(result, currentVtx) // push the current vertex in result
+
+				for j := range graph[currentVtx] {
+					if !visited[graph[currentVtx][j]] {
+						visited[graph[currentVtx][j]] = true        // mark as visited
+						queue = append(queue, graph[currentVtx][j]) // push neighbors of current vertex in the queue
+					}
+				}
+
 			}
-		}
 
+		}
 	}
 
 	return result
