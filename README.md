@@ -18,6 +18,7 @@ This repo is for learning data structures and algorithms which is the base of an
 01. **algorithms** -
     * *01knapsack_dp* - 0-1 Knapsack Problem using Dynamic Programming
     * *bellman_ford* - Bellman Ford Algorithm
+    * *cd_directed_graph_traversals* - Cycle Detection in Directed Graphs using Traversals techniques &nbsp;&nbsp;:point_left:
     * *dijkstra* - Dijkstra's Algorithm
     * *expression_conversions* - 
         * *infix_postfix* - Infix to Postfix Conversion
@@ -73,6 +74,8 @@ This repo is for learning data structures and algorithms which is the base of an
     * *simple_bt_using_arr* - Simple Binary Tree using array with BFS and DFS (Pre, In, Post) order traversals.
     * *simple_bt_using_ll* - Simple Binary Tree using linked list with BFS and DFS (Pre, In, Post) order traversals.
 
+
+**Note**: The pointer &nbsp;"&nbsp;:point_left:&nbsp;"&nbsp; indicates incomplete implementation and is in todo list.
 
 ### Contribution
 
