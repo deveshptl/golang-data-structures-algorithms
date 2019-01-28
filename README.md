@@ -19,6 +19,7 @@ This repo is for learning data structures and algorithms which is the base of an
     * *01knapsack_dp* - 0-1 Knapsack Problem using Dynamic Programming
     * *bellman_ford* - Bellman Ford Algorithm
     * *cd_directed_graph_traversals* - Cycle Detection in Directed Graphs using Traversals techniques &nbsp;&nbsp;:point_left:
+    * *cd_undirected_graph_traversals* - Cycle Detection in Undirected Graphs using Traversals techniques &nbsp;&nbsp;:point_left:
     * *dijkstra* - Dijkstra's Algorithm
     * *expression_conversions* - 
         * *infix_postfix* - Infix to Postfix Conversion
