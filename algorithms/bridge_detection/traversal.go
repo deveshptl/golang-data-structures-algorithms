@@ -46,7 +46,6 @@ func (g graph) dfs(at string, visited map[string]bool, parent string, bridges []
 			bridges = g.dfs(to, visited, at, bridges)
 			low[at] = math.Min(low[at], low[to])
 			if ids[at] < low[to] {
-				fmt.Println("Entered", at, to)
 				bridges = append(bridges, at)
 				bridges = append(bridges, to)
 			}
