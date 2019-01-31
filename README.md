@@ -32,6 +32,7 @@ This repo is for learning data structures and algorithms which is the base of an
         * *prefix_postfix* - Prefix to Postfix Conversion
     * *floyd_warshall* - Floyd Warshall Algorithm (All points shortest path)
     * *kruskals* - Kruskal's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
+    * *making_change_dp* - Making Change Problem using Dynamic Programming
     * *naive_pattern_matching* - Naive Pattern/String Matching
     * *prims* - Prim's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
     * *searching* -
