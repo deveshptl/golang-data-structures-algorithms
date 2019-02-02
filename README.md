@@ -18,6 +18,7 @@ This repo is for learning data structures and algorithms which is the base of an
 01. **algorithms** -
     * *01knapsack_dp* - 0-1 Knapsack Problem using Dynamic Programming
     * *articulation_point_detection* - Detecting Articulation Points in an undirected graph
+    * *assembly_line_scheduling* - Assembly Line Scheduling algorithm using Dynamic Programming
     * *bellman_ford* - Bellman Ford Algorithm
     * *bridge_detection* - Bridge Detection/Cut Edge Detection in an undirected graph
     * *cd_directed_graph_traversals* - Cycle Detection in Directed Graphs using Traversals techniques &nbsp;&nbsp;:point_left:
