@@ -37,18 +37,18 @@ This repo is for learning data structures and algorithms which is the base of an
     * *naive_pattern_matching* - Naive Pattern/String Matching
     * *prims* - Prim's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
     * *searching* -
-        * *binary_search* - Binary Search
-        * *linear_search* - Linear Search
+        * *binary_search* - Binary Search - O(log n)
+        * *linear_search* - Linear Search - O(n)
     * *sorting* - 
-        * *bubble_sort* - Bubble Sort
-        * *counting_sort* - Counting Sort
-        * *heap_sort* - Heap Sort
-        * *insertion_sort* - Insertion Sort
-        * *merge_sort* - Merge Sort
-        * *quick_sort* - Quick Sort
-        * *radix_sort* - Radix Sort
-        * *selection_sort* - Selection Sort
-        * *shell_sort* - Shell Sort
+        * *bubble_sort* - Bubble Sort - O(n<sup>2</sup>)
+        * *counting_sort* - Counting Sort - O(n + k)
+        * *heap_sort* - Heap Sort - O(nlog(n)
+        * *insertion_sort* - Insertion Sort - O(n<sup>2</sup>)
+        * *merge_sort* - Merge Sort - O(nlog(n))
+        * *quick_sort* - Quick Sort - Θ(nlog(n))
+        * *radix_sort* - Radix Sort - O(n+k)
+        * *selection_sort* - Selection Sort - (O(n<sup>2</sup>))
+        * *shell_sort* - Shell Sort - О(n)
     * *toh* - Tower of Hanoi
     * *topological_sort* - Topological Sort
     * *union_find* - Union Find / Disjoint Sets (Detecting cycles in an undirected graph)
@@ -86,6 +86,9 @@ This repo is for learning data structures and algorithms which is the base of an
 ### Contribution
 
 Feel free to make PR if you find a better way to solve/implement any algorithm or data structure. I will be more than happy to merge your PR. :smile:
+
+### License
+This repository is released under the [MIT license](https://opensource.org/licenses/MIT). In short, this means you are free to use this software in any personal, open-source or commercial projects. Attribution is optional but appreciated.
 
 ```
 HAPPY CODING
