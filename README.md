@@ -1,19 +1,37 @@
-## Data Structures and Algorithms
+# Data Structures and Algorithms
+
+Data Structures and Algorithms (DSA) is one of the most important topic in computer science that every CS student must be proficient in and even non-CS students must have basic understanding of it. It is said that DSA is like bread and butter, necessity of CS. This repository is made for those students (like me :sunglasses:) who are eager to learn and want to implement data strucutures and algorithms.
+
+
+### Why Go/GoLang and not C, C++ or Java?
+
+I wouldn't disagree that C, C++ or Java wouldn't be a great language to implement DSA as one has to take care of lot things while writing the code like memory allocations and proper deallocations and by doing so one learns a lot.
+
+However the reason why go would also be a good language to implement DSA is that it lacks a lot of magic. There is no operator overloading, so no way to hide extra complexity. An index operation is O(1), a loop is O(n) - always. There are no generics, so a lot of extra abstractions and helpers don't exist, which is actually pretty great. There is no laziness or other compiler-driven magic that might alter the runtime of your algorithms significantly. And Go has pointer and low-level primitives for slices, meaning it is apparent when data is packed or when data has an extra indirection. *In short*: Go make the actual algorithmic execution obvious from the code, which is a good thing to learn algorithms.
+
+**Conclusion**: Go would also be a good language to get started with implementing Data Structures and Algorithms. :computer:
 
 ### Instructions
 
-1. To run any of the file make sure that you have go (golang) programming language installed on your machine. Follow how to install instructions from [golang download instructions](https://golang.org/doc/install).
-2. Once golang is installed on your machine, just clone or download this repository.
+1. To get started make sure that you have go programming language installed on your computer. Follow how to install instructions from [golang download instructions](https://golang.org/doc/install).
+2. Once go is installed on your machine, just clone or download this repository.
 3. Now `cd <folder-name>` into the folder where the file you want to run is located.
 4. Now run `go run <file-name>`.
 
-**Note**: If a folder contains multiple `.go` extension files then use `go run <file-name> [<file-name>...]`. For e.g `bst_using_arr` folder contains two files: `bst_using_arr.go` and `traversal.go`. So use the command `go run bst_using_arr.go traversal.go`.
 
-### Description
+### Example
+Let's assume that I want to run files located in `graphs/directed_unweighted` directory then the syntax to run it would be:
 
-This repo is for learning data structures and algorithms which is the base of any programming language.
+```
+cd graphs/directed_unweighted/
 
-**FOLDER NAMES**
+go run graph.go traversal.go
+```
+
+**Note**: If a folder contains multiple `go` files then use `go run <file-name> [<file-name>...]`. For e.g `bst_using_arr` folder contains two files: `bst_using_arr.go` and `traversal.go`. So use the command `go run bst_using_arr.go traversal.go`.
+
+
+### FOLDER NAMES
 
 01. **algorithms** -
     * *01knapsack_dp* - 0-1 Knapsack Problem using Dynamic Programming
@@ -84,9 +102,11 @@ This repo is for learning data structures and algorithms which is the base of an
 
 **Note**: The pointer &nbsp;"&nbsp;:point_left:&nbsp;"&nbsp; indicates incomplete implementation and is in todo list.
 
+
 ### Contribution
 
 Feel free to make PR if you find a better way to solve/implement any algorithm or data structure. I will be more than happy to merge your PR. :smile:
+
 
 ### License
 This repository is released under the [MIT license](https://opensource.org/licenses/MIT). In short, this means you are free to use this software in any personal, open-source or commercial projects. Attribution is optional but appreciated.
