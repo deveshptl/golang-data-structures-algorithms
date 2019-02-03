@@ -105,7 +105,7 @@ go run graph.go traversal.go
 
 ### Contribution
 
-Feel free to make PR if you find a better way to solve/implement any algorithm or data structure. I will be more than happy to merge your PR. :smile:
+Read the [contributing guide](CONTRIBUTING.md) to see how to contribute.
 
 
 ### License
