@@ -41,6 +41,7 @@ This repo is for learning data structures and algorithms which is the base of an
         * *linear_search* - Linear Search - O(n)
     * *sorting* - 
         * *bubble_sort* - Bubble Sort - O(n<sup>2</sup>)
+        * *bucket_sort* - Bucket Sort - O(n<sup>2</sup>)
         * *counting_sort* - Counting Sort - O(n + k)
         * *heap_sort* - Heap Sort - O(nlog(n)
         * *insertion_sort* - Insertion Sort - O(n<sup>2</sup>)
