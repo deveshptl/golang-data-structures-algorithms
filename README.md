@@ -53,7 +53,7 @@ go run graph.go traversal.go
     * *floyd_warshall* - Floyd Warshall Algorithm (All points shortest path)
     * *kruskals* - Kruskal's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
     * *lcs* - Longest Common Subsequence
-        *iterative_dp* - Longest Common Subsequence using Dynamic Programming (Iterative Version)
+        * *iterative_dp* - Longest Common Subsequence using Dynamic Programming (Iterative Version)
     * *making_change_dp* - Making Change Problem using Dynamic Programming
     * *naive_pattern_matching* - Naive Pattern/String Matching
     * *prims* - Prim's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
