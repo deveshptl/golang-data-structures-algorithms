@@ -35,6 +35,7 @@ go run graph.go traversal.go
 
 01. **algorithms** -
     * *01knapsack_dp* - 0-1 Knapsack Problem using Dynamic Programming
+    * *activity_selection_gp* - Activity Selection using Greedy Programming
     * *articulation_point_detection* - Detecting Articulation Points in an undirected graph
     * *assembly_line_scheduling* - Assembly Line Scheduling algorithm using Dynamic Programming
     * *bellman_ford* - Bellman Ford Algorithm
