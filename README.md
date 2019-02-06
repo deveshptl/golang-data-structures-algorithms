@@ -51,6 +51,7 @@ go run graph.go traversal.go
         * *prefix_infix* - Prefix to Infix Conversion
         * *prefix_postfix* - Prefix to Postfix Conversion
     * *floyd_warshall* - Floyd Warshall Algorithm (All points shortest path)
+    * *huffman_codes* - Huffman Codes (Generating Huffman Codes)
     * *job_scheduling_gp* - Job Scheduling Algorithm using Greedy Programming
     * *kruskals* - Kruskal's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
     * *lcs* - Longest Common Subsequence
