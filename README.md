@@ -53,6 +53,7 @@ go run graph.go traversal.go
     * *floyd_warshall* - Floyd Warshall Algorithm (All points shortest path)
     * *huffman_codes* - Huffman Codes (Generating Huffman Codes)
     * *job_scheduling_gp* - Job Scheduling Algorithm using Greedy Programming
+    * *knuth_morris_pratt* - Knuth Morris Pratt Algorithm for Pattern Matching
     * *kruskals* - Kruskal's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
     * *lcs* - Longest Common Subsequence
         * *iterative_dp* - Longest Common Subsequence using Dynamic Programming (Iterative Version)
