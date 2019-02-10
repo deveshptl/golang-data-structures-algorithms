@@ -64,6 +64,7 @@ go run graph.go traversal.go
         * *binary_search* - Binary Search - O(log n)
         * *linear_search* - Linear Search - O(n)
     * *sorting* - 
+        * *binary_insertion_sort* - Binary Insertion Sort - O(n<sup>2</sup>)
         * *bubble_sort* - Bubble Sort - O(n<sup>2</sup>)
         * *bucket_sort* - Bucket Sort - O(n<sup>2</sup>)
         * *counting_sort* - Counting Sort - O(n + k)
