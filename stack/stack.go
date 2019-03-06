@@ -6,14 +6,17 @@ import "fmt"
 // top - top pointer
 // stack - stack array
 
-var stack [5]string
+type stack []string
+
+var s stack
 var size, top int
 
 func init() {
 	size = 4
 	top = -1
-	for i := range stack {
-		stack[i] = "nil"
+	s = make(stack, 5)
+	for i := range s {
+		s[i] = "nil"
 	}
 }
 
@@ -23,28 +26,33 @@ func main() {
 		var choice int
 		fmt.Println("\n1. PUSH")
 		fmt.Println("2. POP")
-		fmt.Println("3. DISPLAY")
-		fmt.Println("4. EXIT")
+		fmt.Println("3. PEEK")
+		fmt.Println("4. DISPLAY")
+		fmt.Println("5. isEmpty")
+		fmt.Println("6. EXIT")
 		fmt.Print("\nEnter you choice: ")
 		fmt.Scanf("%d", &choice)
 
 		switch choice {
 		case 1:
-			push()
+			s.push()
 			fmt.Println("\nValues after push TOP:", top)
-			display()
-			break
+			s.display()
 		case 2:
-			pop()
+			s.pop()
 			fmt.Println("\nValues after pop TOP:", top)
-			display()
-			break
+			s.display()
 		case 3:
-			fmt.Println("\nTOP:", top)
-			display()
+			s.peek()
+			fmt.Println("\nValues after peek TOP:", top)
+			s.display()
 		case 4:
+			fmt.Println("\nTOP:", top)
+			s.display()
+		case 5:
+			s.isEmpty()
+		case 6:
 			i = 1
-			break
 		default:
 			fmt.Println("Choice not recognized")
 		}
@@ -52,7 +60,7 @@ func main() {
 	}
 }
 
-func push() {
+func (s stack) push() {
 
 	// check for overflow
 	if size == top {
@@ -69,10 +77,11 @@ func push() {
 	top = top + 1
 
 	// insert the element
-	stack[top] = val
+	s[top] = val
+	return
 }
 
-func pop() {
+func (s stack) pop() {
 
 	// check for underflow
 	if top == -1 {
@@ -80,20 +89,43 @@ func pop() {
 		return
 	}
 
-	// Print popped value
-	y := stack[top]
+	// print popped value
+	y := s[top]
 	fmt.Println("\nValue popped:", y)
 
 	// initialize to nil
-	stack[top] = "nil"
+	s[top] = "nil"
 
 	// decrement top pointer
 	top = top - 1
+	return
 }
 
-func display() {
-	for i := range stack {
-		fmt.Print(stack[i], " ")
+func (s stack) peek() {
+	// check for underflow
+	if top == -1 {
+		fmt.Println("\n-- Stack underflow --")
+		return
+	}
+
+	// print the peeked value
+	y := s[top]
+	fmt.Println("\nValue peeked:", y)
+	return
+}
+
+func (s stack) isEmpty() {
+	if top == -1 {
+		fmt.Println("\ntrue")
+		return
+	}
+	fmt.Println("\nfalse")
+	return
+}
+
+func (s stack) display() {
+	for i := range s {
+		fmt.Print(s[i], " ")
 	}
 	fmt.Println("")
 }
