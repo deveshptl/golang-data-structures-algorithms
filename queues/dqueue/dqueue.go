@@ -9,10 +9,13 @@ import (
 // n - size of queue
 // q - queue
 
+type queue []string
+
 var r, f, n int
-var q [5]string
+var q queue
 
 func init() {
+	q = make(queue, 5)
 	for i := range q {
 		q[i] = "nil"
 	}
@@ -36,22 +39,22 @@ func main() {
 
 		switch choice {
 		case 1:
-			insertRear()
+			q.insertRear()
 			fmt.Println("\nValues after insert from rear FRONT:", f, "REAR:", r)
 			display()
 			break
 		case 2:
-			insertFront()
+			q.insertFront()
 			fmt.Println("\nValues after insert from front FRONT:", f, "REAR:", r)
 			display()
 			break
 		case 3:
-			deleteRear()
+			q.deleteRear()
 			fmt.Println("\nValues after delete from rear FRONT:", f, "REAR:", r)
 			display()
 			break
 		case 4:
-			deleteFront()
+			q.deleteFront()
 			fmt.Println("\nValues after delete from front FRONT:", f, "REAR:", r)
 			display()
 			break
@@ -68,7 +71,7 @@ func main() {
 	}
 }
 
-func insertRear() {
+func (q queue) insertRear() {
 
 	// check for overflow
 	if r >= n {
@@ -93,7 +96,7 @@ func insertRear() {
 	return
 }
 
-func insertFront() {
+func (q queue) insertFront() {
 
 	// check for initial insertion
 	if f == -1 {
@@ -124,7 +127,7 @@ func insertFront() {
 	return
 }
 
-func deleteRear() {
+func (q queue) deleteRear() {
 
 	// check for initial condition
 	if r == -1 {
@@ -150,7 +153,7 @@ func deleteRear() {
 	return
 }
 
-func deleteFront() {
+func (q queue) deleteFront() {
 
 	// check for underflow
 	if f == -1 {

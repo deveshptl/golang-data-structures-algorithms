@@ -9,13 +9,16 @@ import (
 // f - front
 // q - queue
 
+type queue []string
+
 var r, n, f int
-var q [5]string
+var q queue
 
 func init() {
 	r = -1
 	f = -1
 	n = 4
+	q = make(queue, 5)
 	for i := range q {
 		q[i] = "nil"
 	}
@@ -33,12 +36,12 @@ func main() {
 		fmt.Scanf("%d", &choice)
 		switch choice {
 		case 1:
-			insert()
+			q.insert()
 			fmt.Println("\nValues after insertion FRONT:", f, "REAR:", r)
 			display()
 			break
 		case 2:
-			delete()
+			q.delete()
 			fmt.Println("\nValues after deletion FRONT:", f, "REAR:", r)
 			display()
 			break
@@ -54,7 +57,7 @@ func main() {
 
 }
 
-func insert() {
+func (q queue) insert() {
 
 	// check for overflow
 	if r >= n {
@@ -79,7 +82,7 @@ func insert() {
 	return
 }
 
-func delete() {
+func (q queue) delete() {
 
 	// check for underflow
 	if f == -1 {
