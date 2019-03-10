@@ -1,8 +1,12 @@
 ## Queue
 
-A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO). A good example of a queue is any queue of consumers for a resource where the consumer that came first is served first.
+In computer science, a queue is a collection in which the entities in the collection are kept in order and the principal (or only) operations on the collection are the addition of entities to the rear terminal position, known as enqueue, and removal of entities from the front terminal position, known as dequeue. 
 
-<img src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2014/02/Queue.png" alt="simple queue diagram" title="simple queue diagram">
+This makes the queue a First-In-First-Out (FIFO) data structure. In a FIFO data structure, the first element added to the queue will be the first one to be removed. This is equivalent to the requirement that once a new element is added, all elements that were added before have to be removed before the new element can be removed. 
+
+Often a peek or front operation is also entered, returning the value of the front element without dequeuing it. A queue is an example of a linear data structure, or more abstractly a sequential collection.
+
+Queue can be implemented using an Array, Stack or Linked List. The easiest way of implementing a queue is by using an Array.
 
 
 #### Types of Queues
@@ -20,6 +24,6 @@ A Queue is a linear structure which follows a particular order in which the oper
 4. Handling of interrupts in real-time systems. The interrupts are handled in the same order as they arrive, First come first served.
 
 
-
-*References*
+*References*:
 * [https://www.geeksforgeeks.org/queue-data-structure/](https://www.geeksforgeeks.org/queue-data-structure/)
+* [https://en.wikipedia.org/wiki/Queue_(abstract_data_type)](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))

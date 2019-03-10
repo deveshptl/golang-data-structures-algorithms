@@ -2,8 +2,6 @@
 
 Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).
 
-<img src="https://www.geeksforgeeks.org/wp-content/uploads/gq/2013/03/stack.png" alt="simple stack diagram" title="simple stack diagram">
-
 
 #### Operations
 1. **PUSH** - Adds an item in the stack and increments the `top` pointer. If the stack is full, then it is said to be an Overflow condition.
@@ -29,7 +27,7 @@ Stack is a linear data structure which follows a particular order in which the o
 9. File undo and redo operations
 
 
-*References*
+*References*:
 * [https://www.geeksforgeeks.org/stack-data-structure/](https://www.geeksforgeeks.org/stack-data-structure/)
 * [https://www.geeksforgeeks.org/stack-data-structure-introduction-program/](https://www.geeksforgeeks.org/stack-data-structure-introduction-program/)
 * [https://www.thecrazyprogrammer.com/2016/04/applications-of-stack.html](https://www.thecrazyprogrammer.com/2016/04/applications-of-stack.html)
