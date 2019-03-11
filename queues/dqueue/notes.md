@@ -2,7 +2,9 @@
 
 In computer science, a double-ended queue (abbreviated to deque) is an abstract data type that generalizes a queue, for which elements can be added to or removed from either the front (head) or back (tail). It is also often called a head-tail linked list, though properly this refers to a specific data structure implementation of a deque.
 
-In Circular Queue elements can be:
+
+#### Operations
+
 1. Inserted using tail(REAR) pointer.
 2. Inserted using head(FRONT) pointer.
 3. Deleted using tail(REAR) pointer.

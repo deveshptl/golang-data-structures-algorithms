@@ -2,7 +2,9 @@
 
 Cicural Double Ended Queue is a generalized version of Queue data structure that allows insert and delete at both ends.
 
-In Circular Queue elements can be:
+
+#### Operations
+
 1. Inserted using tail(REAR) pointer.
 2. Inserted using head(FRONT) pointer.
 3. Deleted using tail(REAR) pointer.
