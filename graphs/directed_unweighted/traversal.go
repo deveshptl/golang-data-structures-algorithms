@@ -3,37 +3,37 @@ package main
 import "fmt"
 
 // DFS traverses a graph using dfs technique
-func DFS() []string {
+func (g graph) DFS() []string {
 	visited := make(map[string]bool)
 	var result []string
-	if len(graph) == 0 {
+	if len(g) == 0 {
 		fmt.Println("\n-- Graph is empty. --")
 		return nil
 	}
-	for i := range graph {
+	for i := range g {
 		if !visited[i] {
-			result = dfsHelper(i, visited, result)
+			result = g.dfsHelper(i, visited, result)
 		}
 	}
 	return result
 }
 
 // dfsHelper recursively calls itself to solve dfs traversal
-func dfsHelper(vtx string, visited map[string]bool, result []string) []string {
+func (g graph) dfsHelper(vtx string, visited map[string]bool, result []string) []string {
 	visited[vtx] = true
 	result = append(result, vtx)
-	for i := range graph[vtx] {
-		if !visited[graph[vtx][i]] {
-			result = dfsHelper(graph[vtx][i], visited, result)
+	for i := range g[vtx] {
+		if !visited[g[vtx][i]] {
+			result = g.dfsHelper(g[vtx][i], visited, result)
 		}
 	}
 	return result
 }
 
 // BFS traverses a graph using dfs technique
-func BFS() []string {
+func (g graph) BFS() []string {
 
-	if len(graph) == 0 {
+	if len(g) == 0 {
 		fmt.Println("\n-- Graph is empty. --")
 		return nil
 	}
@@ -44,7 +44,7 @@ func BFS() []string {
 	var result []string
 	var currentVtx string
 
-	for i := range graph {
+	for i := range g {
 		if !visited[i] {
 			visited[i] = true
 			queue = append(queue, i)
@@ -54,10 +54,10 @@ func BFS() []string {
 				queue = queue[1:len(queue)]         // remove element from the queue
 				result = append(result, currentVtx) // push the current vertex in result
 
-				for j := range graph[currentVtx] {
-					if !visited[graph[currentVtx][j]] {
-						visited[graph[currentVtx][j]] = true        // mark as visited
-						queue = append(queue, graph[currentVtx][j]) // push neighbors of current vertex in the queue
+				for j := range g[currentVtx] {
+					if !visited[g[currentVtx][j]] {
+						visited[g[currentVtx][j]] = true        // mark as visited
+						queue = append(queue, g[currentVtx][j]) // push neighbors of current vertex in the queue
 					}
 				}
 

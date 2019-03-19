@@ -8,89 +8,86 @@ type Node struct {
 	value int
 }
 
-func addVertexToGraph(vtx string) {
-	if graph[vtx] != nil {
+type graph map[string][]Node
+
+func (g graph) addVertexToGraph(vtx string) {
+	if g[vtx] != nil {
 		fmt.Println("\n-- Vertex already exists. --")
 		return
 	}
-	graph[vtx] = make([]Node, 0)
+	g[vtx] = make([]Node, 0)
 }
 
-func addEdgeToGraph(fromVtx, toVtx string, edgeValue int) {
-	if graph[fromVtx] == nil { // check if initial vertex exists
+func (g graph) addEdgeToGraph(fromVtx, toVtx string, edgeValue int) {
+	if g[fromVtx] == nil { // check if initial vertex exists
 		fmt.Println("\n-- Initial vertex " + fromVtx + " does not exist. --")
 		return
 	}
-	for i := range graph[fromVtx] { // check if edge already exists
-		if graph[fromVtx][i].name == toVtx {
+	for i := range g[fromVtx] { // check if edge already exists
+		if g[fromVtx][i].name == toVtx {
 			fmt.Println("\n-- Edge from " + fromVtx + " to " + toVtx + " already exists. --")
 			return
 		}
 	}
-	if graph[toVtx] == nil { // create new destination vertext if it does not exists
-		graph[toVtx] = make([]Node, 0)
+	if g[toVtx] == nil { // create new destination vertext if it does not exists
+		g[toVtx] = make([]Node, 0)
 		fmt.Println("\n-- Destination vertex " + toVtx + " created. --")
 	}
 
-	graph[fromVtx] = append(graph[fromVtx], Node{name: toVtx, value: edgeValue})
+	g[fromVtx] = append(g[fromVtx], Node{name: toVtx, value: edgeValue})
 	return
 }
 
-func removeVertexFromGraph(vtx string) {
-	length := len(graph[vtx]) - 1
+func (g graph) removeVertexFromGraph(vtx string) {
+	length := len(g[vtx]) - 1
 	for length != -1 { // loop in reverse in order to avoid index out of range
-		removeEdgeFromGraph(vtx, graph[vtx][length].name)
+		g.removeEdgeFromGraph(vtx, g[vtx][length].name)
 		length--
 	}
 
-	for i := range graph {
+	for i := range g {
 		if i != vtx {
-			length := len(graph[i]) - 1
+			length := len(g[i]) - 1
 			for length != -1 { // loop in reverse in order to avoid index out of range
-				if graph[i][length].name == vtx {
-					removeEdgeFromGraph(i, vtx)
+				if g[i][length].name == vtx {
+					g.removeEdgeFromGraph(i, vtx)
 				}
 				length--
 			}
 		}
 	}
 
-	delete(graph, vtx)
+	delete(g, vtx)
 }
 
-func removeEdgeFromGraph(fromVtx, toVtx string) {
-	if graph[fromVtx] == nil {
+func (g graph) removeEdgeFromGraph(fromVtx, toVtx string) {
+	if g[fromVtx] == nil {
 		fmt.Println("\n-- Vertex " + fromVtx + " does not exists. --")
 		return
-	} else if graph[toVtx] == nil {
+	} else if g[toVtx] == nil {
 		fmt.Println("\n-- Vertex " + toVtx + " does not exists. --")
 		return
 	}
 
-	for i := range graph[fromVtx] {
-		if graph[fromVtx][i].name == toVtx {
+	for i := range g[fromVtx] {
+		if g[fromVtx][i].name == toVtx {
 			if i == 0 {
-				graph[fromVtx] = graph[fromVtx][1:len(graph[fromVtx])]
-			} else if i == (len(graph[fromVtx]) - 1) {
-				graph[fromVtx] = graph[fromVtx][0:(len(graph[fromVtx]) - 1)]
+				g[fromVtx] = g[fromVtx][1:len(g[fromVtx])]
+			} else if i == (len(g[fromVtx]) - 1) {
+				g[fromVtx] = g[fromVtx][0:(len(g[fromVtx]) - 1)]
 			} else {
-				initial := graph[fromVtx][0:i]
-				final := graph[fromVtx][i+1 : len(graph[fromVtx])]
-				graph[fromVtx] = append(initial, final...)
+				initial := g[fromVtx][0:i]
+				final := g[fromVtx][i+1 : len(g[fromVtx])]
+				g[fromVtx] = append(initial, final...)
 			}
 			break
 		}
 	}
 }
 
-var graph map[string][]Node
-
-func init() {
-	graph = make(map[string][]Node)
-}
-
 func main() {
 	i := 0
+	g := make(graph)
 	for i == 0 {
 		fmt.Println("\n1. ADD A VERTEX")
 		fmt.Println("2. ADD AN EDGE")
@@ -105,47 +102,39 @@ func main() {
 		fmt.Scanf("%d", &choice)
 		switch choice {
 		case 1:
-			addVertex()
-			break
+			g.addVertex()
 		case 2:
-			addEdge()
-			break
+			g.addEdge()
 		case 3:
-			removeVertex()
-			break
+			g.removeVertex()
 		case 4:
-			removeEdge()
-			break
+			g.removeEdge()
 		case 5:
-			result, weights := displayDFS()
+			result, weights := g.displayDFS()
 			fmt.Println(result)
 			fmt.Println(weights)
-			break
 		case 6:
-			result, weights := displayBFS()
+			result, weights := g.displayBFS()
 			fmt.Println(result)
 			fmt.Println(weights)
-			break
 		case 7:
-			simpleDisplay()
-			break
+			g.simpleDisplay()
 		case 8:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}
 	}
 }
 
-func addVertex() {
+func (g graph) addVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
 	fmt.Scanf("%s", &vtxName)
-	addVertexToGraph(vtxName)
+	g.addVertexToGraph(vtxName)
 }
 
-func addEdge() {
+func (g graph) addEdge() {
 	var fromVtx, toVtx string
 	var edgeValue int
 	fmt.Print("Enter the initial vertex name: ")
@@ -154,41 +143,41 @@ func addEdge() {
 	fmt.Scanf("%s", &toVtx)
 	fmt.Print("Enter the weight of edge: ")
 	fmt.Scanf("%d", &edgeValue)
-	addEdgeToGraph(fromVtx, toVtx, edgeValue)
+	g.addEdgeToGraph(fromVtx, toVtx, edgeValue)
 }
 
-func removeVertex() {
+func (g graph) removeVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
 	fmt.Scanf("%s", &vtxName)
-	removeVertexFromGraph(vtxName)
+	g.removeVertexFromGraph(vtxName)
 }
 
-func removeEdge() {
+func (g graph) removeEdge() {
 	var fromVtx, toVtx string
 	fmt.Print("Enter the initial vertex name: ")
 	fmt.Scanf("%s", &fromVtx)
 	fmt.Print("Enter the destination vertex name: ")
 	fmt.Scanf("%s", &toVtx)
-	removeEdgeFromGraph(fromVtx, toVtx)
+	g.removeEdgeFromGraph(fromVtx, toVtx)
 }
 
-func displayDFS() ([]string, []int) {
-	result, weights := DFS()
+func (g graph) displayDFS() ([]string, []int) {
+	result, weights := g.DFS()
 	return result, weights
 }
 
-func displayBFS() ([]string, []int) {
-	result, weights := BFS()
+func (g graph) displayBFS() ([]string, []int) {
+	result, weights := g.BFS()
 	return result, weights
 }
 
-func simpleDisplay() {
+func (g graph) simpleDisplay() {
 	fmt.Println("")
-	for i := range graph {
+	for i := range g {
 		fmt.Print(i, " => ")
-		for j := range graph[i] {
-			fmt.Print(graph[i][j])
+		for j := range g[i] {
+			fmt.Print(g[i][j])
 		}
 		fmt.Println("")
 	}

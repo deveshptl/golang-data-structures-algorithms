@@ -3,33 +3,33 @@ package main
 import "fmt"
 
 // DFS traverses a graph using dfs technique
-func DFS(start string) []string {
+func (g graph) DFS(start string) []string {
 	visited := make(map[string]bool)
 	var result []string
-	if graph[start] == nil {
+	if g[start] == nil {
 		fmt.Println("\n-- No vertex named " + start + " present in graph. --")
 		return nil
 	}
-	result = dfsHelper(start, visited, result)
+	result = g.dfsHelper(start, visited, result)
 	return result
 }
 
 // dfsHelper recursively calls itself to solve dfs traversal
-func dfsHelper(vtx string, visited map[string]bool, result []string) []string {
+func (g graph) dfsHelper(vtx string, visited map[string]bool, result []string) []string {
 	visited[vtx] = true
 	result = append(result, vtx)
-	for i := range graph[vtx] {
-		if !visited[graph[vtx][i]] {
-			result = dfsHelper(graph[vtx][i], visited, result)
+	for i := range g[vtx] {
+		if !visited[g[vtx][i]] {
+			result = g.dfsHelper(g[vtx][i], visited, result)
 		}
 	}
 	return result
 }
 
 // BFS traverses a graph using dfs technique
-func BFS(start string) []string {
+func (g graph) BFS(start string) []string {
 
-	if graph[start] == nil {
+	if g[start] == nil {
 		fmt.Println("\n-- No vertex named " + start + " present in graph. --")
 		return nil
 	}
@@ -48,10 +48,10 @@ func BFS(start string) []string {
 		queue = queue[1:len(queue)]         // remove element from the queue
 		result = append(result, currentVtx) // push the current vertex in result
 
-		for i := range graph[currentVtx] {
-			if !visited[graph[currentVtx][i]] {
-				visited[graph[currentVtx][i]] = true        // mark as visited
-				queue = append(queue, graph[currentVtx][i]) // push neighbors of current vertex in the queue
+		for i := range g[currentVtx] {
+			if !visited[g[currentVtx][i]] {
+				visited[g[currentVtx][i]] = true        // mark as visited
+				queue = append(queue, g[currentVtx][i]) // push neighbors of current vertex in the queue
 			}
 		}
 

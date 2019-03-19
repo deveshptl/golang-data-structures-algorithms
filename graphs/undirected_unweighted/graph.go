@@ -2,89 +2,86 @@ package main
 
 import "fmt"
 
-func addVertexToGraph(vtx string) {
-	if graph[vtx] != nil {
+type graph map[string][]string
+
+func (g graph) addVertexToGraph(vtx string) {
+	if g[vtx] != nil {
 		fmt.Println("\n-- Vertex already exists. --")
 		return
 	}
-	graph[vtx] = make([]string, 0)
+	g[vtx] = make([]string, 0)
 }
 
-func addEdgeToGraph(fromVtx, toVtx string) {
-	if graph[fromVtx] == nil { // check if initial vertex exists
+func (g graph) addEdgeToGraph(fromVtx, toVtx string) {
+	if g[fromVtx] == nil { // check if initial vertex exists
 		fmt.Println("\n-- Initial vertex " + fromVtx + " does not exist. --")
 		return
 	}
-	for i := range graph[fromVtx] { // check if edge already exists
-		if graph[fromVtx][i] == toVtx {
+	for i := range g[fromVtx] { // check if edge already exists
+		if g[fromVtx][i] == toVtx {
 			fmt.Println("\n-- Edge between " + fromVtx + " and " + toVtx + " already exists. --")
 			return
 		}
 	}
-	if graph[toVtx] == nil { // create new destination vertext if it does not exists
-		graph[toVtx] = make([]string, 0)
+	if g[toVtx] == nil { // create new destination vertext if it does not exists
+		g[toVtx] = make([]string, 0)
 		fmt.Println("\n-- Destination vertex " + toVtx + " created. --")
 	}
 
-	graph[fromVtx] = append(graph[fromVtx], toVtx)
-	graph[toVtx] = append(graph[toVtx], fromVtx)
+	g[fromVtx] = append(g[fromVtx], toVtx)
+	g[toVtx] = append(g[toVtx], fromVtx)
 	return
 }
 
-func removeVertexFromGraph(vtx string) {
-	length := len(graph[vtx]) - 1
+func (g graph) removeVertexFromGraph(vtx string) {
+	length := len(g[vtx]) - 1
 	for length != -1 {
-		removeEdgeFromGraph(vtx, graph[vtx][length])
+		g.removeEdgeFromGraph(vtx, g[vtx][length])
 		length--
 	}
-	delete(graph, vtx)
+	delete(g, vtx)
 }
 
-func removeEdgeFromGraph(fromVtx, toVtx string) {
-	if graph[fromVtx] == nil || graph[toVtx] == nil {
+func (g graph) removeEdgeFromGraph(fromVtx, toVtx string) {
+	if g[fromVtx] == nil || g[toVtx] == nil {
 		fmt.Println("\n-- Edge between " + fromVtx + " and " + toVtx + " does not exist. --")
 		return
 	}
 
-	for i := range graph[fromVtx] {
-		if graph[fromVtx][i] == toVtx {
+	for i := range g[fromVtx] {
+		if g[fromVtx][i] == toVtx {
 			if i == 0 {
-				graph[fromVtx] = graph[fromVtx][1:len(graph[fromVtx])]
-			} else if i == (len(graph[fromVtx]) - 1) {
-				graph[fromVtx] = graph[fromVtx][0:(len(graph[fromVtx]) - 1)]
+				g[fromVtx] = g[fromVtx][1:len(g[fromVtx])]
+			} else if i == (len(g[fromVtx]) - 1) {
+				g[fromVtx] = g[fromVtx][0:(len(g[fromVtx]) - 1)]
 			} else {
-				initial := graph[fromVtx][0:i]
-				final := graph[fromVtx][i+1 : len(graph[fromVtx])]
-				graph[fromVtx] = append(initial, final...)
+				initial := g[fromVtx][0:i]
+				final := g[fromVtx][i+1 : len(g[fromVtx])]
+				g[fromVtx] = append(initial, final...)
 			}
 			break
 		}
 	}
 
-	for i := range graph[toVtx] {
-		if graph[toVtx][i] == fromVtx {
+	for i := range g[toVtx] {
+		if g[toVtx][i] == fromVtx {
 			if i == 0 {
-				graph[toVtx] = graph[toVtx][1:len(graph[toVtx])]
-			} else if i == (len(graph[toVtx]) - 1) {
-				graph[toVtx] = graph[toVtx][0:(len(graph[toVtx]) - 1)]
+				g[toVtx] = g[toVtx][1:len(g[toVtx])]
+			} else if i == (len(g[toVtx]) - 1) {
+				g[toVtx] = g[toVtx][0:(len(g[toVtx]) - 1)]
 			} else {
-				initial := graph[toVtx][0:i]
-				final := graph[toVtx][i+1 : len(graph[toVtx])]
-				graph[toVtx] = append(initial, final...)
+				initial := g[toVtx][0:i]
+				final := g[toVtx][i+1 : len(g[toVtx])]
+				g[toVtx] = append(initial, final...)
 			}
 			break
 		}
 	}
-}
-
-var graph map[string][]string
-
-func init() {
-	graph = make(map[string][]string)
 }
 
 func main() {
 	i := 0
+	g := make(graph)
 	for i == 0 {
 		fmt.Println("\n1. ADD A VERTEX")
 		fmt.Println("2. ADD AN EDGE")
@@ -92,84 +89,91 @@ func main() {
 		fmt.Println("4. REMOVE AN EDGE")
 		fmt.Println("5. DISPLAY USING DFS")
 		fmt.Println("6. DISPLAY USING BFS")
-		fmt.Println("7. EXIT")
+		fmt.Println("7. SIMPLE DISPLAY")
+		fmt.Println("8. EXIT")
 		var choice int
 		fmt.Print("Enter your choice: ")
 		fmt.Scanf("%d", &choice)
 		switch choice {
 		case 1:
-			addVertex()
-			break
+			g.addVertex()
 		case 2:
-			addEdge()
-			break
+			g.addEdge()
 		case 3:
-			removeVertex()
-			break
+			g.removeVertex()
 		case 4:
-			removeEdge()
-			break
+			g.removeEdge()
 		case 5:
-			result := displayDFS()
+			result := g.displayDFS()
 			fmt.Println(result)
-			break
 		case 6:
-			result := displayBFS()
+			result := g.displayBFS()
 			fmt.Println(result)
-			break
 		case 7:
+			g.simpleDisplay()
+		case 8:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}
 	}
 }
 
-func addVertex() {
+func (g graph) addVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
 	fmt.Scanf("%s", &vtxName)
-	addVertexToGraph(vtxName)
+	g.addVertexToGraph(vtxName)
 }
 
-func addEdge() {
+func (g graph) addEdge() {
 	var fromVtx, toVtx string
 	fmt.Print("Enter the initial vertex name: ")
 	fmt.Scanf("%s", &fromVtx)
 	fmt.Print("Enter the destination vertex name: ")
 	fmt.Scanf("%s", &toVtx)
-	addEdgeToGraph(fromVtx, toVtx)
+	g.addEdgeToGraph(fromVtx, toVtx)
 }
 
-func removeVertex() {
+func (g graph) removeVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
 	fmt.Scanf("%s", &vtxName)
-	removeVertexFromGraph(vtxName)
+	g.removeVertexFromGraph(vtxName)
 }
 
-func removeEdge() {
+func (g graph) removeEdge() {
 	var fromVtx, toVtx string
 	fmt.Print("Enter the initial vertex name: ")
 	fmt.Scanf("%s", &fromVtx)
 	fmt.Print("Enter the destination vertex name: ")
 	fmt.Scanf("%s", &toVtx)
-	removeEdgeFromGraph(fromVtx, toVtx)
+	g.removeEdgeFromGraph(fromVtx, toVtx)
 }
 
-func displayDFS() []string {
+func (g graph) displayDFS() []string {
 	var startVtx string
 	fmt.Print("Enter the start vertex name: ")
 	fmt.Scanf("%s", &startVtx)
-	result := DFS(startVtx)
+	result := g.DFS(startVtx)
 	return result
 }
 
-func displayBFS() []string {
+func (g graph) displayBFS() []string {
 	var startVtx string
 	fmt.Print("Enter the start vertex name: ")
 	fmt.Scanf("%s", &startVtx)
-	result := BFS(startVtx)
+	result := g.BFS(startVtx)
 	return result
+}
+
+func (g graph) simpleDisplay() {
+	fmt.Println("")
+	for i := range g {
+		fmt.Print(i, " => ")
+		for j := range g[i] {
+			fmt.Print(g[i][j])
+		}
+		fmt.Println("")
+	}
 }
