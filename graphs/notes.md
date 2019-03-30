@@ -12,6 +12,12 @@ A graph with relatively few possible edges missing is called **dense**.
 
 A graph with few edges relative to the number of its vertices is called **sparse**.
 
+The vertex is attached as a child to the vertex it is being reached from with an edge called a **tree edge**.
+
+If an edge leading to a previously visited vertex other than its immediate predecessor is encountered, the edge is noted as a **cross edge**.
+
+Vertext connecting to its ancestor is called **back edges**.
+
 **Graph Representation**:
 Graph can be represented by using adjacency matrix, adjacency list or incidence matrix. Each implementations has their own pros and cons associated with it either it could be time complexity on operations or space complexity.
 
@@ -42,6 +48,9 @@ Structures that associate values to the edges usually also provide:
 * **get_edge_value `(G, x, y)`**: Returns the value associated with the edge (x, y).
 * **set_edge_value `(G, x, y, v)`**: Sets the value associated with the edge (x, y) to v.
 
+Traversals:
+* BFS - Breadth First Search
+* DFS - Depth First Search
 
 #### Applications
 

@@ -45,6 +45,13 @@ A red–black tree is a kind of self-balancing binary search tree in computer sc
 4. Inorder Traversal − Traverses a tree in an in-order manner.
 5. Postorder Traversal − Traverses a tree in a post-order manner.
 
+Traversals:
+* BFS - Breadth First Search
+* DFS - Depth First Search
+  * Pre-order traversal
+  * In-order traversal
+  * Post-order traversal
+
 These are the common operations that can be performed on a tree. Different types of trees has different operations which can be performed.
 
 
