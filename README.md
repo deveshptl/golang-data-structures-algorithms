@@ -49,6 +49,7 @@ go run graph.go traversal.go
       - _prefix_infix_ - Prefix to Infix Conversion
       - _prefix_postfix_ - Prefix to Postfix Conversion
     - _floyd_warshall_ - Floyd Warshall Algorithm (All points shortest path)
+    - _gcd_ - Greatest Common Divisor (Euclid's Algorithm)
     - _huffman_codes_ - Huffman Codes (Generating Huffman Codes)
     - _job_scheduling_gp_ - Job Scheduling Algorithm using Greedy Programming
     - _knuth_morris_pratt_ - Knuth Morris Pratt Algorithm for Pattern Matching
