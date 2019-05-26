@@ -23,22 +23,21 @@ A **binary tree** can be defined as an ordered tree in which every vertex has no
 **A degenerate (or pathological) tree**: A Tree where every internal node has one child. Such trees are performance-wise same as linked list.
 
 **Binary Search Tree** is a node-based binary tree data structure which has the following properties:
-* The left subtree of a node contains only nodes with keys lesser than the node’s key.
-* The right subtree of a node contains only nodes with keys greater than the node’s key.
-* The left and right subtree each must also be a binary search tree.
 
+- The left subtree of a node contains only nodes with keys lesser than the node’s key.
+- The right subtree of a node contains only nodes with keys greater than the node’s key.
+- The left and right subtree each must also be a binary search tree.
 
 #### AVL Tree
 
 **AVL Tree** is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees cannot be more than 1 for all nodes and less than -1.
 
-
 #### Red Black Tree
 
 A red–black tree is a kind of self-balancing binary search tree in computer science. Each node of the binary tree has an extra bit, and that bit is often interpreted as the color (red or black) of the node. These color bits are used to ensure the tree remains approximately balanced during insertions and deletions.
 
-
 #### Operations
+
 1. Insert - Inserts an element in a tree/create a tree.
 2. Search - Searches an element in a tree.
 3. Preorder Traversal − Traverses a tree in a pre-order manner.
@@ -46,16 +45,17 @@ A red–black tree is a kind of self-balancing binary search tree in computer sc
 5. Postorder Traversal − Traverses a tree in a post-order manner.
 
 Traversals:
-* BFS - Breadth First Search
-* DFS - Depth First Search
-  * Pre-order traversal
-  * In-order traversal
-  * Post-order traversal
+
+- BFS - Breadth First Search
+- DFS - Depth First Search
+  - Pre-order traversal
+  - In-order traversal
+  - Post-order traversal
 
 These are the common operations that can be performed on a tree. Different types of trees has different operations which can be performed.
 
-
 #### Applications
+
 1. Heap is a tree data structure which is implemented using arrays and used to implement priority queues.
 2. Syntax Tree: Used in Compilers.
 3. B-Tree and B+ Tree : They are used to implement indexing in databases.
@@ -64,11 +64,11 @@ These are the common operations that can be performed on a tree. Different types
 6. Manipulate sorted lists of data.
 7. Router algorithms
 
+_References_:
 
-*References*:
-* [https://www.geeksforgeeks.org/binary-tree-set-3-types-of-binary-tree/](https://www.geeksforgeeks.org/binary-tree-set-3-types-of-binary-tree/) 
-* [https://www.geeksforgeeks.org/avl-tree-set-1-insertion/](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)
-* [https://en.wikipedia.org/wiki/Tree_(data_structure)](https://en.wikipedia.org/wiki/Tree_(data_structure))
-* [https://en.wikipedia.org/wiki/AVL_tree](https://en.wikipedia.org/wiki/AVL_tree)
+- [https://www.geeksforgeeks.org/binary-tree-set-3-types-of-binary-tree/](https://www.geeksforgeeks.org/binary-tree-set-3-types-of-binary-tree/)
+- [https://www.geeksforgeeks.org/avl-tree-set-1-insertion/](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)
+- [https://en.wikipedia.org/wiki/Tree\_(data_structure)](<https://en.wikipedia.org/wiki/Tree_(data_structure)>)
+- [https://en.wikipedia.org/wiki/AVL_tree](https://en.wikipedia.org/wiki/AVL_tree)
 
 **Refer** [here](https://en.wikipedia.org/wiki/List_of_data_structures) for more information on types of trees and terminologies used.

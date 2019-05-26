@@ -4,7 +4,6 @@ In a 'doubly linked list', each node contains, besides the next-node link, a sec
 
 Many modern operating systems use doubly linked lists to maintain references to active processes, threads, and other dynamic objects.
 
-
 #### Operations
 
 1. Insertion − Adds an element at the beginning of the list.

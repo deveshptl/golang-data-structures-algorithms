@@ -4,7 +4,7 @@ In computer science, a graph is an abstract data type that is meant to implement
 
 A graph `( G = <V, E> )` data structure consists of a finite (and possibly mutable) set of vertices (`V`) or nodes or points, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph. These pairs are known as edges (`E`), arcs, or lines for an undirected graph and as arrows, directed edges, directed arcs, or directed lines for a directed graph.
 
-**Note**: The number of edges `|E|` possible in an undirected graph with `|V|` vertices and no loops: `0 ≤ |E| ≤ |V|(|V| − 1)/2`. We have to divide product `|V|(|V| - 1)` by `2`, however, because it includes every edge twice. 
+**Note**: The number of edges `|E|` possible in an undirected graph with `|V|` vertices and no loops: `0 ≤ |E| ≤ |V|(|V| − 1)/2`. We have to divide product `|V|(|V| - 1)` by `2`, however, because it includes every edge twice.
 
 A graph with every pair of its vertices connected by an edge is called **complete**.
 
@@ -12,15 +12,14 @@ A graph with relatively few possible edges missing is called **dense**.
 
 A graph with few edges relative to the number of its vertices is called **sparse**.
 
-The vertex is attached as a child to the vertex it is being reached from with an edge called a **tree edge**.
+The vertex is attached as a child to the vertex it is being reached from with an edge called a **tree edge** or in other words it is an edge which is present in tree obtained after applying DFS on the graph.
 
-If an edge leading to a previously visited vertex other than its immediate predecessor is encountered, the edge is noted as a **cross edge**.
+If an edge leading to a previously visited vertex other than its immediate predecessor is encountered, the edge is noted as a **cross edge** or in others words it is a edge which connects two node such that they do not have any ancestor and a descendant relationship between them.
 
-Vertext connecting to its ancestor is called **back edges**.
+Edges connecting to its ancestor is called **back edges** or in other words it is an edge (u, v) such that v is ancestor of edge u but not part of DFS tree.
 
 **Graph Representation**:
 Graph can be represented by using adjacency matrix, adjacency list or incidence matrix. Each implementations has their own pros and cons associated with it either it could be time complexity on operations or space complexity.
-
 
 #### Types
 
@@ -32,25 +31,26 @@ Graph can be represented by using adjacency matrix, adjacency list or incidence 
 6. Infinite graphs
 7. Graph having Connected or Disconnected components
 
-
 #### Operations
 
-* **adjacent `(G, x, y)`**: Tests whether there is an edge from the vertex x to the vertex y.
-* **neighbors `(G, x, y)`**: Lists all vertices y such that there is an edge from the vertex x to the vertex y.
-* **add_vertex `(G, x)`**: Adds the vertex x, if it is not there.
-* **remove_vertex `(G, x)`**: Removes the vertex x, if it is there.
-* **add_edge `(G, x, y)`**: Adds the edge from the vertex x to the vertex y, if it is not there.
-* **remove_edge `(G, x, y)`**: Removes the edge from the vertex x to the vertex y, if it is there.
-* **get_vertex_value `(G, x)`**: Returns the value associated with the vertex x.
-* **set_vertex_value `(G, x, v)`**: Sets the value associated with the vertex x to v.
+- **adjacent `(G, x, y)`**: Tests whether there is an edge from the vertex x to the vertex y.
+- **neighbors `(G, x, y)`**: Lists all vertices y such that there is an edge from the vertex x to the vertex y.
+- **add_vertex `(G, x)`**: Adds the vertex x, if it is not there.
+- **remove_vertex `(G, x)`**: Removes the vertex x, if it is there.
+- **add_edge `(G, x, y)`**: Adds the edge from the vertex x to the vertex y, if it is not there.
+- **remove_edge `(G, x, y)`**: Removes the edge from the vertex x to the vertex y, if it is there.
+- **get_vertex_value `(G, x)`**: Returns the value associated with the vertex x.
+- **set_vertex_value `(G, x, v)`**: Sets the value associated with the vertex x to v.
 
 Structures that associate values to the edges usually also provide:
-* **get_edge_value `(G, x, y)`**: Returns the value associated with the edge (x, y).
-* **set_edge_value `(G, x, y, v)`**: Sets the value associated with the edge (x, y) to v.
+
+- **get_edge_value `(G, x, y)`**: Returns the value associated with the edge (x, y).
+- **set_edge_value `(G, x, y, v)`**: Sets the value associated with the edge (x, y) to v.
 
 Traversals:
-* BFS - Breadth First Search
-* DFS - Depth First Search
+
+- BFS - Breadth First Search
+- DFS - Depth First Search
 
 #### Applications
 

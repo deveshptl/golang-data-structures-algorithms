@@ -1,17 +1,14 @@
 ## Contributing Guide:
 
-
 ### Prerequisites
 
 The only prerequisites is to have go installed on you computer in order to contribute. Follow how to install instructions from [golang download instructions](https://golang.org/doc/install) if you don't already have.
-
 
 ### Issues
 
 If you find anything wrong about any data structures or algorithm not working the way they should then feel free to create a new issue, but before doing that make sure that no one else has created the same issue.
 
 It would be better if you create a issue first before implementing anything, so that other people don't accidently duplicate your effort.
-
 
 ### Pull Requests
 
