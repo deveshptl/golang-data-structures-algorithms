@@ -62,6 +62,7 @@ go run graph.go traversal.go
     - _searching_ -
       - _binary_search_ - Binary Search - O(log n)
       - _linear_search_ - Linear Search - O(n)
+    - _sieve_of_eratosthenes_ - Sieve of Eratosthenes (Consecutive primes not exceeding n)
     - _sorting_ -
       - _binary_insertion_sort_ - Binary Insertion Sort - O(n<sup>2</sup>)
       - _bubble_sort_ - Bubble Sort - O(n<sup>2</sup>)
