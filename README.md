@@ -38,8 +38,8 @@ go run graph.go traversal.go
     - _assembly_line_scheduling_ - Assembly Line Scheduling algorithm using Dynamic Programming
     - _bellman_ford_ - Bellman Ford Algorithm
     - _bridge_detection_ - Bridge Detection/Cut Edge Detection in an undirected graph
-    - _cd_directed_graph_traversals_ - Cycle Detection in Directed Graphs using Traversals techniques &nbsp;&nbsp;:point_left:
-    - _cd_undirected_graph_traversals_ - Cycle Detection in Undirected Graphs using Traversals techniques &nbsp;&nbsp;:point_left:
+    - _cd_directed_graph_traversals_ - Cycle Detection in Directed Graphs using Traversals techniques
+    - _cd_undirected_graph_traversals_ - Cycle Detection in Undirected Graphs using Traversals techniques
     - _dijkstra_ - Dijkstra's Algorithm
     - _expression_conversions_ -
       - _infix_postfix_ - Infix to Postfix Conversion
@@ -59,6 +59,7 @@ go run graph.go traversal.go
     - _making_change_dp_ - Making Change Problem using Dynamic Programming
     - _naive_pattern_matching_ - Naive Pattern/String Matching
     - _prims_ - Prim's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
+    - _rabin_karp_ - Rabin Karp (Pattern/String Matching)&nbsp;&nbsp; :point_left:
     - _searching_ -
       - _binary_search_ - Binary Search - O(log n)
       - _linear_search_ - Linear Search - O(n)
