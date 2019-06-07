@@ -58,6 +58,7 @@ go run graph.go traversal.go
     - _kruskals_ - Kruskal's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
     - _lcs_ - Longest Common Subsequence
       - _iterative_dp_ - Longest Common Subsequence using Dynamic Programming (Iterative Version)
+    - _lo_permutations_ - Lexicographic Ordering Permutations
     - _making_change_dp_ - Making Change Problem using Dynamic Programming
     - _naive_pattern_matching_ - Naive Pattern/String Matching
     - _prims_ - Prim's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
