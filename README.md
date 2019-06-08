@@ -40,7 +40,7 @@ go run graph.go traversal.go
     - _bridge_detection_ - Bridge Detection/Cut Edge Detection in an undirected graph
     - _cd_directed_graph_traversals_ - Cycle Detection in Directed Graphs using Traversals techniques
     - _cd_undirected_graph_traversals_ - Cycle Detection in Undirected Graphs using Traversals techniques
-    - _convex_hull_ - 
+    - _convex_hull_ -
       - _ch_brute_force_ - Convex Hull Algorithm using Brute Force Technique
     - _dijkstra_ - Dijkstra's Algorithm
     - _expression_conversions_ -
@@ -81,6 +81,9 @@ go run graph.go traversal.go
       - _shell_sort_ - Shell Sort - О(n)
     - _toh_ - Tower of Hanoi
     - _topological_sort_ - Topological Sort
+    - _tsp_ -
+      - _tsp_naive_ -
+        - _undirected_graph_ - TSP (Travelling Salesman Problem) using naive approach for undirected graph
     - _union_find_ - Union Find / Disjoint Sets (Detecting cycles in an undirected graph)
 2.  **graphs** -
     - _directed_unweighted_ - Directed Unweighted graph
