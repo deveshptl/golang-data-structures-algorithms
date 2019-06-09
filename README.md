@@ -83,7 +83,8 @@ go run graph.go traversal.go
     - _topological_sort_ - Topological Sort
     - _tsp_ -
       - _tsp_naive_ -
-        - _undirected_graph_ - TSP (Travelling Salesman Problem) using naive approach for undirected graph
+        1. _undirected_graph_ - TSP (Travelling Salesman Problem) using naive approach for undirected graph
+        2. _directed_graph_ - TSP (Travelling Salesman Problem) using naive approach for directed graph
     - _union_find_ - Union Find / Disjoint Sets (Detecting cycles in an undirected graph)
 2.  **graphs** -
     - _directed_unweighted_ - Directed Unweighted graph
@@ -124,6 +125,6 @@ Read the [contributing guide](CONTRIBUTING.md) to see how to contribute.
 This repository is released under the [MIT license](https://opensource.org/licenses/MIT). In short, this means you are free to use this software in any personal, open-source or commercial projects. Attribution is optional but appreciated.
 
 ```
-HAPPY CODING
-HAPPY LEARNING
+HAPPY CODING 💻
+HAPPY LEARNING 📚
 ```
