@@ -82,9 +82,11 @@ go run graph.go traversal.go
     - _toh_ - Tower of Hanoi
     - _topological_sort_ - Topological Sort
     - _tsp_ -
+      - _tsp_dynamic_ -
+        1. _undirected_graph_ - TSP (Travelling Salesman Problem) using Dynamic approach for undirected graph
       - _tsp_naive_ -
-        1. _undirected_graph_ - TSP (Travelling Salesman Problem) using naive approach for undirected graph
-        2. _directed_graph_ - TSP (Travelling Salesman Problem) using naive approach for directed graph
+        1. _directed_graph_ - TSP (Travelling Salesman Problem) using Naive approach for directed graph
+        2. _undirected_graph_ - TSP (Travelling Salesman Problem) using Naive approach for undirected graph
     - _union_find_ - Union Find / Disjoint Sets (Detecting cycles in an undirected graph)
 2.  **graphs** -
     - _directed_unweighted_ - Directed Unweighted graph
