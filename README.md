@@ -83,7 +83,8 @@ go run graph.go traversal.go
     - _topological_sort_ - Topological Sort
     - _tsp_ -
       - _tsp_dynamic_ -
-        1. _undirected_graph_ - TSP (Travelling Salesman Problem) using Dynamic approach for undirected graph
+        1. _directed_graph_ - TSP (Travelling Salesman Problem) using Dynamic approach for directed graph
+        2. _undirected_graph_ - TSP (Travelling Salesman Problem) using Dynamic approach for undirected graph
       - _tsp_naive_ -
         1. _directed_graph_ - TSP (Travelling Salesman Problem) using Naive approach for directed graph
         2. _undirected_graph_ - TSP (Travelling Salesman Problem) using Naive approach for undirected graph
