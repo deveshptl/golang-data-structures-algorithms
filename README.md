@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-Data Structures and Algorithms (DSA) is one of the most important topic in computer science that every CS student must be proficient in and even non-CS students must have basic understanding of it. It is said that DSA is like bread and butter, necessity of CS. This repository is made for those students (like me :sunglasses:) who are eager to learn and want to implement data strucutures and algorithms.
+Data Structures and Algorithms (DSA) is one of the most important topic in computer science that every CS student must be proficient in and even non-CS students must have basic understanding of it. It is said that DSA is like bread and butter, necessity of CS. This repository is made for those students (like me :sunglasses:) who are eager to learn and want to implement data structures and algorithms.
 
 ### Why Go/GoLang and not C, C++ or Java?
 
@@ -19,7 +19,7 @@ However the reason why go would also be a good language to implement DSA is that
 
 ### Example
 
-Let's assume that I want to run files located in `graphs/directed_unweighted` directory then the syntax to run it would be:
+Let's assume that you want to run files located in `graphs/directed_unweighted` directory then the syntax to run it would be:
 
 ```
 cd graphs/directed_unweighted/
