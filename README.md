@@ -61,6 +61,8 @@ go run graph.go traversal.go
     - _lo_permutations_ - Lexicographic Ordering Permutations
     - _making_change_dp_ - Making Change Problem using Dynamic Programming
     - _naive_pattern_matching_ - Naive Pattern/String Matching
+    - _order_statistics_ - Finding Kth Smallest/Largest element (Order Statistics)
+      - _worst_case_linear_time_ - Worst Case Linear Time Order Statistics - O(n)
     - _prims_ - Prim's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
     - _rabin_karp_ - Rabin Karp (Pattern/String Matching)
     - _searching_ -
