@@ -7,12 +7,12 @@ import (
 )
 
 func main() {
-	fmt.Println("-- Worst Case Linear Time Order Statistics --")
+	fmt.Println("\n-- Worst Case Linear Time Order Statistics --")
 	arr := make([]float64, 0)
 	var value int
 	var n int
 	var k int
-	fmt.Print("Enter the size of an array: ")
+	fmt.Print("\nEnter the size of an array: ")
 	fmt.Scanf("%d", &n)
 	fmt.Println("Start entering elements:")
 	for i := 0; i < n; i++ {
@@ -66,22 +66,16 @@ func kthSmallest(arr []float64, k int) float64 {
 }
 
 func partition(arr []float64, rank int) int {
-	temp := arr[rank]
-	arr[rank] = arr[len(arr)-1]
-	arr[len(arr)-1] = temp
+	arr[rank], arr[len(arr)-1] = arr[len(arr)-1], arr[rank]
 	pivot := arr[len(arr)-1]
 	index := 0
 	for i := 0; i < len(arr)-1; i++ {
 		if arr[i] < pivot {
-			temp = arr[index]
-			arr[index] = arr[i]
-			arr[i] = temp
+			arr[i], arr[index] = arr[index], arr[i]
 			index++
 		}
 	}
-	temp = arr[index]
-	arr[index] = arr[len(arr)-1]
-	arr[len(arr)-1] = temp
+	arr[index], arr[len(arr)-1] = arr[len(arr)-1], arr[index]
 	return index
 }
 
