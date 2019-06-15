@@ -4,22 +4,25 @@ import (
 	"bufio"
 	"fmt"
 	"log"
-	"math"
 	"os"
 	"strconv"
 	"strings"
 )
 
-var x []float64
-var y []float64
+// Point represents a point on a 2d plane having x, y coords
+type Point struct {
+	x float64
+	y float64
+}
+
+var arr []Point
 
 // pointInConvex keeps a simple check
 // whether a given point is considered in convex set or not
 var pointInConvex map[string]bool
 
 func init() {
-	x = make([]float64, 0)
-	y = make([]float64, 0)
+	arr = make([]Point, 0)
 	pointInConvex = make(map[string]bool)
 
 	file, err := os.Open("sample.txt")
@@ -43,8 +46,7 @@ func init() {
 			log.Fatal(err)
 		}
 
-		x = append(x, strx)
-		y = append(y, stry)
+		arr = append(arr, Point{x: strx, y: stry})
 	}
 
 	if err := scanner.Err(); err != nil {
@@ -53,29 +55,27 @@ func init() {
 }
 
 func main() {
-	fmt.Println("-- Convex Hull Brute Force Technique --")
-	ax, ay := ConvexHull()
-	for i := 0; i < len(ax); i++ {
-		sx := fmt.Sprintf("%.1f", ax[i])
-		sy := fmt.Sprintf("%.1f", ay[i])
-		fmt.Println("(" + sx + ", " + sy + ")")
+	fmt.Println("\n-- Convex Hull Brute Force Technique --")
+	ch := ConvexHull()
+	ch = SortConvexPoints(ch)
+	for i := 0; i < len(ch); i++ {
+		fmt.Println(ch[i])
 	}
 }
 
 // ConvexHull finds required set of points which forms a convex
-func ConvexHull() ([]float64, []float64) {
-	ax := make([]float64, 0)
-	ay := make([]float64, 0)
+func ConvexHull() []Point {
+	newArr := make([]Point, 0)
 
-	for i := 0; i < len(x)-1; i++ {
-		for j := i + 1; j < len(x); j++ {
-			flag := isConvex(x[i], y[i], x[j], y[j])
+	for i := 0; i < len(arr)-1; i++ {
+		for j := i + 1; j < len(arr); j++ {
+			flag := IsConvex(arr[i], arr[j])
 
 			// float64 to string
-			xi := fmt.Sprintf("%f", x[i])
-			yi := fmt.Sprintf("%f", y[i])
-			xj := fmt.Sprintf("%f", x[j])
-			yj := fmt.Sprintf("%f", y[j])
+			xi := fmt.Sprintf("%f", arr[i].x)
+			yi := fmt.Sprintf("%f", arr[i].y)
+			xj := fmt.Sprintf("%f", arr[j].x)
+			yj := fmt.Sprintf("%f", arr[j].y)
 
 			//string of x[i] y[i]
 			strI := xi + yi
@@ -83,32 +83,30 @@ func ConvexHull() ([]float64, []float64) {
 			strJ := xj + yj
 
 			if flag && !pointInConvex[strI] {
-				ax = append(ax, x[i])
-				ay = append(ay, y[i])
+				newArr = append(newArr, arr[i])
 				pointInConvex[strI] = true
 			}
 
 			if flag && !pointInConvex[strJ] {
-				ax = append(ax, x[j])
-				ay = append(ay, y[j])
+				newArr = append(newArr, arr[j])
 				pointInConvex[strJ] = true
 			}
 		}
 	}
-	return ax, ay
+	return newArr
 }
 
-// isConvex checks whether the given two points should be considered in the solution
-func isConvex(x1, y1, x2, y2 float64) bool {
+// IsConvex checks whether the given two points should be considered in the solution
+func IsConvex(p1, p2 Point) bool {
 	flag := float64(0)
-	a := y2 - y1
-	b := x1 - x2
-	c := x1*y2 - y1*x2
+	a := p2.y - p1.y
+	b := p1.x - p2.x
+	c := p1.x*p2.y - p1.y*p2.x
 
-	for i := 0; i < len(x); i++ {
-		lhs := a*x[i] + b*y[i] - c
+	for i := 0; i < len(arr); i++ {
+		lhs := a*arr[i].x + b*arr[i].y - c
 		if lhs == 0 {
-			check := isLongestPair([]float64{x1, y1}, []float64{x2, y2}, []float64{x[i], y[i]})
+			check := IsLongestPair(p1, p2, arr[i])
 			if !check {
 				return false
 			}
@@ -121,16 +119,4 @@ func isConvex(x1, y1, x2, y2 float64) bool {
 		}
 	}
 	return true
-}
-
-// isLongestPair checks whether the given first two set of points (xy1, xy2) have longest distance or not
-// The main idea is not to select all given points in question that lies on the same line
-func isLongestPair(xy1, xy2, xy3 []float64) bool {
-	d12 := math.Pow(xy1[0]-xy2[0], 2) + math.Pow(xy1[1]-xy2[1], 2)
-	d13 := math.Pow(xy1[0]-xy3[0], 2) + math.Pow(xy1[1]-xy3[1], 2)
-	d23 := math.Pow(xy2[0]-xy3[0], 2) + math.Pow(xy2[1]-xy3[1], 2)
-	if d12 >= d13 && d12 >= d23 {
-		return true
-	}
-	return false
 }
