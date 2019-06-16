@@ -69,6 +69,7 @@ go run graph.go traversal.go
     - _rabin_karp_ - Rabin Karp (Pattern/String Matching)
     - _searching_ -
       - _binary_search_ - Binary Search - O(log n)
+      - _interpolation_search_ - Interpolation Search - O(n)
       - _linear_search_ - Linear Search - O(n)
     - _sieve_of_eratosthenes_ - Sieve of Eratosthenes (Consecutive primes not exceeding n)
     - _sorting_ -
