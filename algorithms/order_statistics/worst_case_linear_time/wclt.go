@@ -59,7 +59,7 @@ func kthSmallest(arr []float64, k int) float64 {
 	if pos == k-1 {
 		return arr[pos]
 	} else if pos > k-1 {
-		return kthSmallest(arr[0:pos], k)
+		return kthSmallest(arr[:pos], k)
 	}
 
 	return kthSmallest(arr[pos+1:], k-pos-1)

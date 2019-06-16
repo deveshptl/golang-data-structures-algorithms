@@ -51,7 +51,7 @@ func LOP(str []string) []string {
 
 // Reverse reverses a slice of string from it's length to given index
 func Reverse(str []string, index int) []string {
-	newStr := strings.Join(str[0:index], "")
+	newStr := strings.Join(str[:index], "")
 	for i := len(str) - 1; i >= index; i-- {
 		newStr += str[i]
 	}
