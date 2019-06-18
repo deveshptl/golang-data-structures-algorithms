@@ -65,6 +65,7 @@ go run graph.go traversal.go
       - _naive_approach_ - Naive Approach using Max Heap - O(k + (n-k)\*log(k))
       - _quick_select_ - Quick Select (Quick Sort) - O(n^2), Θ(nlogn)
       - _worst_case_linear_time_ - Worst Case Linear Time Order Statistics - O(n)
+    - _power_set_ - Power Set (Set of Subsets)
     - _prims_ - Prim's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
     - _rabin_karp_ - Rabin Karp (Pattern/String Matching)
     - _searching_ -
