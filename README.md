@@ -37,6 +37,7 @@ go run graph.go traversal.go
     - _articulation_point_detection_ - Detecting Articulation Points in an undirected graph
     - _assembly_line_scheduling_ - Assembly Line Scheduling algorithm using Dynamic Programming
     - _bellman_ford_ - Bellman Ford Algorithm
+    - _binary_reflected_gray_codes_ - Binary Reflected Gray Codes
     - _bridge_detection_ - Bridge Detection/Cut Edge Detection in an undirected graph
     - _cd_directed_graph_traversals_ - Cycle Detection in Directed Graphs using Traversals techniques
     - _cd_undirected_graph_traversals_ - Cycle Detection in Undirected Graphs using Traversals techniques
