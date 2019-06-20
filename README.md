@@ -55,20 +55,17 @@ go run graph.go traversal.go
     - _gcd_ - Greatest Common Divisor (Euclid's Algorithm)
     - _huffman_codes_ - Huffman Codes (Generating Huffman Codes)
     - _job_scheduling_gp_ - Job Scheduling Algorithm using Greedy Programming
-    - _knuth_morris_pratt_ - Knuth Morris Pratt Algorithm for Pattern Matching
     - _kruskals_ - Kruskal's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
     - _lcs_ - Longest Common Subsequence
       - _iterative_dp_ - Longest Common Subsequence using Dynamic Programming (Iterative Version)
     - _lo_permutations_ - Lexicographic Ordering Permutations
     - _making_change_dp_ - Making Change Problem using Dynamic Programming
-    - _naive_pattern_matching_ - Naive Pattern/String Matching
     - _order_statistics_ - Finding Kth Smallest/Largest element (Order Statistics)
       - _naive_approach_ - Naive Approach using Max Heap - O(k + (n-k)\*log(k))
       - _quick_select_ - Quick Select (Quick Sort) - O(n^2), Θ(nlogn)
       - _worst_case_linear_time_ - Worst Case Linear Time Order Statistics - O(n)
     - _power_set_ - Power Set (Set of Subsets)
     - _prims_ - Prim's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
-    - _rabin_karp_ - Rabin Karp (Pattern/String Matching)
     - _searching_ -
       - _binary_search_ - Binary Search - O(log n)
       - _interpolation_search_ - Interpolation Search - O(n)
@@ -87,6 +84,10 @@ go run graph.go traversal.go
       - _radix_sort_ - Radix Sort - O(n+k)
       - _selection_sort_ - Selection Sort - (O(n<sup>2</sup>))
       - _shell_sort_ - Shell Sort - О(n)
+    - _string_matching_ -
+      - _knuth_morris_pratt_ - Knuth Morris Pratt
+      - _naive_pattern_matching_ - Naive Pattern Matching
+      - _rabin_karp_ - Rabin Karp
     - _toh_ - Tower of Hanoi
     - _topological_sort_ - Topological Sort
     - _tsp_ -
