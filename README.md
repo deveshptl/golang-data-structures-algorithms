@@ -43,6 +43,7 @@ go run graph.go traversal.go
     - _cd_undirected_graph_traversals_ - Cycle Detection in Undirected Graphs using Traversals techniques
     - _convex_hull_ -
       - _ch_brute_force_ - Convex Hull Algorithm using Brute Force Technique
+      - _ch_divide_conquer_ - Convex Hull Algorithm using Divide and Conquer Technique
     - _dijkstra_ - Dijkstra's Algorithm
     - _expression_conversions_ -
       - _infix_postfix_ - Infix to Postfix Conversion
