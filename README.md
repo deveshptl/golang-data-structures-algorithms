@@ -41,6 +41,8 @@ go run graph.go traversal.go
     - _bridge_detection_ - Bridge Detection/Cut Edge Detection in an undirected graph
     - _cd_directed_graph_traversals_ - Cycle Detection in Directed Graphs using Traversals techniques
     - _cd_undirected_graph_traversals_ - Cycle Detection in Undirected Graphs using Traversals techniques
+    - _closest_pair_problem_ - 
+      - _cpp_brute_force_ - Closest Pair Problem using Brute Force Technique
     - _convex_hull_ -
       - _ch_brute_force_ - Convex Hull Algorithm using Brute Force Technique
       - _ch_divide_conquer_ - Convex Hull Algorithm using Divide and Conquer Technique
