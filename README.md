@@ -60,6 +60,7 @@ go run graph.go traversal.go
     - _huffman_codes_ - Huffman Codes (Generating Huffman Codes)
     - _job_scheduling_gp_ - Job Scheduling Algorithm using Greedy Programming
     - _kruskals_ - Kruskal's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
+    - _lcm_ - Least Common Multiple (using GCD Euclid's Algorithm)
     - _lcs_ - Longest Common Subsequence
       - _iterative_dp_ - Longest Common Subsequence using Dynamic Programming (Iterative Version)
     - _lo_permutations_ - Lexicographic Ordering Permutations
