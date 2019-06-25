@@ -71,6 +71,10 @@ func ConvexHull() []Point {
 		for j := i + 1; j < len(arr); j++ {
 			flag := IsConvex(arr[i], arr[j])
 
+			if !flag {
+				continue
+			}
+
 			// float64 to string
 			xi := fmt.Sprintf("%f", arr[i].x)
 			yi := fmt.Sprintf("%f", arr[i].y)
@@ -82,12 +86,12 @@ func ConvexHull() []Point {
 			//string of x[j] y[j]
 			strJ := xj + yj
 
-			if flag && !pointInConvex[strI] {
+			if !pointInConvex[strI] {
 				newArr = append(newArr, arr[i])
 				pointInConvex[strI] = true
 			}
 
-			if flag && !pointInConvex[strJ] {
+			if !pointInConvex[strJ] {
 				newArr = append(newArr, arr[j])
 				pointInConvex[strJ] = true
 			}

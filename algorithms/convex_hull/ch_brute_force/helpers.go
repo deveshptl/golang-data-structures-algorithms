@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-// IsLongestPair checks whether the given first two set of points (xy1, xy2) have longest distance or not
+// IsLongestPair checks whether the given first two set of points (p1, p2) have longest distance or not
 // The main idea is not to select all given points in question that lies on the same line
 func IsLongestPair(p1, p2, p3 Point) bool {
 	d12 := math.Pow(p1.x-p2.x, 2) + math.Pow(p1.y-p2.y, 2)
