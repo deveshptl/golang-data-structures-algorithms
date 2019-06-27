@@ -41,7 +41,7 @@ go run graph.go traversal.go
     - _bridge_detection_ - Bridge Detection/Cut Edge Detection in an undirected graph
     - _cd_directed_graph_traversals_ - Cycle Detection in Directed Graphs using Traversals techniques
     - _cd_undirected_graph_traversals_ - Cycle Detection in Undirected Graphs using Traversals techniques
-    - _closest_pair_problem_ - 
+    - _closest_pair_problem_ -
       - _cpp_brute_force_ - Closest Pair Problem using Brute Force Technique
       - _cpp_divide_conquer_ - Closest Pair Problem using Divide and Conquer Techinque
     - _convex_hull_ -
@@ -90,6 +90,7 @@ go run graph.go traversal.go
       - _selection_sort_ - Selection Sort - (O(n<sup>2</sup>))
       - _shell_sort_ - Shell Sort - О(n)
     - _string_matching_ -
+      - _horspool_ - Boyer Moore Horspool Algorithm
       - _knuth_morris_pratt_ - Knuth Morris Pratt
       - _naive_pattern_matching_ - Naive Pattern Matching
       - _rabin_karp_ - Rabin Karp
