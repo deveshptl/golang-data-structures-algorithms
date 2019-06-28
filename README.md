@@ -90,6 +90,7 @@ go run graph.go traversal.go
       - _selection_sort_ - Selection Sort - (O(n<sup>2</sup>))
       - _shell_sort_ - Shell Sort - О(n)
     - _string_matching_ -
+      - _boyer_moore_ - Boyer Moore Algorithm
       - _horspool_ - Boyer Moore Horspool Algorithm
       - _knuth_morris_pratt_ - Knuth Morris Pratt
       - _naive_pattern_matching_ - Naive Pattern Matching
