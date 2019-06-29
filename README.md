@@ -34,20 +34,14 @@ go run graph.go traversal.go
 1.  **algorithms** -
     - _01knapsack_dp_ - 0-1 Knapsack Problem using Dynamic Programming
     - _activity_selection_gp_ - Activity Selection using Greedy Programming
-    - _articulation_point_detection_ - Detecting Articulation Points in an undirected graph
     - _assembly_line_scheduling_ - Assembly Line Scheduling algorithm using Dynamic Programming
-    - _bellman_ford_ - Bellman Ford Algorithm
     - _binary_reflected_gray_codes_ - Binary Reflected Gray Codes
-    - _bridge_detection_ - Bridge Detection/Cut Edge Detection in an undirected graph
-    - _cd_directed_graph_traversals_ - Cycle Detection in Directed Graphs using Traversals techniques
-    - _cd_undirected_graph_traversals_ - Cycle Detection in Undirected Graphs using Traversals techniques
     - _closest_pair_problem_ -
       - _cpp_brute_force_ - Closest Pair Problem using Brute Force Technique
       - _cpp_divide_conquer_ - Closest Pair Problem using Divide and Conquer Techinque
     - _convex_hull_ -
       - _ch_brute_force_ - Convex Hull Algorithm using Brute Force Technique
       - _ch_divide_conquer_ - Convex Hull Algorithm using Divide and Conquer Technique
-    - _dijkstra_ - Dijkstra's Algorithm
     - _expression_conversions_ -
       - _infix_postfix_ - Infix to Postfix Conversion
       - _infix_prefix_ - Infix to Prefix Conversion
@@ -55,11 +49,29 @@ go run graph.go traversal.go
       - _postfix_prefix_ - Postfix to Prefix Conversion
       - _prefix_infix_ - Prefix to Infix Conversion
       - _prefix_postfix_ - Prefix to Postfix Conversion
-    - _floyd_warshall_ - Floyd Warshall Algorithm (All points shortest path)
     - _gcd_ - Greatest Common Divisor (Euclid's Algorithm)
+    - _graphs_ -
+      - _articulation_point_detection_ - Detecting Articulation Points in an undirected graph
+      - _bellman_ford_ - Bellman Ford Algorithm
+      - _bridge_detection_ - Bridge Detection/Cut Edge Detection in an undirected graph
+      - _dijkstra_ - Dijkstra's Algorithm
+      - _floyd_warshall_ - Floyd Warshall Algorithm (All points shortest path)
+      - _kruskals_ - Kruskal's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
+      - _prims_ - Prim's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
+      - _topological_sort_ - Topological Sort
+      - _traversals_ -
+        - _cd_directed_graph_traversals_ - Cycle Detection in Directed Graphs using Traversals techniques
+        - _cd_undirected_graph_traversals_ - Cycle Detection in Undirected Graphs using Traversals techniques
+      - _tsp_ -
+        - _tsp_dynamic_ -
+          1. _directed_graph_ - TSP (Travelling Salesman Problem) using Dynamic approach for directed graph
+          2. _undirected_graph_ - TSP (Travelling Salesman Problem) using Dynamic approach for undirected graph
+        - _tsp_naive_ -
+          1. _directed_graph_ - TSP (Travelling Salesman Problem) using Naive approach for directed graph
+          2. _undirected_graph_ - TSP (Travelling Salesman Problem) using Naive approach for undirected graph
+      - _union_find_ - Union Find / Disjoint Sets (Detecting cycles in an undirected graph)
     - _huffman_codes_ - Huffman Codes (Generating Huffman Codes)
     - _job_scheduling_gp_ - Job Scheduling Algorithm using Greedy Programming
-    - _kruskals_ - Kruskal's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
     - _lcm_ - Least Common Multiple (using GCD Euclid's Algorithm)
     - _lcs_ - Longest Common Subsequence
       - _iterative_dp_ - Longest Common Subsequence using Dynamic Programming (Iterative Version)
@@ -70,7 +82,6 @@ go run graph.go traversal.go
       - _quick_select_ - Quick Select (Quick Sort) - O(n^2), Θ(nlogn)
       - _worst_case_linear_time_ - Worst Case Linear Time Order Statistics - O(n)
     - _power_set_ - Power Set (Set of Subsets)
-    - _prims_ - Prim's Algorithm (Finding Minimum Spanning Tree MST using Greedy Approach)
     - _searching_ -
       - _binary_search_ - Binary Search - O(log n)
       - _interpolation_search_ - Interpolation Search - O(n)
@@ -96,15 +107,6 @@ go run graph.go traversal.go
       - _naive_pattern_matching_ - Naive Pattern Matching
       - _rabin_karp_ - Rabin Karp
     - _toh_ - Tower of Hanoi
-    - _topological_sort_ - Topological Sort
-    - _tsp_ -
-      - _tsp_dynamic_ -
-        1. _directed_graph_ - TSP (Travelling Salesman Problem) using Dynamic approach for directed graph
-        2. _undirected_graph_ - TSP (Travelling Salesman Problem) using Dynamic approach for undirected graph
-      - _tsp_naive_ -
-        1. _directed_graph_ - TSP (Travelling Salesman Problem) using Naive approach for directed graph
-        2. _undirected_graph_ - TSP (Travelling Salesman Problem) using Naive approach for undirected graph
-    - _union_find_ - Union Find / Disjoint Sets (Detecting cycles in an undirected graph)
 2.  **graphs** -
     - _directed_unweighted_ - Directed Unweighted graph
     - _directed_weighted_ - Directed Weighted graph
