@@ -76,6 +76,8 @@ go run graph.go traversal.go
     - _lcs_ - Longest Common Subsequence
       - _iterative_dp_ - Longest Common Subsequence using Dynamic Programming (Iterative Version)
     - _lo_permutations_ - Lexicographic Ordering Permutations
+    - _longest_palindrome_substring_ -
+      - _brute_force_ - Longest Palindrome Substring using Brute Force Technique
     - _making_change_dp_ - Making Change Problem using Dynamic Programming
     - _order_statistics_ - Finding Kth Smallest/Largest element (Order Statistics)
       - _naive_approach_ - Naive Approach using Max Heap - O(k + (n-k)\*log(k))
