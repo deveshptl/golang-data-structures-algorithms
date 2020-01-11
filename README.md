@@ -40,7 +40,7 @@ go run graph.go traversal.go
       - _cpp_brute_force_ - Closest Pair Problem using Brute Force Technique
       - _cpp_divide_conquer_ - Closest Pair Problem using Divide and Conquer Techinque
     - _combinations_ -
-      - _without_r_without_o_ - Without repetition and without considering order of elements
+      - _without_r_ - Without repetition of elements
     - _convex_hull_ -
       - _ch_brute_force_ - Convex Hull Algorithm using Brute Force Technique
       - _ch_divide_conquer_ - Convex Hull Algorithm using Divide and Conquer Technique
