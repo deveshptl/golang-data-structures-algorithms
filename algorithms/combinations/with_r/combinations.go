@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("\n-- n C r Combinations without repetition --")
+	fmt.Println("\n-- n C r Combinations with repetition --")
 
 	var n, r int
 	arr := make([]string, 0)
@@ -31,9 +31,9 @@ func Combinations(arr, data []string, start, end, index, r int) {
 		return
 	}
 
-	for i := start; i <= end && end-i+1 >= r-index; i++ {
+	for i := start; i <= end; i++ {
 		data[index] = arr[i]
-		Combinations(arr, data, i+1, end, index+1, r)
+		Combinations(arr, data, i, end, index+1, r)
 	}
 
 }
