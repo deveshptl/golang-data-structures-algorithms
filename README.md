@@ -33,6 +33,8 @@ go run graph.go traversal.go
 
 1.  **algorithms** -
     - _01knapsack_dp_ - 0-1 Knapsack Problem using Dynamic Programming
+    - _a_star_ -
+      - _undirected_graph_ - A<sup>*</sup>&nbsp; Algorithm for undirected graph
     - _activity_selection_gp_ - Activity Selection using Greedy Programming
     - _assembly_line_scheduling_ - Assembly Line Scheduling algorithm using Dynamic Programming
     - _binary_reflected_gray_codes_ - Binary Reflected Gray Codes
