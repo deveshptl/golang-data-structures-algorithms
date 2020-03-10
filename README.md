@@ -34,7 +34,7 @@ go run graph.go traversal.go
 1.  **algorithms** -
     - _01knapsack_dp_ - 0-1 Knapsack Problem using Dynamic Programming
     - _a_star_ -
-      - _undirected_graph_ - A<sup>*</sup>&nbsp; Algorithm for undirected graph
+      - _undirected_graph_ - A<sup>\*</sup>&nbsp; Algorithm for undirected graph
     - _activity_selection_gp_ - Activity Selection using Greedy Programming
     - _assembly_line_scheduling_ - Assembly Line Scheduling algorithm using Dynamic Programming
     - _binary_reflected_gray_codes_ - Binary Reflected Gray Codes
@@ -147,7 +147,7 @@ go run graph.go traversal.go
 
 ### Contribution
 
-Read the [contributing guide](CONTRIBUTING.md) to see how to contribute.
+This repository is for learning how to implement data structures and algorithms, and since contributions of others won't really teach me how to implement it by myself, I won't be accepting any pull requests. However, feel free to fork this repo and modify the code to play around various data structures and algorithms. Moreover, while playing around the code, if you find anything unusual or wrong in the implemetation, I would highly appreciate if you create an issue on the same.
 
 ### License
 
