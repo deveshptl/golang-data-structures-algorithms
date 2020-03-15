@@ -34,6 +34,7 @@ go run graph.go traversal.go
 1.  **algorithms** -
     - _01knapsack_dp_ - 0-1 Knapsack Problem using Dynamic Programming
     - _a_star_ -
+      - _8_puzzle_ - 8 Puzzle problem using A<sup>\*</sup> Algorithm
       - _directed_graph_ - A<sup>\*</sup>&nbsp; Algorithm for directed graph
       - _undirected_graph_ - A<sup>\*</sup>&nbsp; Algorithm for undirected graph
     - _activity_selection_gp_ - Activity Selection using Greedy Programming
