@@ -15,7 +15,7 @@ However the reason why go would also be a good language to implement DSA is that
 1. To get started make sure that you have go programming language installed on your computer. Follow how to install instructions from [golang download instructions](https://golang.org/doc/install).
 2. Once go is installed on your machine, just clone or download this repository.
 3. Now `cd <folder-name>` into the folder where the file you want to run is located.
-4. Now run `go run <file-name>`.
+4. Now run `go run .`.
 
 ### Example
 
@@ -24,10 +24,8 @@ Let's assume that you want to run files located in `graphs/directed_unweighted` 
 ```
 cd graphs/directed_unweighted/
 
-go run graph.go traversal.go
+go run .
 ```
-
-**Note**: If a folder contains multiple `go` files then use `go run <file-name> [<file-name>...]`. For e.g `bst_using_arr` folder contains two files: `bst_using_arr.go` and `traversal.go`. So use the command `go run bst_using_arr.go traversal.go`.
 
 ### FOLDER NAMES
 
