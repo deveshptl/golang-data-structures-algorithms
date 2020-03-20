@@ -21,12 +21,12 @@ var heap []*Node
 // value is the cost of the last matrix in path
 // path is the list of matrices which represents the traversal (steps) done from the initial matrix
 // level represents the depth at which the current (last matrix from path) state is
-// move represents the move done on the last state to transform into the current state
+// blankCell represents the row and column in which the blank cell was in the parent state
 type Node struct {
-	value int
-	path  sliceOfMatrix
-	level int
-	move  []int
+	value           int
+	path            sliceOfMatrix
+	level           int
+	parentBlankCell []int
 }
 
 func init() {
@@ -45,6 +45,7 @@ func init() {
 func main() {
 	// scan the input values
 	fmt.Println("\n-- Note: For blank cell use '0' --")
+
 	fmt.Println("\nStart entering puzzle values:")
 	for i := range inputPuzzle {
 		for j := range inputPuzzle[i] {
@@ -69,4 +70,5 @@ func main() {
 	}
 }
 
-// puzzle = [][]int{[]int{2, 8, 3}, []int{1, 6, 4}, []int{7, 0, 5}}
+// puzzle = [][]int{[]int{2, 8, 3}, []int{1, 6, 4}, []int{7, 0, 5}} - [][]int{[]int{1, 2, 3}, []int{8, 0, 4}, []int{7, 6, 5}}
+// puzzle := matrix{[]int{1, 8, 2}, []int{0, 4, 3}, []int{7, 6, 5}} - [][]int{[]int{1, 2, 3}, []int{4, 5, 6}, []int{7, 8, 0}}

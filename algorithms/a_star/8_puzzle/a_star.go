@@ -38,14 +38,14 @@ func (puzzle matrix) isValid() bool {
 
 // aStar function runs a* algorithm on the given scrambled puzzle
 func (puzzle matrix) aStar() {
-	states, moves := puzzle.nextStates([]int{-1, -1})
+	states, parentBlankCell := puzzle.nextStates([]int{-1, -1})
 	for i := range states {
 		// f = h + g
 		cost := states[i].calculateCost() + 1
 		path := make(sliceOfMatrix, 0)
 		path = append(path, copyMatrix(puzzle))
 		path = append(path, copyMatrix(states[i]))
-		Enqueue(&Node{value: cost, path: path, level: 1, move: moves[i]})
+		Enqueue(&Node{value: cost, path: path, level: 1, parentBlankCell: parentBlankCell})
 	}
 
 	node := traverseFurther(Dequeue())
@@ -59,8 +59,7 @@ func (puzzle matrix) aStar() {
 
 // traverseFurther recursively generates new puzzles from current state and stores them into the heap
 func traverseFurther(puzzle *Node) *Node {
-	states, moves := puzzle.path[len(puzzle.path)-1].nextStates(puzzle.move)
-
+	states, parentBlankCell := puzzle.path[len(puzzle.path)-1].nextStates(puzzle.parentBlankCell)
 	for i := range states {
 		// f = h + g
 		cost := states[i].calculateCost() + puzzle.level + 1
@@ -70,7 +69,7 @@ func traverseFurther(puzzle *Node) *Node {
 
 		path = append(path, temp)
 
-		node := &Node{value: cost, path: path, level: puzzle.level + 1, move: moves[i]}
+		node := &Node{value: cost, path: path, level: puzzle.level + 1, parentBlankCell: parentBlankCell}
 		Enqueue(node)
 	}
 
@@ -85,7 +84,7 @@ func traverseFurther(puzzle *Node) *Node {
 }
 
 // nextStates function generates new states from the possible moves
-func (puzzle matrix) nextStates(move []int) (sliceOfMatrix, matrix) {
+func (puzzle matrix) nextStates(move []int) (sliceOfMatrix, []int) {
 	i, j := puzzle.findBlankCell()
 	moves := findNextMoves(i, j)
 
@@ -105,7 +104,7 @@ func (puzzle matrix) nextStates(move []int) (sliceOfMatrix, matrix) {
 		states = append(states, newState)
 	}
 
-	return states, moves
+	return states, []int{i, j}
 }
 
 // findNextMoves generates possible moves of blank (0) cell
