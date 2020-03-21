@@ -44,6 +44,7 @@ func init() {
 
 func main() {
 	// scan the input values
+	fmt.Println("\n-- 8 Puzzle problem using A* Algorithm --")
 	fmt.Println("\n-- Note: For blank cell use '0' --")
 
 	fmt.Println("\nStart entering puzzle values:")
