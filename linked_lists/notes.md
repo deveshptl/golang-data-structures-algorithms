@@ -32,8 +32,10 @@ A drawback of linked lists is that access time is linear (and difficult to pipel
   - Θ(n) when last element is unknown
 - Insert/Delete in middle: search time + Θ(1)
 
-<br>
-*References*:
-* [https://en.wikipedia.org/wiki/Linked_list](https://en.wikipedia.org/wiki/Linked_list)
-* [https://www.quora.com/What-is-an-application-of-linear-linked-list-data-structures](https://www.quora.com/What-is-an-application-of-linear-linked-list-data-structures)
-* [https://www.geeksforgeeks.org/applications-of-linked-list-data-structure/](https://www.geeksforgeeks.org/applications-of-linked-list-data-structure/)
+<br/>
+
+_References_:
+
+- [https://en.wikipedia.org/wiki/Linked_list](https://en.wikipedia.org/wiki/Linked_list)
+- [https://www.quora.com/What-is-an-application-of-linear-linked-list-data-structures](https://www.quora.com/What-is-an-application-of-linear-linked-list-data-structures)
+- [https://www.geeksforgeeks.org/applications-of-linked-list-data-structure/](https://www.geeksforgeeks.org/applications-of-linked-list-data-structure/)

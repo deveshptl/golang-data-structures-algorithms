@@ -13,6 +13,8 @@ Many modern operating systems use doubly linked lists to maintain references to 
 5. Delete − Deletes an element using the given key.
 6. Reverse - Reverses the linked list.
 
-<br>
-*References*:
-* [https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list)
+<br/>
+
+_References_:
+
+- [https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list)

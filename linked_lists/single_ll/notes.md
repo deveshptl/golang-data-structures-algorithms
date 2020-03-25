@@ -11,7 +11,9 @@ Singly linked lists contain nodes which have a data field as well as 'next' fiel
 5. Delete − Deletes an element using the given key.
 6. Reverse - Reverses the linked list.
 
-<br>
-*References*:
-[https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm](https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm)
-[https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list)
+<br/>
+
+_References_:
+
+- [https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm](https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm)
+- [https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list)

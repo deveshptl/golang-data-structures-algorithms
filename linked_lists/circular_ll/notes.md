@@ -11,6 +11,8 @@ In the last node of a list, the link field often contains a null reference, a sp
 5. Delete − Deletes an element using the given key.
 6. Reverse - Reverses the linked list.
 
-<br>
-*References*:
-[https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list)
+<br/>
+
+_References_:
+
+- [https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list)

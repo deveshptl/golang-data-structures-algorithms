@@ -62,6 +62,8 @@ Traversals:
 
 4. **Topological Sorting**: Dependencies of packages can be represented using graphs and those packages are compiled first which have no dependenies or have dependencies but these have already been compiled.
 
-<br>
-*References*:
-* [https://en.wikipedia.org/wiki/Graph_(abstract_data_type)](https://en.wikipedia.org/wiki/Graph_(abstract_data_type))
+<br/>
+
+_References_:
+
+- [https://en.wikipedia.org/wiki/Graph\_(abstract_data_type)](https://en.wikipedia.org/wiki/Graph_(abstract_data_type))
