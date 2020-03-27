@@ -16,69 +16,45 @@ func main() {
 	fmt.Println("-- Travelling Salesman Problem using Dynamic Programming --")
 	g := make(graph)
 
-	// i := 0
-	// for i == 0 {
-	// 	fmt.Println("\n1. ADD A VERTEX")
-	// 	fmt.Println("2. ADD AN EDGE")
-	// 	fmt.Println("3. REMOVE VERTEX")
-	// 	fmt.Println("4. REMOVE AN EDGE")
-	// 	fmt.Println("5. DISPLAY GRAPH")
-	// 	fmt.Println("6. PERFORM TSP")
-	// 	fmt.Println("7. EXIT")
-	// 	var choice int
-	// 	fmt.Print("Enter your choice: ")
-	// 	fmt.Scanf("%d\n", &choice)
-	// 	switch choice {
-	// 	case 1:
-	// 		g.addVertex()
-	// 	case 2:
-	// 		g.addEdge()
-	// 	case 3:
-	// 		g.removeVertex()
-	// 	case 4:
-	// 		g.removeEdge()
-	// 	case 5:
-	// 		g.simpleDisplay()
-	// 	case 6:
-	// 		fmt.Print("Enter the starting vertex: ")
-	// 		var initVtx string
-	// 		fmt.Scanf("%s\n", &initVtx)
-	// 		tours, cost := TSP(g, initVtx)
-	// 		fmt.Println("\nTours:")
-	// 		for i := 0; i < len(tours); i++ {
-	// 			fmt.Println(strings.Join(tours[i], ""))
-	// 		}
-	// 		fmt.Println("\nCost: ", cost)
-	// 	case 7:
-	// 		i = 1
-	// 	default:
-	// 		fmt.Println("Command not recognized.")
-	// 	}
-	// }
-
-	g.addVertexToGraph("1")
-	g.addVertexToGraph("2")
-	g.addVertexToGraph("3")
-	g.addVertexToGraph("4")
-	g.addEdgeToGraph("1", "2", 10)
-	g.addEdgeToGraph("1", "3", 15)
-	g.addEdgeToGraph("1", "4", 20)
-	g.addEdgeToGraph("2", "1", 5)
-	g.addEdgeToGraph("2", "3", 9)
-	g.addEdgeToGraph("2", "4", 10)
-	g.addEdgeToGraph("3", "1", 6)
-	g.addEdgeToGraph("3", "2", 13)
-	g.addEdgeToGraph("3", "4", 12)
-	g.addEdgeToGraph("4", "1", 8)
-	g.addEdgeToGraph("4", "2", 8)
-	g.addEdgeToGraph("4", "3", 9)
-
-	tours, cost := TSP(g, "1")
-	fmt.Println("\nTours:")
-	for i := 0; i < len(tours); i++ {
-		fmt.Println(strings.Join(tours[i], ""))
+	i := 0
+	for i == 0 {
+		fmt.Println("\n1. ADD A VERTEX")
+		fmt.Println("2. ADD AN EDGE")
+		fmt.Println("3. REMOVE VERTEX")
+		fmt.Println("4. REMOVE AN EDGE")
+		fmt.Println("5. DISPLAY GRAPH")
+		fmt.Println("6. PERFORM TSP")
+		fmt.Println("7. EXIT")
+		var choice int
+		fmt.Print("Enter your choice: ")
+		fmt.Scanf("%d\n", &choice)
+		switch choice {
+		case 1:
+			g.addVertex()
+		case 2:
+			g.addEdge()
+		case 3:
+			g.removeVertex()
+		case 4:
+			g.removeEdge()
+		case 5:
+			g.simpleDisplay()
+		case 6:
+			fmt.Print("Enter the starting vertex: ")
+			var initVtx string
+			fmt.Scanf("%s\n", &initVtx)
+			tours, cost := TSP(g, initVtx)
+			fmt.Println("\nTours:")
+			for i := 0; i < len(tours); i++ {
+				fmt.Println(strings.Join(tours[i], ""))
+			}
+			fmt.Println("\nCost: ", cost)
+		case 7:
+			i = 1
+		default:
+			fmt.Println("Command not recognized.")
+		}
 	}
-	fmt.Println("\nCost: ", cost)
 }
 
 // TSP performs travelling saleman algorithm using naive approach on a given undirected weighted graph.
