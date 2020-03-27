@@ -99,7 +99,7 @@ func main() {
 		fmt.Println("8. EXIT")
 		var choice int
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 		switch choice {
 		case 1:
 			g.addVertex()
@@ -130,7 +130,7 @@ func main() {
 func (g graph) addVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
-	fmt.Scanf("%s", &vtxName)
+	fmt.Scanf("%s\n", &vtxName)
 	g.addVertexToGraph(vtxName)
 }
 
@@ -138,27 +138,27 @@ func (g graph) addEdge() {
 	var fromVtx, toVtx string
 	var edgeValue int
 	fmt.Print("Enter the initial vertex name: ")
-	fmt.Scanf("%s", &fromVtx)
+	fmt.Scanf("%s\n", &fromVtx)
 	fmt.Print("Enter the destination vertex name: ")
-	fmt.Scanf("%s", &toVtx)
+	fmt.Scanf("%s\n", &toVtx)
 	fmt.Print("Enter the weight of edge: ")
-	fmt.Scanf("%d", &edgeValue)
+	fmt.Scanf("%d\n", &edgeValue)
 	g.addEdgeToGraph(fromVtx, toVtx, edgeValue)
 }
 
 func (g graph) removeVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
-	fmt.Scanf("%s", &vtxName)
+	fmt.Scanf("%s\n", &vtxName)
 	g.removeVertexFromGraph(vtxName)
 }
 
 func (g graph) removeEdge() {
 	var fromVtx, toVtx string
 	fmt.Print("Enter the initial vertex name: ")
-	fmt.Scanf("%s", &fromVtx)
+	fmt.Scanf("%s\n", &fromVtx)
 	fmt.Print("Enter the destination vertex name: ")
-	fmt.Scanf("%s", &toVtx)
+	fmt.Scanf("%s\n", &toVtx)
 	g.removeEdgeFromGraph(fromVtx, toVtx)
 }
 

@@ -9,7 +9,7 @@ func main() {
 	fmt.Println("-- Sieve of Eratosthenes: Generating consecutive primes numbers not exceeding n --")
 	var n int
 	fmt.Print("Enter the number greater than 1: ")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d\n", &n)
 	arr := Sieve(n)
 	fmt.Println("Consecutive prime number not exceeding", n, "are: ")
 	fmt.Println(arr)

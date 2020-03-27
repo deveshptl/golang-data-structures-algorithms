@@ -19,7 +19,7 @@ func init() {
 func main() {
 	fmt.Println("\n-- Assembly Line Scheduling --")
 	fmt.Print("Enter the number of stations in assembly line: ")
-	fmt.Scanf("%d", &stations)
+	fmt.Scanf("%d\n", &stations)
 
 	fmt.Println("Start entering the costs:")
 	var temp int
@@ -27,7 +27,7 @@ func main() {
 		assembly[i] = make([]int, stations+2)
 		for j := 0; j < stations+2; j++ {
 			fmt.Print(i, "-", j, ": ")
-			fmt.Scanf("%d", &temp)
+			fmt.Scanf("%d\n", &temp)
 			assembly[i][j] = temp
 		}
 	}
@@ -37,7 +37,7 @@ func main() {
 		transport[i] = make([]int, stations+2)
 		for j := 0; j < stations-1; j++ {
 			fmt.Print(i+1, "-", j+1, ": ")
-			fmt.Scanf("%d", &temp)
+			fmt.Scanf("%d\n", &temp)
 			transport[i][j+1] = temp
 		}
 	}

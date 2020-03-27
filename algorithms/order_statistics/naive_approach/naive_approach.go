@@ -14,15 +14,15 @@ func main() {
 
 	// user inputs
 	fmt.Print("\nEnter the size of array: ")
-	fmt.Scanf("%d", &size)
+	fmt.Scanf("%d\n", &size)
 	fmt.Println("Start entering elements:")
 	for i := 0; i < size; i++ {
 		var value int
-		fmt.Scanf("%d", &value)
+		fmt.Scanf("%d\n", &value)
 		newArr = append(newArr, value)
 	}
 	fmt.Print("Enter the value of k: ")
-	fmt.Scanf("%d", &k)
+	fmt.Scanf("%d\n", &k)
 
 	naiveSelect(newArr, k)
 

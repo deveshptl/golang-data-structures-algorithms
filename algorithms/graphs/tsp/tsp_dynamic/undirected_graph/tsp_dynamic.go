@@ -27,7 +27,7 @@ func main() {
 		fmt.Println("7. EXIT")
 		var choice int
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 		switch choice {
 		case 1:
 			g.addVertex()
@@ -42,7 +42,7 @@ func main() {
 		case 6:
 			fmt.Print("Enter the starting vertex: ")
 			var initVtx string
-			fmt.Scanf("%s", &initVtx)
+			fmt.Scanf("%s\n", &initVtx)
 			tours, cost := TSP(g, initVtx)
 			fmt.Println("\nTours:")
 			for i := 0; i < len(tours); i++ {

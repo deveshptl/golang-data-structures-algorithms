@@ -27,10 +27,10 @@ func main() {
 	var size, element, min, max int
 	fmt.Println("\n-- Counting Sort --")
 	fmt.Print("\nEnter the size of an array: ")
-	fmt.Scanf("%d", &size)
+	fmt.Scanf("%d\n", &size)
 	fmt.Println("Start entering elements:")
 	for i := 0; i < size; i++ {
-		fmt.Scanf("%d", &element)
+		fmt.Scanf("%d\n", &element)
 
 		if i == 0 {
 			min = element

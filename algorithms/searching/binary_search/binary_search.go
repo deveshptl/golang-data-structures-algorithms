@@ -27,14 +27,14 @@ func main() {
 	var size, element, key int
 	fmt.Println("\n-- Binary Search --")
 	fmt.Print("\nEnter the size of an array: ")
-	fmt.Scanf("%d", &size)
+	fmt.Scanf("%d\n", &size)
 	fmt.Println("Start entering elements in sorted manner:")
 	for i := 0; i < size; i++ {
-		fmt.Scanf("%d", &element)
+		fmt.Scanf("%d\n", &element)
 		arr = append(arr, element)
 	}
 	fmt.Print("Enter the search key: ")
-	fmt.Scanf("%d", &key)
+	fmt.Scanf("%d\n", &key)
 
 	index := binarySearch(size, key)
 	if index == -1 {

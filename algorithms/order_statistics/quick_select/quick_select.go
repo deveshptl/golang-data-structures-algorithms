@@ -15,15 +15,15 @@ func main() {
 
 	// user inputs
 	fmt.Print("\nEnter the size of array: ")
-	fmt.Scanf("%d", &size)
+	fmt.Scanf("%d\n", &size)
 	fmt.Println("Start entering elements:")
 	for i := 0; i < size; i++ {
 		var value int
-		fmt.Scanf("%d", &value)
+		fmt.Scanf("%d\n", &value)
 		arr = append(arr, value)
 	}
 	fmt.Print("Enter the value for k: ")
-	fmt.Scanf("%d", &k)
+	fmt.Scanf("%d\n", &k)
 
 	value := QuickSelect(arr, k)
 	fmt.Println(k, "smallest element is:", value)

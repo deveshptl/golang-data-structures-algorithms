@@ -9,10 +9,10 @@ func main() {
 	var element int
 	fmt.Println("\n-- Selection Sort --")
 	fmt.Print("\nEnter the size of an array: ")
-	fmt.Scanf("%d", &length)
+	fmt.Scanf("%d\n", &length)
 	fmt.Println("Start entering the elements: ")
 	for i := 0; i < length; i++ {
-		fmt.Scanf("%d", &element)
+		fmt.Scanf("%d\n", &element)
 		arr = append(arr, element)
 	}
 

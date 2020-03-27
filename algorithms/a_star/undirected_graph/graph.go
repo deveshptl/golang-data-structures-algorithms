@@ -105,7 +105,7 @@ func main() {
 		fmt.Println("7. EXIT")
 		var choice int
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 		switch choice {
 		case 1:
 			g.addVertex()
@@ -131,9 +131,9 @@ func (g graph) addVertex() {
 	var vtxName string
 	var vtxWeight int
 	fmt.Print("Enter the name of vertex: ")
-	fmt.Scanf("%s", &vtxName)
+	fmt.Scanf("%s\n", &vtxName)
 	fmt.Print("Enter the weight of vertex: ")
-	fmt.Scanf("%d", &vtxWeight)
+	fmt.Scanf("%d\n", &vtxWeight)
 	g.addVertexToGraph(vtxName, vtxWeight)
 }
 
@@ -141,36 +141,36 @@ func (g graph) addEdge() {
 	var fromVtx, toVtx string
 	var edgeValue int
 	fmt.Print("Enter the initial vertex name: ")
-	fmt.Scanf("%s", &fromVtx)
+	fmt.Scanf("%s\n", &fromVtx)
 	fmt.Print("Enter the destination vertex name: ")
-	fmt.Scanf("%s", &toVtx)
+	fmt.Scanf("%s\n", &toVtx)
 	fmt.Print("Enter the weight of edge: ")
-	fmt.Scanf("%d", &edgeValue)
+	fmt.Scanf("%d\n", &edgeValue)
 	g.addEdgeToGraph(fromVtx, toVtx, edgeValue)
 }
 
 func (g graph) removeVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
-	fmt.Scanf("%s", &vtxName)
+	fmt.Scanf("%s\n", &vtxName)
 	g.removeVertexFromGraph(vtxName)
 }
 
 func (g graph) removeEdge() {
 	var fromVtx, toVtx string
 	fmt.Print("Enter the initial vertex name: ")
-	fmt.Scanf("%s", &fromVtx)
+	fmt.Scanf("%s\n", &fromVtx)
 	fmt.Print("Enter the destination vertex name: ")
-	fmt.Scanf("%s", &toVtx)
+	fmt.Scanf("%s\n", &toVtx)
 	g.removeEdgeFromGraph(fromVtx, toVtx)
 }
 
 func (g graph) initAStarAlgo() {
 	var initialVtx, goalVtx string
 	fmt.Print("Enter the initial vertex name: ")
-	fmt.Scanf("%s", &initialVtx)
+	fmt.Scanf("%s\n", &initialVtx)
 	fmt.Print("Enter the goal vertex name: ")
-	fmt.Scanf("%s", &goalVtx)
+	fmt.Scanf("%s\n", &goalVtx)
 	if g[initialVtx] == nil {
 		fmt.Println("Initial vertex does not exist.")
 		return

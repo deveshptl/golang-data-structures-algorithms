@@ -166,7 +166,7 @@ func main() {
 
 		var choice int
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 
 		switch choice {
 		case 1:
@@ -199,13 +199,13 @@ func main() {
 func insNode() {
 	var element int
 	fmt.Print("Enter the node value that you want to insert: ")
-	fmt.Scanf("%d", &element)
+	fmt.Scanf("%d\n", &element)
 	avl.root = Insert(avl.root, element)
 }
 
 func findNode() {
 	var element int
 	fmt.Print("Enter the value of the key: ")
-	fmt.Scanf("%d", &element)
+	fmt.Scanf("%d\n", &element)
 	avl.Find(element)
 }

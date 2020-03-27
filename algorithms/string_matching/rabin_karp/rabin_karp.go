@@ -9,9 +9,9 @@ func main() {
 	fmt.Println("-- Rabin Karp --")
 	var text, pattern string
 	fmt.Print("Enter the text string: ")
-	fmt.Scanf("%s", &text)
+	fmt.Scanf("%s\n", &text)
 	fmt.Print("Enter the pattern string: ")
-	fmt.Scanf("%s", &pattern)
+	fmt.Scanf("%s\n", &pattern)
 	arr := RabinKarpWithoutHash(text, pattern)
 	fmt.Println("Without using hash function, pattern found at index/ices:", arr)
 	arr = RabinKarpWithHash(text, pattern)

@@ -49,14 +49,14 @@ func init() {
 func main() {
 	fmt.Println("\n-- Insertion Sort --")
 	fmt.Print("Enter the size of an array: ")
-	fmt.Scanf("%d", &size)
+	fmt.Scanf("%d\n", &size)
 	fmt.Println("Start entering the elements:")
 	var temp float64
 	for i := 0; i < size; i++ {
 		if i == 0 {
 			max = temp
 		}
-		fmt.Scanf("%f", &temp)
+		fmt.Scanf("%f\n", &temp)
 		arr = append(arr, temp)
 		if max < temp {
 			max = temp

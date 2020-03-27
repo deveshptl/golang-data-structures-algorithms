@@ -24,12 +24,12 @@ var elements []int
 func main() {
 	fmt.Println("\n-- Binary Insertion Sort --")
 	fmt.Print("\nEnter the number of elements: ")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d\n", &n)
 	elements = make([]int, n)
 	var temp int
 	fmt.Println("Start entering the elements:")
 	for i := 0; i < n; i++ {
-		fmt.Scanf("%d", &temp)
+		fmt.Scanf("%d\n", &temp)
 		elements[i] = temp
 	}
 	InsertionSort()

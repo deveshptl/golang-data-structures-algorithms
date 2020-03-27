@@ -9,15 +9,15 @@ func main() {
 	arr := make([]string, 0)
 
 	fmt.Print("\nEnter the value of n: ")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d\n", &n)
 	fmt.Println("Start entering unique values of n:")
 	for i := 0; i < n; i++ {
 		var temp string
-		fmt.Scanf("%s", &temp)
+		fmt.Scanf("%s\n", &temp)
 		arr = append(arr, temp)
 	}
 	fmt.Print("Enter the value of r: ")
-	fmt.Scanf("%d", &r)
+	fmt.Scanf("%d\n", &r)
 
 	data := make([]string, r)
 

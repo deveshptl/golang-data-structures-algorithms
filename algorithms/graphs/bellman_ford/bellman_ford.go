@@ -78,7 +78,7 @@ func main() {
 		fmt.Println("5. EXIT")
 		var choice int
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 		switch choice {
 		case 1:
 			addVertex()
@@ -130,7 +130,7 @@ func startBellmanFord() {
 	// scan for starting vertex name
 	var vtx string
 	fmt.Print("Enter the name of starting vertex: ")
-	fmt.Scanf("%s", &vtx)
+	fmt.Scanf("%s\n", &vtx)
 
 	// initialize distance matrix with necessary values
 	distanceMatrix = make([]float64, len(vertices))

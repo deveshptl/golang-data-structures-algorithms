@@ -75,7 +75,7 @@ func main() {
 		fmt.Println("4. EXIT")
 		var choice int
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 		switch choice {
 		case 1:
 			addVertex()
@@ -100,9 +100,9 @@ func main() {
 func DijkstraInit() {
 	var start, finish string
 	fmt.Print("Enter the initial node: ")
-	fmt.Scanf("%s", &start)
+	fmt.Scanf("%s\n", &start)
 	fmt.Print("Enter the destination node: ")
-	fmt.Scanf("%s", &finish)
+	fmt.Scanf("%s\n", &finish)
 	Dijkstra(start, finish)
 }
 

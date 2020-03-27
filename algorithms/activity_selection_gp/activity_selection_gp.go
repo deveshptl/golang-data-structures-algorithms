@@ -33,17 +33,17 @@ func main() {
 	fmt.Println("\n-- Activity Selection Problem using Greedy Approach --")
 
 	fmt.Print("\nEnter the number of activities: ")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d\n", &n)
 	activities = make([]activity, n)
 
 	fmt.Println("Start entering starting and finishing times of each activities:")
 	var temp float64
 	for i := 0; i < n; i++ {
 		fmt.Print("Start: ")
-		fmt.Scanf("%f", &temp)
+		fmt.Scanf("%f\n", &temp)
 		activities[i].start = temp
 		fmt.Print("Finish: ")
-		fmt.Scanf("%f", &temp)
+		fmt.Scanf("%f\n", &temp)
 		activities[i].finish = temp
 	}
 

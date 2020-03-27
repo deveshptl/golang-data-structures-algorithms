@@ -9,15 +9,15 @@ func main() {
 	arr := make([]int, 0)
 
 	fmt.Print("\nEnter the size of array: ")
-	fmt.Scanf("%d", &size)
+	fmt.Scanf("%d\n", &size)
 	fmt.Println("Start entering elements in sorted order:")
 	for i := 0; i < size; i++ {
 		var value int
-		fmt.Scanf("%d", &value)
+		fmt.Scanf("%d\n", &value)
 		arr = append(arr, value)
 	}
 	fmt.Print("Enter the value for key: ")
-	fmt.Scanf("%d", &key)
+	fmt.Scanf("%d\n", &key)
 
 	pos := TernarySearch(arr, 0, size-1, key)
 

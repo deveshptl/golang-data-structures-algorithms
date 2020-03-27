@@ -40,7 +40,7 @@ func addEdgeToGraph(fromVtx, toVtx string, edgeValue float64) {
 func addVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
-	fmt.Scanf("%s", &vtxName)
+	fmt.Scanf("%s\n", &vtxName)
 	addVertexToGraph(vtxName)
 }
 
@@ -48,10 +48,10 @@ func addEdge() {
 	var fromVtx, toVtx string
 	var edgeValue int
 	fmt.Print("Enter the initial vertex name: ")
-	fmt.Scanf("%s", &fromVtx)
+	fmt.Scanf("%s\n", &fromVtx)
 	fmt.Print("Enter the destination vertex name: ")
-	fmt.Scanf("%s", &toVtx)
+	fmt.Scanf("%s\n", &toVtx)
 	fmt.Print("Enter the weight of edge: ")
-	fmt.Scanf("%d", &edgeValue)
+	fmt.Scanf("%d\n", &edgeValue)
 	addEdgeToGraph(fromVtx, toVtx, float64(edgeValue))
 }

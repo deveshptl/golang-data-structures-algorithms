@@ -61,11 +61,11 @@ func main() {
 	i := 0
 	for i == 0 {
 		fmt.Print("\nEnter the expression: ")
-		fmt.Scanf("%s", &inputExp)
+		fmt.Scanf("%s\n", &inputExp)
 		InToPre()
 		var choice string
 		fmt.Print("\nDo you want to continue y/n? ")
-		fmt.Scanf("%s", &choice)
+		fmt.Scanf("%s\n", &choice)
 		if choice == "N" || choice == "n" {
 			break
 		} else if choice == "Y" || choice == "y" {

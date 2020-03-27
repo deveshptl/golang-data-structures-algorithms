@@ -119,7 +119,7 @@ func main() {
 		fmt.Println("4. DISPLAY")
 		fmt.Println("5. EXIT")
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 
 		switch choice {
 		case 1:
@@ -145,14 +145,14 @@ func main() {
 func nodeInsert() {
 	var element int
 	fmt.Print("Enter the element that you want to insert: ")
-	fmt.Scanf("%d", &element)
+	fmt.Scanf("%d\n", &element)
 	l.Insert(element)
 }
 
 func nodeDelete() {
 	var place int
 	fmt.Print("Enter the index place from where you to delete the node: ")
-	fmt.Scanf("%d", &place)
+	fmt.Scanf("%d\n", &place)
 	l.Delete(place)
 }
 

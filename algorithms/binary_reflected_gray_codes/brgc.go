@@ -9,7 +9,7 @@ func main() {
 	fmt.Println("\n-- Binary Reflected Gray Codes --")
 	var value int
 	fmt.Print("\nEnter a value: ")
-	fmt.Scanf("%d", &value)
+	fmt.Scanf("%d\n", &value)
 	if value < 1 {
 		log.Fatal("Invalid value. Value must be greater than 0.")
 	}

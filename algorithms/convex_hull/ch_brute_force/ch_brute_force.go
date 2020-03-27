@@ -76,10 +76,10 @@ func ConvexHull() []Point {
 			}
 
 			// float64 to string
-			xi := fmt.Sprintf("%f", arr[i].x)
-			yi := fmt.Sprintf("%f", arr[i].y)
-			xj := fmt.Sprintf("%f", arr[j].x)
-			yj := fmt.Sprintf("%f", arr[j].y)
+			xi := fmt.Sprintf("%f\n", arr[i].x)
+			yi := fmt.Sprintf("%f\n", arr[i].y)
+			xj := fmt.Sprintf("%f\n", arr[j].x)
+			yj := fmt.Sprintf("%f\n", arr[j].y)
 
 			//string of x[i] y[i]
 			strI := xi + yi

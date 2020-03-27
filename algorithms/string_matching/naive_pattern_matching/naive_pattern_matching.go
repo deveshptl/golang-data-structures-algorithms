@@ -21,9 +21,9 @@ var mainString, pattern string
 func main() {
 	fmt.Println("\n-- Naive Pattern Matching --")
 	fmt.Print("\nEnter the main string: ")
-	fmt.Scanf("%s", &mainString)
+	fmt.Scanf("%s\n", &mainString)
 	fmt.Print("Enter the pattern: ")
-	fmt.Scanf("%s", &pattern)
+	fmt.Scanf("%s\n", &pattern)
 	occurance := naiveMatch()
 	if len(occurance) == 0 {
 		fmt.Println("-- No pattern found --")

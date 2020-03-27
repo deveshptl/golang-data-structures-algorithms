@@ -13,14 +13,14 @@ func main() {
 	var n int
 	var k int
 	fmt.Print("\nEnter the size of an array: ")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d\n", &n)
 	fmt.Println("Start entering elements:")
 	for i := 0; i < n; i++ {
-		fmt.Scanf("%d", &value)
+		fmt.Scanf("%d\n", &value)
 		arr = append(arr, float64(value))
 	}
 	fmt.Print("Enter the value for k: ")
-	fmt.Scanf("%d", &k)
+	fmt.Scanf("%d\n", &k)
 	if k < 1 || k >= len(arr) {
 		fmt.Println("You must enter a valid value for k.")
 		return

@@ -51,15 +51,15 @@ func addEdgeToGraph(fromVtx, toVtx string) {
 func addVertex() {
 	var vtxName string
 	fmt.Print("Enter the name of vertex: ")
-	fmt.Scanf("%s", &vtxName)
+	fmt.Scanf("%s\n", &vtxName)
 	addVertexToGraph(vtxName)
 }
 
 func addEdge() {
 	var fromVtx, toVtx string
 	fmt.Print("Enter the initial vertex name: ")
-	fmt.Scanf("%s", &fromVtx)
+	fmt.Scanf("%s\n", &fromVtx)
 	fmt.Print("Enter the destination vertex name: ")
-	fmt.Scanf("%s", &toVtx)
+	fmt.Scanf("%s\n", &toVtx)
 	addEdgeToGraph(fromVtx, toVtx)
 }

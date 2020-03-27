@@ -27,7 +27,7 @@ func main() {
 	// 	fmt.Println("7. EXIT")
 	// 	var choice int
 	// 	fmt.Print("Enter your choice: ")
-	// 	fmt.Scanf("%d", &choice)
+	// 	fmt.Scanf("%d\n", &choice)
 	// 	switch choice {
 	// 	case 1:
 	// 		g.addVertex()
@@ -42,7 +42,7 @@ func main() {
 	// 	case 6:
 	// 		fmt.Print("Enter the starting vertex: ")
 	// 		var initVtx string
-	// 		fmt.Scanf("%s", &initVtx)
+	// 		fmt.Scanf("%s\n", &initVtx)
 	// 		tours, cost := TSP(g, initVtx)
 	// 		fmt.Println("\nTours:")
 	// 		for i := 0; i < len(tours); i++ {
@@ -183,7 +183,7 @@ func TSP(g graph, initVtx string) ([][]string, float64) {
 			state = state ^ (1 << uint32(index))
 			lastIndex = uint32(index)
 		}
-		tour = append(tour, ", ", strconv.Itoa(int(start)), ", ", fmt.Sprintf("%f", math.Inf(1)))
+		tour = append(tour, ", ", strconv.Itoa(int(start)), ", ", fmt.Sprintf("%f\n", math.Inf(1)))
 		state = endState
 		lastIndex = start
 	}
@@ -191,7 +191,7 @@ func TSP(g graph, initVtx string) ([][]string, float64) {
 	// Some Reformating of strings
 	//									--------------	---------------
 	// Format of type: [2, 0, 1, 3, 2,  2, 3, 1, 0, 2,  ]
-	tours := strings.Split(strings.Join(tour, ""), fmt.Sprintf("%f", math.Inf(1)))
+	tours := strings.Split(strings.Join(tour, ""), fmt.Sprintf("%f\n", math.Inf(1)))
 	// eclude the trailing empty []string
 	tours = tours[0 : len(tours)-1]
 

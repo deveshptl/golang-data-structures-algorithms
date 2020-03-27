@@ -9,7 +9,7 @@ func main() {
 	fmt.Println("-- Lexicographic Ordering Permutations --")
 	var str string
 	fmt.Print("Enter a string: ")
-	fmt.Scanf("%s", &str)
+	fmt.Scanf("%s\n", &str)
 	arr := strings.Split(str, "")
 	result := LOP(arr)
 	for i := 0; i < len(result); i++ {

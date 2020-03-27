@@ -52,7 +52,7 @@ func main() {
 		for j := range inputPuzzle[i] {
 			value := -1
 			fmt.Print("Enter for ", i+1, j+1, ": ")
-			fmt.Scanf("%d", &value)
+			fmt.Scanf("%d\n", &value)
 			inputPuzzle[i][j] = value
 		}
 		fmt.Println("")

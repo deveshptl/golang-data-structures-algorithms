@@ -6,7 +6,7 @@ func main() {
 	var n int
 	fmt.Println("\n-- Tower of Hanoi --")
 	fmt.Print("\nEnter the number of discs: ")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d\n", &n)
 	Toh("A", "B", "C", n)
 }
 

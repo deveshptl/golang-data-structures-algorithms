@@ -91,9 +91,9 @@ func (h heap) insertNodes() heap {
 	var char string
 	var freq int
 	fmt.Print("\nChar: ")
-	fmt.Scanf("%s", &char)
+	fmt.Scanf("%s\n", &char)
 	fmt.Print("Freq: ")
-	fmt.Scanf("%d", &freq)
+	fmt.Scanf("%d\n", &freq)
 	h = h.Insert(Node{char: char, freq: freq})
 	return h
 }

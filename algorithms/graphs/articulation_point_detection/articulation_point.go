@@ -13,7 +13,7 @@ func main() {
 		fmt.Println("5. EXIT")
 		var choice int
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 		switch choice {
 		case 1:
 			g.addVertex()

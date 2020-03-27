@@ -84,7 +84,7 @@ func main() {
 		fmt.Println("4. EXIT")
 		var ch int
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &ch)
+		fmt.Scanf("%d\n", &ch)
 		switch ch {
 		case 1:
 			insertNode()
@@ -107,7 +107,7 @@ func main() {
 func insertNode() {
 	var ch int
 	fmt.Print("Enter the element that you want to insert: ")
-	fmt.Scanf("%d", &ch)
+	fmt.Scanf("%d\n", &ch)
 	Insert(ch)
 }
 

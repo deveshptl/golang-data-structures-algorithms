@@ -46,9 +46,9 @@ var sequence [][]int
 func main() {
 	fmt.Println("\n-- Longest Common Subsequence --")
 	fmt.Print("\nEnter the first string: ")
-	fmt.Scanf("%s", &str01)
+	fmt.Scanf("%s\n", &str01)
 	fmt.Print("Enter the second string: ")
-	fmt.Scanf("%s", &str02)
+	fmt.Scanf("%s\n", &str02)
 	str01 = "\n" + str01
 	str02 = "\n" + str02
 	sequence = make([][]int, len(str01))

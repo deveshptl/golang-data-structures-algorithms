@@ -9,10 +9,10 @@ func main() {
 	var element int
 	fmt.Println("\n-- Bubble Sort --")
 	fmt.Print("\nEnter the size of an array: ")
-	fmt.Scanf("%d", &size)
+	fmt.Scanf("%d\n", &size)
 	fmt.Println("Start entering elements:")
 	for i := 0; i < size; i++ {
-		fmt.Scanf("%d", &element)
+		fmt.Scanf("%d\n", &element)
 		arr = append(arr, element)
 	}
 

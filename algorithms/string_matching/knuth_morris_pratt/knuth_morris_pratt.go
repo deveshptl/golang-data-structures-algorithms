@@ -34,9 +34,9 @@ var pi []int
 func main() {
 	fmt.Println("\n-- Knuth Morris Pratt Algorithm --")
 	fmt.Print("\nEnter the initial text: ")
-	fmt.Scanf("%s", &text)
+	fmt.Scanf("%s\n", &text)
 	fmt.Print("Enter the pattern: ")
-	fmt.Scanf("%s", &pattern)
+	fmt.Scanf("%s\n", &pattern)
 	Knp()
 }
 

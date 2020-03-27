@@ -48,7 +48,7 @@ func main() {
 		fmt.Println("5. EXIT")
 		var choice int
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 		switch choice {
 		case 1:
 			g.addVertex()
@@ -76,7 +76,7 @@ func main() {
 func (g graph) startPrims() {
 	var start string
 	fmt.Print("Enter the source vertex: ")
-	fmt.Scanf("%s", &start)
+	fmt.Scanf("%s\n", &start)
 	for i := range g {
 		if i == start {
 			insertNode(i, 0)

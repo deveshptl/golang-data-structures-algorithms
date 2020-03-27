@@ -66,18 +66,18 @@ func main() {
 	var temp int
 	fmt.Println("\n-- 0-1 Knapsack Problem using Dynamic Programming --")
 	fmt.Print("\nEnter the number of objects: ")
-	fmt.Scanf("%d", &size)
+	fmt.Scanf("%d\n", &size)
 	fmt.Println("Start entering weight and value of each object:")
 	for i := 0; i < size; i++ {
 		fmt.Print("\nWeight: ")
-		fmt.Scanf("%d", &temp)
+		fmt.Scanf("%d\n", &temp)
 		weights = append(weights, temp)
 		fmt.Print("Value: ")
-		fmt.Scanf("%d", &temp)
+		fmt.Scanf("%d\n", &temp)
 		values = append(values, temp)
 	}
 	fmt.Print("\nEnter the capacity of knapsack: ")
-	fmt.Scanf("%d", &capacity)
+	fmt.Scanf("%d\n", &capacity)
 	knapsack()
 }
 

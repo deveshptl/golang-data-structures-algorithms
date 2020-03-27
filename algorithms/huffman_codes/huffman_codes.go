@@ -51,7 +51,7 @@ func main() {
 	h := make(heap, 0)
 
 	fmt.Print("\nEnter the number of characters: ")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d\n", &n)
 	nodes = make([]Node, 0)
 
 	fmt.Println("Start entering character and frequency:")

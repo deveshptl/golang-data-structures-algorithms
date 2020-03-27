@@ -49,17 +49,17 @@ func main() {
 	fmt.Println("\n-- Job Scheduling using Greedy Programming --")
 
 	fmt.Print("\nEnter the number of jobs: ")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d\n", &n)
 	jobs = make([]job, n)
 
 	fmt.Println("Start entering profits and deadlines of each job:")
 	var temp float64
 	for i := 0; i < n; i++ {
 		fmt.Print("Profit: ")
-		fmt.Scanf("%f", &temp)
+		fmt.Scanf("%f\n", &temp)
 		jobs[i].profit = temp
 		fmt.Print("Deadline: ")
-		fmt.Scanf("%f", &temp)
+		fmt.Scanf("%f\n", &temp)
 		jobs[i].deadline = temp
 		if i == 0 {
 			max = jobs[i].deadline

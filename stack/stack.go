@@ -31,7 +31,7 @@ func main() {
 		fmt.Println("5. isEmpty")
 		fmt.Println("6. EXIT")
 		fmt.Print("\nEnter you choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 
 		switch choice {
 		case 1:
@@ -71,7 +71,7 @@ func (s stack) push() {
 	// scan for element
 	var val string
 	fmt.Print("Enter the value that you want to PUSH: ")
-	fmt.Scanf("%s", &val)
+	fmt.Scanf("%s\n", &val)
 
 	// increment top pointer
 	top = top + 1

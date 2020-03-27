@@ -195,7 +195,7 @@ func main() {
 
 		var choice int
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 
 		switch choice {
 		case 1:
@@ -231,30 +231,30 @@ func main() {
 func insEnd() {
 	var element int
 	fmt.Print("Enter the element that you want to insert: ")
-	fmt.Scanf("%d", &element)
+	fmt.Scanf("%d\n", &element)
 	l.Push(element)
 }
 
 func insStart() {
 	var element int
 	fmt.Print("Enter the element that you want to insert: ")
-	fmt.Scanf("%d", &element)
+	fmt.Scanf("%d\n", &element)
 	l.Unshift(element)
 }
 
 func insMiddle() {
 	var element, place int
 	fmt.Print("Enter the element that you want to insert: ")
-	fmt.Scanf("%d", &element)
+	fmt.Scanf("%d\n", &element)
 	fmt.Print("Enter the index where you want to insert the element: ")
-	fmt.Scanf("%d", &place)
+	fmt.Scanf("%d\n", &place)
 	l.InsMiddle(element, place)
 }
 
 func delMiddle() {
 	var place int
 	fmt.Print("Enter the index from where you want to delete the element: ")
-	fmt.Scanf("%d", &place)
+	fmt.Scanf("%d\n", &place)
 	l.DelMiddle(place)
 }
 

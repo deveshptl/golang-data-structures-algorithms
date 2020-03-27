@@ -12,7 +12,7 @@ func main() {
 	var txt []string
 
 	fmt.Print("\nEnter a text string: ")
-	fmt.Scanf("%s", &str)
+	fmt.Scanf("%s\n", &str)
 
 	txt = strings.Split(str, "")
 	str = "#" + strings.Join(txt, "#") + "#"

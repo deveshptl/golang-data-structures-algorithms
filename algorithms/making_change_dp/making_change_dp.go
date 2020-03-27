@@ -52,13 +52,13 @@ var matrix [][]float64
 func main() {
 	fmt.Println("\n-- Making Change Problem using Dynamic Programming. --")
 	fmt.Print("Enter the value for the amount of change you want: ")
-	fmt.Scanf("%f", &change)
+	fmt.Scanf("%f\n", &change)
 	fmt.Print("Enter the number of coins you have: ")
-	fmt.Scanf("%f", &numCoins)
+	fmt.Scanf("%f\n", &numCoins)
 	var coin float64
 	fmt.Println("Start enter the values of these coins in increasing order:")
 	for i := 0; i < int(numCoins); i++ {
-		fmt.Scanf("%f", &coin)
+		fmt.Scanf("%f\n", &coin)
 		coins = append(coins, coin)
 	}
 	matrix = make([][]float64, int(numCoins)+1)

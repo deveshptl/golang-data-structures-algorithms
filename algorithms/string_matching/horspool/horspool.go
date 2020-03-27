@@ -11,9 +11,9 @@ func main() {
 	var text, pattern string
 
 	fmt.Print("\nEnter the text string: ")
-	fmt.Scanf("%s", &text)
+	fmt.Scanf("%s\n", &text)
 	fmt.Print("Enter the pattern string: ")
-	fmt.Scanf("%s", &pattern)
+	fmt.Scanf("%s\n", &pattern)
 
 	st := ShiftTable(strings.Split(pattern, ""))
 	fmt.Println(st)

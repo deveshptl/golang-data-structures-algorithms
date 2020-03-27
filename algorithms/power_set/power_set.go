@@ -12,7 +12,7 @@ func main() {
 	var value int
 
 	fmt.Print("\nEnter a value: ")
-	fmt.Scanf("%d", &value)
+	fmt.Scanf("%d\n", &value)
 
 	list := PowerSet(value)
 

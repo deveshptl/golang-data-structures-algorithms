@@ -6,9 +6,9 @@ func main() {
 	fmt.Println("\n-- Least Common Multiple --")
 	var m, n, lcm int
 	fmt.Print("\nEnter the first number: ")
-	fmt.Scanf("%d", &m)
+	fmt.Scanf("%d\n", &m)
 	fmt.Print("Enter the second number: ")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d\n", &n)
 	if n < m {
 		lcm = findLCM(m, n)
 	} else {

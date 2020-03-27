@@ -33,7 +33,7 @@ func main() {
 		fmt.Println("3. DISPLAY")
 		fmt.Println("4. EXIT")
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &choice)
+		fmt.Scanf("%d\n", &choice)
 		switch choice {
 		case 1:
 			q.insert()
@@ -71,7 +71,7 @@ func (q queue) insert() {
 	// insert the element
 	var y string
 	fmt.Print("Enter the element that you want to insert: ")
-	fmt.Scanf("%s", &y)
+	fmt.Scanf("%s\n", &y)
 	q[r] = y
 
 	// set front pointer

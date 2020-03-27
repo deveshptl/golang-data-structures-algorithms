@@ -93,7 +93,7 @@ func main() {
 		fmt.Println("4. EXIT")
 		var ch int
 		fmt.Print("Enter your choice: ")
-		fmt.Scanf("%d", &ch)
+		fmt.Scanf("%d\n", &ch)
 		switch ch {
 		case 1:
 			insertNode()
@@ -118,9 +118,9 @@ func insertNode() {
 	var name string
 	var priority int
 	fmt.Print("Enter the name of the process: ")
-	fmt.Scanf("%s", &name)
+	fmt.Scanf("%s\n", &name)
 	fmt.Print("Enter the priority of the process: ")
-	fmt.Scanf("%d", &priority)
+	fmt.Scanf("%d\n", &priority)
 	fmt.Println(name, priority)
 	newNode := &Node{name: name, priority: priority}
 	Enqueue(newNode)
