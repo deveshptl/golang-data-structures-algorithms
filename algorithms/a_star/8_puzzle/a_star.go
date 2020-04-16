@@ -139,7 +139,7 @@ func (puzzle matrix) calculateCost() int {
 	h := 0
 	for i := range puzzle {
 		for j := range puzzle[i] {
-			if puzzle[i][j] != solvedPuzzle[i][j] {
+			if puzzle[i][j] != outputPuzzle[i][j] {
 				h++
 			}
 		}
