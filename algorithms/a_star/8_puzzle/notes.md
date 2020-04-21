@@ -39,3 +39,5 @@ The `calculateCost` function implemented in this implementation can be changed t
 #### References
 
 Live Demo: [http://tristanpenman.com/demos/n-puzzle/](http://tristanpenman.com/demos/n-puzzle/)
+
+List of sample inputs: [https://www.andrew.cmu.edu/course/15-121/labs/HW-7%20Slide%20Puzzle/lab.html](https://www.andrew.cmu.edu/course/15-121/labs/HW-7%20Slide%20Puzzle/lab.html)
