@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	"strings"
 )
 
@@ -11,6 +12,7 @@ func main() {
 	fmt.Print("Enter a string: ")
 	fmt.Scanf("%s\n", &str)
 	arr := strings.Split(str, "")
+	sort.Strings(arr)
 	result := LOP(arr)
 	for i := 0; i < len(result); i++ {
 		fmt.Println(i+1, "-", result[i])
