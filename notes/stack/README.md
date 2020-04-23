@@ -9,6 +9,11 @@ Stack is a linear data structure which follows a particular order in which the o
 3. **PEEK** - Returns top element of stack. Does not remove any elements from stack.
 4. **isEmpty** - Returns true if stack is empty, else false.
 5. **DISPLAY** - Displays content of stack.
+6. **getSize** - Returns the size of the stack irrespective of how many elements are in the stack.
+
+#### Implementation
+
+Stack can be implemented using arrays, linked list or queues. Implementation using arrays is the simplest one.
 
 #### Time Complexities
 
@@ -25,8 +30,9 @@ Stack is a linear data structure which follows a particular order in which the o
 7. Parenthesis checking
 8. Backtracking
 9. File undo and redo operations
+10. Depth First Search traversal in tree and graph data structure uses stack to store explored nodes and processes them later.
 
-_References_:
+## References
 
 - [https://www.geeksforgeeks.org/stack-data-structure/](https://www.geeksforgeeks.org/stack-data-structure/)
 - [https://www.geeksforgeeks.org/stack-data-structure-introduction-program/](https://www.geeksforgeeks.org/stack-data-structure-introduction-program/)
