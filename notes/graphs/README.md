@@ -33,9 +33,31 @@ Graph can be represented by using adjacency matrix, adjacency list or incidence 
 9. **Breadth First Traversal** - traverses the graph in bfs order
 10. **Depth First Traversal** - traverses the graph in dfs order
 
+#### BFS Traversal Psuedo code
+
+1. Initialize a queue with starting node in it.
+2. Initialize an empty visited set.
+3. Repeat following until queue is empty:
+   - Remove a node from the queue and name it as `currNode`.
+   - If the `currNode` is visited, start step-2 over again.
+   - Mark the `currNode` as visited.
+   - Expand the `currNode`, add resulting nodes to the queue if they aren't already visited and aren't in the stack.
+
+#### DFS Traversal Psuedo code
+
+1. Initialize a stack with starting node in it.
+2. Initialize an empty visited set.
+3. Repeat following until stack is empty:
+   - Remove a node from the stack and name it as `currNode`.
+   - If the `currNode` is visited, start step-2 over again.
+   - Mark the `currNode` as visited.
+   - Expand the `currNode`, add resulting nodes to the queue if they aren't already visited and aren't in the stack.
+
+**Note**: The way you insert explored nodes into the queue or stack will result into different traversal paths.
+
 #### Applications
 
-1. **Shortesh Path**: what is the best route between two cities? Google Maps.
+1. **Shortest Path**: what is the best route between two cities? Google Maps.
 
 2. **Facebook**: users are considered to be the vertices and if they are friends then there is an edge running between them. Facebook’s Friend suggestion algorithm uses graph theory.
 
