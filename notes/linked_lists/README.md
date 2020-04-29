@@ -6,14 +6,14 @@ In its most basic form, each node contains: data, and a reference (in other word
 
 A drawback of linked lists is that access time is linear (and difficult to pipeline). Faster access, such as random access, is not feasible.
 
-#### Types
+### Types
 
 1. Singly Linked List
 2. Circular Linked List
 3. Doubly Linked List
 4. Circular Doubly Linked List
 
-#### Applications
+### Applications
 
 1. Linked Lists can be used to implement Stacks , Queues.
 2. Linked Lists can also be used to implement Graphs. (Adjacency list representation of Graph).
@@ -23,7 +23,7 @@ A drawback of linked lists is that access time is linear (and difficult to pipel
 6. Previous and next page in web browser – We can access previous and next url searched in web browser by pressing back and next button since, they are linked as linked list.
 7. Circular Doubly Linked Lists are used for implementation of advanced data structures like Fibonacci Heap.
 
-#### Time Complexities
+### Time Complexities
 
 - Indexing: Θ(n)
 - Insert/Delete at beginning: Θ(1)
@@ -32,7 +32,7 @@ A drawback of linked lists is that access time is linear (and difficult to pipel
   - Θ(n) when last element is unknown
 - Insert/Delete in middle: search time + Θ(1)
 
-#### Operations
+### Operations
 
 Following operations can be performed on each type of linked lists:
 

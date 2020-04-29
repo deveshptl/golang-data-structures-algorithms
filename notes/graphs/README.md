@@ -6,11 +6,11 @@ A graph `( G = <V, E> )` data structure consists of a finite (and possibly mutab
 
 **Note**: The number of edges `|E|` possible in an undirected graph with `|V|` vertices and no loops: `0 ≤ |E| ≤ |V|(|V| − 1)/2`. We have to divide product `|V|(|V| - 1)` by `2`, however, because it includes every edge twice.
 
-#### Representation
+### Representation
 
 Graph can be represented by using adjacency matrix, adjacency list or incidence matrix. Each implementations has their own pros and cons associated with it either it could be time complexity on operations or space complexity.
 
-#### Types
+### Types
 
 1. Simple graph
 2. Undirected or Directed graphs
@@ -20,7 +20,7 @@ Graph can be represented by using adjacency matrix, adjacency list or incidence 
 6. Infinite graphs
 7. Graph having Connected or Disconnected components
 
-#### Operations
+### Operations
 
 1. **Add node `(G, x)`** - adds a node to the graph
 2. **Add edge `(G, x, y)`** - adds an edge from node x to y
@@ -33,7 +33,7 @@ Graph can be represented by using adjacency matrix, adjacency list or incidence 
 9. **Breadth First Traversal** - traverses the graph in bfs order
 10. **Depth First Traversal** - traverses the graph in dfs order
 
-#### BFS Traversal Psuedo code
+### BFS Traversal Psuedo code
 
 1. Initialize a queue with starting node in it.
 2. Initialize an empty visited set.
@@ -43,7 +43,7 @@ Graph can be represented by using adjacency matrix, adjacency list or incidence 
    - Mark the `currNode` as visited.
    - Expand the `currNode`, add resulting nodes to the queue if they aren't already visited and aren't in the stack.
 
-#### DFS Traversal Psuedo code
+### DFS Traversal Psuedo code
 
 1. Initialize a stack with starting node in it.
 2. Initialize an empty visited set.
@@ -55,7 +55,7 @@ Graph can be represented by using adjacency matrix, adjacency list or incidence 
 
 **Note**: The way you insert explored nodes into the queue or stack will result into different traversal paths.
 
-#### Applications
+### Applications
 
 1. **Shortest Path**: what is the best route between two cities? Google Maps.
 
@@ -65,7 +65,7 @@ Graph can be represented by using adjacency matrix, adjacency list or incidence 
 
 4. **Topological Sorting**: Dependencies of packages can be represented using graphs and those packages are compiled first which have no dependenies or have dependencies but these have already been compiled.
 
-#### Terminologies
+### Terminologies
 
 A graph with every pair of its vertices connected by an edge is called **complete**.
 

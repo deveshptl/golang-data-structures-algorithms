@@ -8,7 +8,7 @@ A queue is an example of a linear data structure, or more abstractly a sequentia
 
 Queue can be implemented using an Array, Stack or Linked List. The easiest way of implementing a queue is by using an Array.
 
-#### Types of Queues
+### Types of Queues
 
 1. Simple Queue
 2. Circular Queue
@@ -16,7 +16,7 @@ Queue can be implemented using an Array, Stack or Linked List. The easiest way o
 4. Circular Double Ended Queue
 5. Priority Queue
 
-#### Applications
+### Applications
 
 1. Scheduling of resources and multiple processes running on same cpu.
 2. When data is transferred asynchronously between two processes, Queue is used for synchronization.
@@ -28,7 +28,7 @@ Queue can be implemented using an Array, Stack or Linked List. The easiest way o
 
 Simple Queue can be implemented using Array, Stack or Linked List. Easiest way to implement simple queue is using array.
 
-#### Operations
+### Operations
 
 1. Insert using tail(REAR) pointer.
 2. Delete using head(FRONT) pointer.
@@ -37,7 +37,7 @@ Simple Queue can be implemented using Array, Stack or Linked List. Easiest way t
 
 A circular buffer, circular queue, cyclic buffer or ring buffer is a data structure that uses a single, fixed-size buffer as if it were connected end-to-end. This structure lends itself easily to buffering data streams.
 
-#### Operations
+### Operations
 
 1. Insert using tail(REAR) pointer.
 2. Delete using head(FRONT) pointer.
@@ -46,7 +46,7 @@ A circular buffer, circular queue, cyclic buffer or ring buffer is a data struct
 
 In computer science, a double-ended queue (abbreviated to deque) is an abstract data type that generalizes a queue, for which elements can be added to or removed from either the front (head) or back (tail). It is also often called a head-tail linked list, though properly this refers to a specific data structure implementation of a deque.
 
-#### Operations
+### Operations
 
 1. Insert using tail(REAR) pointer.
 2. Insert using head(FRONT) pointer.
@@ -57,7 +57,7 @@ In computer science, a double-ended queue (abbreviated to deque) is an abstract 
 
 Cicural Double Ended Queue is a generalized version of Queue data structure that allows insert and delete at both ends.
 
-#### Operations
+### Operations
 
 1. Insert using tail(REAR) pointer.
 2. Insert using head(FRONT) pointer.
@@ -68,13 +68,13 @@ Cicural Double Ended Queue is a generalized version of Queue data structure that
 
 In computer science, a priority queue is an abstract data type which is like a regular queue or stack data structure, but where additionally each element has a "priority" associated with it. In a priority queue, an element with high priority is served before an element with low priority. In some implementations, if two elements have the same priority, they are served according to the order in which they were enqueued, while in other implementations, ordering of elements with the same priority is undefined.
 
-#### Operations
+### Operations
 
 1. Insert - To insert a new element.
 2. Remove - To remove an element depending upon it's priority. Returns the element which is removed.
 3. Display - Display's the content of queue.
 
-#### Applications
+### Applications
 
 - **Dijkstra’s Shortest Path Algorithm**: When the graph is stored in the form of adjacency list or matrix, priority queue can be used to extract minimum efficiently when implementing Dijkstra’s algorithm.
 
@@ -88,7 +88,7 @@ In computer science, a priority queue is an abstract data type which is like a r
 
 - **Operating systems**: It is also used in Operating System for load balancing (load balancing on server), interrupt handling.
 
-#### Time Complexities
+### Time Complexities
 
 Time complexities of priority queue depends on which sorting algorithm it uses internally to sort elements based on their priority. Here I have used heap sort algorithm, hence the time complexities will be:
 

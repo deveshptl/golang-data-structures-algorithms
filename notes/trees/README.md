@@ -2,24 +2,24 @@
 
 **A tree is a type of graph**. A tree data structure can be defined recursively (locally) as a collection of nodes/vertices (starting at a root node), where each node is a data structure consisting of a value, together with a list of references (edges) to nodes (the "children"), with the constraints that no reference is duplicated, and none points to the root.
 
-#### Types of Trees
+### Types of Trees
 
 1. **Binary Tree** - It is a tree where a parent node has at most 2 children.
 2. **Binary Search Tree** - It is a node-based binary tree data structure which has the following properties:
    - The left subtree of a node contains only nodes with keys lesser than the node’s key.
    - The right subtree of a node contains only nodes with keys greater than the node’s key.
    - The left and right subtree each must also be a binary search tree.
-3. **AVL Tree (aka Self Balancing Binary Search Tree)** - It is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees cannot be more than 1 for all nodes and less than -1.
+3. **AVL Tree** - It is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees cannot be more than 1 for all nodes and less than -1.
 4. **Red Black Tree** - A red–black tree is a kind of self-balancing binary search tree in computer science. Each node of the binary tree has an extra bit, and that bit is often interpreted as the color (red or black) of the node. These color bits are used to ensure the tree remains approximately balanced during insertions and deletions.
 
 [**Refer here**](https://en.wikipedia.org/wiki/List_of_data_structures) for more information on other types of trees and terminologies used.
 
-#### Representation
+### Representation
 
 1. Linked List - Trees can be represented using linked list where each parent/root node points to its children.
 2. Arrays - Sometimes trees can also be represented using arrays. However, some operations like deletion will take too many shifting of nodes in an array and hence it becomes impractical to implement such operations.
 
-#### Operations
+### Operations
 
 1. Insert - Inserts an element in a tree/create a tree.
 2. Search - Searches an element in a tree.
@@ -31,7 +31,7 @@
 
 These are the common operations that can be performed on a tree. Different types of trees has different operations which can be performed.
 
-#### Applications
+### Applications
 
 1. Heap is a tree data structure which is implemented using arrays and used to implement priority queues.
 2. Syntax Tree: Used in Compilers.
@@ -42,7 +42,7 @@ These are the common operations that can be performed on a tree. Different types
 7. Router algorithms
 8. Many search algorithms in Aritificial Intelligence makes use of Trees and Graphs to maintain the search path and to backtrack if needed.
 
-#### Terminologies
+### Terminologies
 
 An **ordered tree** is a rooted tree in which all the children of each vertex are ordered. It is convenient to assume that in a tree's diagram, all the children are ordered left to right.
 

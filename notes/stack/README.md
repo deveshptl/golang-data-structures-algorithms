@@ -2,7 +2,7 @@
 
 Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).
 
-#### Operations
+### Operations
 
 1. **PUSH** - Adds an item in the stack and increments the `top` pointer. If the stack is full, then it is said to be an Overflow condition.
 2. **POP** - Removes an item from the stack and decrements the `top`. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an Underflow condition.
@@ -11,15 +11,15 @@ Stack is a linear data structure which follows a particular order in which the o
 5. **DISPLAY** - Displays content of stack.
 6. **getSize** - Returns the size of the stack irrespective of how many elements are in the stack.
 
-#### Implementation
+### Implementation
 
 Stack can be implemented using arrays, linked list or queues. Implementation using arrays is the simplest one.
 
-#### Time Complexities
+### Time Complexities
 
 - push(), pop(), isEmpty() and peek() all take O(1) time. We do not run any loop in any of these operations.
 
-#### Applications
+### Applications
 
 1. Expression evaluation
 2. Expression conversion
