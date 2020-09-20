@@ -31,7 +31,7 @@ func Sieve(n int) []int {
 			j := i * i
 			for j <= n {
 				arr[j] = 0
-				j = j + i
+				j += i
 			}
 		}
 	}

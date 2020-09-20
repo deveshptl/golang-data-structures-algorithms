@@ -19,10 +19,8 @@ func main() {
 		switch choice {
 		case 1:
 			g.addVertex()
-			break
 		case 2:
 			g.addEdge()
-			break
 		case 3:
 			result, cycle := g.detectDFS()
 			if cycle {
@@ -30,17 +28,13 @@ func main() {
 			} else if result != nil && !cycle {
 				fmt.Println("\n-- Given graph is acyclic. --")
 			}
-			break
 		case 4:
 			result := g.detectBFS()
 			fmt.Println(result)
-			break
 		case 5:
 			g.simpleDisplay()
-			break
 		case 6:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

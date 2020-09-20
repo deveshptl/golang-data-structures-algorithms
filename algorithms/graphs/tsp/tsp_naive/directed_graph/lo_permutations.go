@@ -9,7 +9,7 @@ import (
 func LOP(str []string) []string {
 	result := make([]string, 0)
 	result = append(result, strings.Join(str, ""))
-	for true {
+	for {
 		var i int
 		var j int
 

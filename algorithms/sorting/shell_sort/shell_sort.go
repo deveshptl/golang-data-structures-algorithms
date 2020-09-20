@@ -7,7 +7,7 @@ import (
 
 func shellSort(size int) {
 	gap := int(math.Floor(float64(size / 2)))
-	for true {
+	for {
 		for i := 0; i < size-((size-1)%gap); i++ {
 
 			// swap the elements
@@ -16,7 +16,7 @@ func shellSort(size int) {
 
 				j := i
 				// start comparing with previous elements
-				for true {
+				for {
 					// swap the elements
 					if j-gap >= 0 && arr[j-gap] > arr[j] {
 						arr[j-gap], arr[j] = arr[j], arr[j-gap]

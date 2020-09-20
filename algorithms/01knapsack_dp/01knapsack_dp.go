@@ -39,7 +39,7 @@ func knapsack() {
 		} else {
 			finalWeights = append(finalWeights, weights[i])
 			finalValues = append(finalValues, values[i])
-			j = j - weights[i]
+			j -= weights[i]
 		}
 	}
 

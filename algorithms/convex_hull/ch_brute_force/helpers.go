@@ -41,8 +41,8 @@ func SortConvexPoints(pts []Point) []Point {
 		center.y += pts[i].y
 	}
 
-	center.x = center.x / float64(len(pts))
-	center.y = center.y / float64(len(pts))
+	center.x /= float64(len(pts))
+	center.y /= float64(len(pts))
 
 	// find angle of each points formed at center point
 	for i := 0; i < len(pts); i++ {

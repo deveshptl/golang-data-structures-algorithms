@@ -79,16 +79,12 @@ func main() {
 		switch choice {
 		case 1:
 			addVertex()
-			break
 		case 2:
 			addEdge()
-			break
 		case 3:
 			DijkstraInit()
-			break
 		case 4:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

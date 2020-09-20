@@ -37,8 +37,7 @@ func (g graph) addEdgeToGraph(fromVtx, toVtx string, edgeValue int) {
 
 	g[fromVtx] = append(g[fromVtx], Node{name: toVtx, value: edgeValue})
 	g[toVtx] = append(g[toVtx], Node{name: fromVtx, value: edgeValue})
-	return
-}
+	}
 
 func (g graph) removeVertexFromGraph(vtx string) {
 	length := len(g[vtx]) - 1

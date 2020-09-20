@@ -42,29 +42,23 @@ func main() {
 			q.insertRear()
 			fmt.Println("\nValues after insert from rear FRONT:", f, "REAR:", r)
 			display()
-			break
 		case 2:
 			q.insertFront()
 			fmt.Println("\nValues after insert from front FRONT:", f, "REAR:", r)
 			display()
-			break
 		case 3:
 			q.deleteRear()
 			fmt.Println("\nValues after delete from rear FRONT:", f, "REAR:", r)
 			display()
-			break
 		case 4:
 			q.deleteFront()
 			fmt.Println("\nValues after delete from front FRONT:", f, "REAR:", r)
 			display()
-			break
 		case 5:
 			fmt.Println("\nValues are FRONT:", f, "REAR:", r)
 			display()
-			break
 		case 6:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}
@@ -77,7 +71,7 @@ func (q queue) insertRear() {
 	if r == n {
 		r = 0
 	} else {
-		r = r + 1
+		r++
 	}
 
 	// check for overflow
@@ -86,7 +80,7 @@ func (q queue) insertRear() {
 		if r == 0 {
 			r = n
 		} else {
-			r = r - 1
+			r--
 		}
 		return
 	}
@@ -102,7 +96,6 @@ func (q queue) insertRear() {
 		f = 0
 	}
 
-	return
 }
 
 func (q queue) insertFront() {
@@ -122,7 +115,7 @@ func (q queue) insertFront() {
 	if f == 0 {
 		f = n
 	} else {
-		f = f - 1
+		f--
 	}
 
 	// check for overflow
@@ -130,7 +123,7 @@ func (q queue) insertFront() {
 		if f == n {
 			f = 0
 		} else {
-			f = f + 1
+			f++
 		}
 		fmt.Println("\n-- Overflow --")
 		return
@@ -142,7 +135,6 @@ func (q queue) insertFront() {
 	fmt.Scanf("%s\n", &element)
 	q[f] = element
 
-	return
 }
 
 func (q queue) deleteRear() {
@@ -169,12 +161,11 @@ func (q queue) deleteRear() {
 	if r == 0 {
 		r = n
 	} else {
-		r = r - 1
+		r--
 	}
 
 	fmt.Println("\nElement deleted:", y)
 
-	return
 }
 
 func (q queue) deleteFront() {
@@ -201,11 +192,10 @@ func (q queue) deleteFront() {
 	if f == n {
 		f = 0
 	} else {
-		f = f + 1
+		f++
 	}
 	fmt.Println("\nElement deleted: ", y)
 
-	return
 }
 
 func display() {

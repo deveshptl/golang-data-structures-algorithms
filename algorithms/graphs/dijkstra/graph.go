@@ -34,7 +34,6 @@ func addEdgeToGraph(fromVtx, toVtx string, edgeValue float64) {
 
 	graph[fromVtx] = append(graph[fromVtx], Node{node: toVtx, weight: edgeValue})
 	graph[toVtx] = append(graph[toVtx], Node{node: fromVtx, weight: edgeValue})
-	return
 }
 
 func addVertex() {

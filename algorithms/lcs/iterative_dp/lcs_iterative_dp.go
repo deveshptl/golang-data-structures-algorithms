@@ -23,17 +23,17 @@ func LCS() string {
 	i := len(str01) - 1
 	j := len(str02) - 1
 	str := make([]string, sequence[i][j])
-	for true {
+	for {
 		if sequence[i][j] == 0 {
 			break
 		} else if sequence[i-1][j] == sequence[i][j] {
-			i = i - 1
+			i--
 		} else if sequence[i][j-1] == sequence[i][j] {
-			j = j - 1
+			j--
 		} else {
 			str[sequence[i][j]-1] += string(str02[j])
-			i = i - 1
-			j = j - 1
+			i--
+			j--
 		}
 	}
 	return strings.Join(str, "")

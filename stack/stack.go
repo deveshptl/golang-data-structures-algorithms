@@ -74,12 +74,11 @@ func (s stack) push() {
 	fmt.Scanf("%s\n", &val)
 
 	// increment top pointer
-	top = top + 1
+	top++
 
 	// insert the element
 	s[top] = val
-	return
-}
+	}
 
 func (s stack) pop() {
 
@@ -97,9 +96,8 @@ func (s stack) pop() {
 	s[top] = "nil"
 
 	// decrement top pointer
-	top = top - 1
-	return
-}
+	top--
+	}
 
 func (s stack) peek() {
 	// check for underflow
@@ -111,8 +109,7 @@ func (s stack) peek() {
 	// print the peeked value
 	y := s[top]
 	fmt.Println("\nValue peeked:", y)
-	return
-}
+	}
 
 func (s stack) isEmpty() {
 	if top == -1 {
@@ -120,8 +117,7 @@ func (s stack) isEmpty() {
 		return
 	}
 	fmt.Println("\nfalse")
-	return
-}
+	}
 
 func (s stack) display() {
 	for i := range s {

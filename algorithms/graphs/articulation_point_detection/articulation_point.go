@@ -17,10 +17,8 @@ func main() {
 		switch choice {
 		case 1:
 			g.addVertex()
-			break
 		case 2:
 			g.addEdge()
-			break
 		case 3:
 			result := g.findArticulationPoints()
 			if len(result) != 0 {
@@ -33,10 +31,8 @@ func main() {
 			} else {
 				fmt.Println("\n -- No articulation point/s exists in a given graph. --")
 			}
-			break
 		case 4:
 			g.simpleDisplay()
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

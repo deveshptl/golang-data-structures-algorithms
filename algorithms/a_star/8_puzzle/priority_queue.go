@@ -48,7 +48,7 @@ func bubbleDown() {
 	idx := 0
 	length := len(heap)
 	element := heap[0]
-	for true {
+	for {
 		leftChildIdx := (2 * idx) + 1
 		rightChildIdx := (2 * idx) + 2
 		var leftChild, rightChild *Node

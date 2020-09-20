@@ -81,8 +81,5 @@ func validate(c string) bool {
 			check++
 		}
 	}
-	if check == 1 {
-		return true
-	}
-	return false
+	return check == 1
 }

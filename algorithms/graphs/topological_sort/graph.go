@@ -29,8 +29,7 @@ func (g graph) addEdgeToGraph(fromVtx, toVtx string) {
 	}
 
 	g[fromVtx] = append(g[fromVtx], toVtx)
-	return
-}
+	}
 
 // detectDFS traverses a graph using dfs technique to detect a cycle in a graph
 func (g graph) detectDFS() ([]string, bool) {

@@ -110,7 +110,7 @@ func rightRotate(node *Node) *Node {
 // Find finds a key from the avl
 func (avl *AVLTree) Find(value int) {
 	current := avl.root
-	for true {
+	for {
 		if value < current.value {
 			if current.left == nil {
 				fmt.Println("\n-- Key not found. --")
@@ -171,25 +171,18 @@ func main() {
 		switch choice {
 		case 1:
 			insNode()
-			break
 		case 2:
 			fmt.Println("\n", avl.BFS())
-			break
 		case 3:
 			fmt.Println("\n", avl.DFS("pre"))
-			break
 		case 4:
 			fmt.Println("\n", avl.DFS("in"))
-			break
 		case 5:
 			fmt.Println("\n", avl.DFS("pos"))
-			break
 		case 6:
 			findNode()
-			break
 		case 7:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

@@ -54,7 +54,7 @@ func bubbleDown() {
 	idx := 0
 	length := len(heap)
 	element := heap[0]
-	for true {
+	for {
 		leftChildIdx := (2 * idx) + 1
 		rightChildIdx := (2 * idx) + 2
 		var leftChild, rightChild *Node
@@ -97,17 +97,13 @@ func main() {
 		switch ch {
 		case 1:
 			insertNode()
-			break
 		case 2:
 			node := Dequeue()
 			fmt.Println("Process removed: ", node)
-			break
 		case 3:
 			display()
-			break
 		case 4:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

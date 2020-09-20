@@ -51,20 +51,15 @@ func main() {
 		switch choice {
 		case 1:
 			addVertex()
-			break
 		case 2:
 			addEdge()
-			break
 		case 3:
 			simpleDisplay()
-			break
 		case 4:
 			constructMatrix()
 			FloydWarshall()
-			break
 		case 5:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

@@ -55,7 +55,7 @@ func RabinKarpWithoutHash(text, pattern string) []int {
 		if i < n-m {
 			t = ((d * (t - int(text[i])*h)) + (int(text[i+m]))) % q
 			if t < 0 {
-				t = t + q
+				t += q
 			}
 		}
 

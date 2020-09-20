@@ -16,16 +16,12 @@ func main() {
 		switch choice {
 		case 1:
 			g.addVertex()
-			break
 		case 2:
 			g.addEdge()
-			break
 		case 3:
 			g.runTopological()
-			break
 		case 4:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

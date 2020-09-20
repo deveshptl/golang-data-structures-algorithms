@@ -5,7 +5,7 @@ import "fmt"
 // UnionFind run union find algorithm and detects cycle in give graph
 func UnionFind() {
 	flag := 0
-	for i := 0; i < len(uniqueEdges); i = i + 1 {
+	for i := 0; i < len(uniqueEdges); i++ {
 		x := find(uniqueEdges[i].src)
 		y := find(uniqueEdges[i].dest)
 		if x == y {
@@ -55,15 +55,12 @@ func main() {
 		switch choice {
 		case 1:
 			addVertex()
-			break
 		case 2:
 			addEdge()
-			break
 		case 3:
 			UnionFind()
 		case 4:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

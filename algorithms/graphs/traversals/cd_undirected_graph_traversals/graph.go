@@ -30,8 +30,7 @@ func (g graph) addEdgeToGraph(fromVtx, toVtx string) {
 
 	g[fromVtx] = append(g[fromVtx], toVtx)
 	g[toVtx] = append(g[toVtx], fromVtx)
-	return
-}
+	}
 
 func (g graph) addVertex() {
 	var vtxName string

@@ -17,10 +17,8 @@ func main() {
 		switch choice {
 		case 1:
 			g.addVertex()
-			break
 		case 2:
 			g.addEdge()
-			break
 		case 3:
 			result := g.findBridges()
 			prev := ""
@@ -37,10 +35,8 @@ func main() {
 			} else {
 				fmt.Println("\n -- No bridge exists in a given graph. --")
 			}
-			break
 		case 4:
 			g.simpleDisplay()
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

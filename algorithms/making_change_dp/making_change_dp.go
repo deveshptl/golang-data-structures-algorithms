@@ -36,7 +36,7 @@ func MakeChange() {
 		if matrix[i-1][j] == count {
 			i--
 		} else {
-			j = j - int(coins[i-1])
+			j -= int(coins[i-1])
 			result = append(result, coins[i-1])
 			count--
 		}

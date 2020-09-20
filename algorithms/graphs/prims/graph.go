@@ -39,8 +39,7 @@ func (g graph) addEdgeToGraph(fromVtx, toVtx string, edgeValue float64) {
 
 	g[fromVtx] = append(g[fromVtx], GraphNode{name: toVtx, value: edgeValue})
 	g[toVtx] = append(g[toVtx], GraphNode{name: fromVtx, value: edgeValue})
-	return
-}
+	}
 
 // addVertex asks user to enter vertex name
 func (g graph) addVertex() {

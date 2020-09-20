@@ -22,7 +22,7 @@ func (bst *BinarySearchTree) Insert(value int) {
 		bst.root = node
 	} else {
 		current := bst.root
-		for true {
+		for {
 			if value == current.value {
 				fmt.Println("\n-- Same value was found. Freq. incremented. --")
 				current.freq++
@@ -48,7 +48,7 @@ func (bst *BinarySearchTree) Insert(value int) {
 // Find finds a key from the bst
 func (bst *BinarySearchTree) Find(value int) {
 	current := bst.root
-	for true {
+	for {
 		if value < current.value {
 			if current.left == nil {
 				fmt.Println("\n-- Key not found. --")
@@ -109,25 +109,18 @@ func main() {
 		switch choice {
 		case 1:
 			insNode()
-			break
 		case 2:
 			fmt.Println("\n", bst.BFS())
-			break
 		case 3:
 			fmt.Println("\n", bst.DFS("pre"))
-			break
 		case 4:
 			fmt.Println("\n", bst.DFS("in"))
-			break
 		case 5:
 			fmt.Println("\n", bst.DFS("pos"))
-			break
 		case 6:
 			findNode()
-			break
 		case 7:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

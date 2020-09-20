@@ -32,7 +32,7 @@ func Insert(value, index int) {
 // Find finds a key and prints its information
 func Find(key int) {
 	i := 0
-	for true {
+	for {
 		if bst[i] != nil {
 			if bst[i].value == key {
 				index := i
@@ -41,7 +41,7 @@ func Find(key int) {
 					i = (i / 2) - 1
 					sibling = bst[(i*2)+1]
 				} else {
-					i = i / 2
+					i /= 2
 					sibling = bst[(i*2)+2]
 				}
 				fmt.Println("\n-- Key found. --")
@@ -88,25 +88,18 @@ func main() {
 		switch choice {
 		case 1:
 			insNode()
-			break
 		case 2:
 			fmt.Println("\n", BFS())
-			break
 		case 3:
 			fmt.Println("\n", DFS("pre"))
-			break
 		case 4:
 			fmt.Println("\n", DFS("in"))
-			break
 		case 5:
 			fmt.Println("\n", DFS("pos"))
-			break
 		case 6:
 			findNode()
-			break
 		case 7:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

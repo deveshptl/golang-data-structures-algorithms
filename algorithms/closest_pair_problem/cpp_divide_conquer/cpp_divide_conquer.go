@@ -72,19 +72,19 @@ func ClosestPair(pts []Point) ([]Point, float64) {
 	}
 
 	// minimum distance and points obtained from solving left side
-	dLeft := math.Inf(1)
+	dLeft := math.Inf(1) // nolint:ineffassign
 	pLeft := make([]Point, 2)
 
 	// minimum distance and points obtained from solving right side
-	dRight := math.Inf(1)
+	dRight := math.Inf(1) // nolint:ineffassign
 	pRight := make([]Point, 2)
 
 	// minimum distance and points obtained from solving points near around the middle line
-	distS := math.Inf(1)
+	distS := math.Inf(1) // nolint:ineffassign
 	ps := make([]Point, 2)
 
 	// final distance and points having the least distance
-	dist := math.Inf(1)
+	dist := math.Inf(1) // nolint:ineffassign
 	p := make([]Point, 2)
 
 	// finding the median

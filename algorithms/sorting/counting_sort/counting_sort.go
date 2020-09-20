@@ -9,14 +9,14 @@ func countingSort(size, max int) []int {
 	count := make([]int, max)
 	sorted := make([]int, size)
 	for i := 0; i < size; i++ {
-		count[arr[i]] = count[arr[i]] + 1
+		count[arr[i]]++
 	}
 	for i := 1; i < max; i++ {
-		count[i] = count[i] + count[i-1]
+		count[i] += count[i-1]
 	}
 	for i := size - 1; i >= 0; i-- {
 		sorted[count[arr[i]]-1] = arr[i]
-		count[arr[i]] = count[arr[i]] - 1
+		count[arr[i]]--
 	}
 	return sorted
 }

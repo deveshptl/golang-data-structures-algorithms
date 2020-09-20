@@ -78,25 +78,18 @@ func main() {
 		switch choice {
 		case 1:
 			insNode()
-			break
 		case 2:
 			fmt.Println("\n", BFS())
-			break
 		case 3:
 			fmt.Println("\n", DFS("pre"))
-			break
 		case 4:
 			fmt.Println("\n", DFS("in"))
-			break
 		case 5:
 			fmt.Println("\n", DFS("pos"))
-			break
 		case 6:
 			findNode()
-			break
 		case 7:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

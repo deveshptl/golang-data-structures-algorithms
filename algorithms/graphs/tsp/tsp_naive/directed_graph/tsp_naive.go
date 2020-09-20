@@ -59,9 +59,9 @@ func main() {
 // TSP performs travelling saleman algorithm using naive approach on a given undirected weighted graph.
 func TSP(g graph, initVtx string) (map[string]int, map[string]int) {
 	// costs to all possible routes will be stored
-	result := make(map[string]int, 0)
+	result := make(map[string]int)
 	// maps numbers to vertices to generate all possible permutations later which will make it easy to map from numbers to vertices
-	numToVtx := make(map[string]string, 0)
+	numToVtx := make(map[string]string)
 	// vtx number which represents the number count of the node being visited
 	vtx := 0
 	// string on which all possible permutations will performed
@@ -149,7 +149,7 @@ func TSP(g graph, initVtx string) (map[string]int, map[string]int) {
 		result[route] = val
 	}
 
-	routesWithMinCost := make(map[string]int, 0)
+	routesWithMinCost := make(map[string]int)
 	// add routes that costs the least
 	for i := range result {
 		if result[i] == cost {

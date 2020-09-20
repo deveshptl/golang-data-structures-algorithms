@@ -46,7 +46,7 @@ func (l *List) Pop() {
 		l.tail = nil
 	} else { // loop over the list
 		list := l.head
-		for true {
+		for {
 			if list.next.next == l.head {
 				list.next = l.head
 				l.tail = list
@@ -200,28 +200,20 @@ func main() {
 		switch choice {
 		case 1:
 			insStart()
-			break
 		case 2:
 			insMiddle()
-			break
 		case 3:
 			insEnd()
-			break
 		case 4:
 			l.Shift()
-			break
 		case 5:
 			delMiddle()
-			break
 		case 6:
 			l.Pop()
-			break
 		case 7:
 			display()
-			break
 		case 8:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}
@@ -262,7 +254,7 @@ func display() {
 	fmt.Println("\nHEAD:", l.head, "TAIL:", l.tail)
 	if l.head != nil {
 		list := l.head
-		for true {
+		for {
 			fmt.Println(list.value, list.prev, list.next)
 			list = list.next
 			if list == l.head {

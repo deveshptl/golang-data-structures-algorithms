@@ -52,19 +52,14 @@ func main() {
 		switch choice {
 		case 1:
 			g.addVertex()
-			break
 		case 2:
 			g.addEdge()
-			break
 		case 3:
 			g.startPrims()
-			break
 		case 4:
 			g.simpleDisplay()
-			break
 		case 5:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

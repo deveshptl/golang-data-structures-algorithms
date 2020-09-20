@@ -39,7 +39,7 @@ func (g graph) findArticulationPoints() map[string]bool {
 // dfsHelper recursively calls itself to solve dfs traversal
 func (g graph) dfs(root string, visited map[string]bool, at string, parent string) {
 	visited[at] = true
-	id = id + 1
+	id++
 	low[at] = id
 	ids[at] = id
 	for i := range g[at] {

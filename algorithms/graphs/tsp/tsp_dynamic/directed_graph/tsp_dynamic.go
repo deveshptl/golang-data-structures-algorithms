@@ -156,7 +156,7 @@ func TSP(g graph, initVtx string) ([][]string, float64) {
 			memo[index][state] = math.Inf(1)
 
 			tour = append(tour, ", ", strconv.Itoa(index))
-			state = state ^ (1 << uint32(index))
+			state ^= (1 << uint32(index))
 			lastIndex = uint32(index)
 		}
 		tour = append(tour, ", ", strconv.Itoa(int(start)), ", ", fmt.Sprintf("%f\n", math.Inf(1)))

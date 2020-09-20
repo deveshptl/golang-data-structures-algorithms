@@ -21,7 +21,7 @@ func Knp() {
 			if j != 0 {
 				j = pi[j-1]
 			} else {
-				i = i + 1
+				i++
 			}
 		}
 	}

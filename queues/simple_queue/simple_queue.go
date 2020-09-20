@@ -39,12 +39,10 @@ func main() {
 			q.insert()
 			fmt.Println("\nValues after insertion FRONT:", f, "REAR:", r)
 			display()
-			break
 		case 2:
 			q.delete()
 			fmt.Println("\nValues after deletion FRONT:", f, "REAR:", r)
 			display()
-			break
 		case 3:
 			fmt.Println("\nFRONT:", f, "REAR:", r)
 			display()
@@ -54,7 +52,6 @@ func main() {
 			fmt.Println("\nCommand not recognized")
 		}
 	}
-
 }
 
 func (q queue) insert() {
@@ -66,7 +63,7 @@ func (q queue) insert() {
 	}
 
 	// increment rear pointer
-	r = r + 1
+	r++
 
 	// insert the element
 	var y string
@@ -78,8 +75,6 @@ func (q queue) insert() {
 	if f == -1 {
 		f = 0
 	}
-
-	return
 }
 
 func (q queue) delete() {
@@ -99,13 +94,11 @@ func (q queue) delete() {
 		f = -1
 		r = -1
 	} else {
-		f = f + 1
+		f++
 	}
 
 	// print deleted element
 	fmt.Println("Element deleted", y)
-
-	return
 }
 
 func display() {

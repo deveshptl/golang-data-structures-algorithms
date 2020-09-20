@@ -45,7 +45,7 @@ func (g graph) BFS(start string) []string {
 
 	for len(queue) != 0 {
 		currentVtx = queue[0]               // get the element from the queue
-		queue = queue[1:len(queue)]         // remove element from the queue
+		queue = queue[1:]                   // remove element from the queue
 		result = append(result, currentVtx) // push the current vertex in result
 
 		for i := range g[currentVtx] {

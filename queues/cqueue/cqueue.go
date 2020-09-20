@@ -39,19 +39,15 @@ func main() {
 			q.insert()
 			fmt.Println("\nValues after insertion - FRONT:", f, "REAR:", r)
 			display()
-			break
 		case 2:
 			q.delete()
 			fmt.Println("\nValues after deletion - FRONT:", f, "REAR:", r)
 			display()
-			break
 		case 3:
 			fmt.Println("\nFRONT:", f, "REAR:", r)
 			display()
-			break
 		case 4:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}
@@ -64,7 +60,7 @@ func (q queue) insert() {
 	if r == n {
 		r = 0
 	} else {
-		r = r + 1
+		r++
 	}
 
 	// check for overflow
@@ -73,7 +69,7 @@ func (q queue) insert() {
 		if r == 0 {
 			r = n
 		} else {
-			r = r - 1
+			r--
 		}
 		return
 	}
@@ -88,8 +84,6 @@ func (q queue) insert() {
 	if f == -1 {
 		f = 0
 	}
-
-	return
 }
 
 func (q queue) delete() {
@@ -116,13 +110,12 @@ func (q queue) delete() {
 	if f == n {
 		f = 0
 	} else {
-		f = f + 1
+		f++
 	}
 
 	fmt.Println("\nElement deleted: ", y)
 
-	return
-}
+	}
 
 func display() {
 	fmt.Println("Displaying elements: ")

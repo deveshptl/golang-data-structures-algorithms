@@ -42,8 +42,7 @@ func (bt *BinaryTree) Insert(value int) {
 			return
 		}
 	}
-	return
-}
+	}
 
 // Find finds a key from the bt
 func (bt *BinaryTree) Find(value int) {
@@ -113,25 +112,18 @@ func main() {
 		switch choice {
 		case 1:
 			insNode()
-			break
 		case 2:
 			fmt.Println("\n", bt.BFS())
-			break
 		case 3:
 			fmt.Println("\n", bt.DFS("pre"))
-			break
 		case 4:
 			fmt.Println("\n", bt.DFS("in"))
-			break
 		case 5:
 			fmt.Println("\n", bt.DFS("pos"))
-			break
 		case 6:
 			findNode()
-			break
 		case 7:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

@@ -172,28 +172,20 @@ func main() {
 		switch choice {
 		case 1:
 			insStart()
-			break
 		case 2:
 			insMiddle()
-			break
 		case 3:
 			insEnd()
-			break
 		case 4:
 			l.Shift()
-			break
 		case 5:
 			delMiddle()
-			break
 		case 6:
 			l.Pop()
-			break
 		case 7:
 			display()
-			break
 		case 8:
 			i = 1
-			break
 		default:
 			fmt.Println("Command not recognized.")
 		}

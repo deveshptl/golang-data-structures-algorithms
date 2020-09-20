@@ -80,7 +80,7 @@ func IsPrefix(pt []string, k int) bool {
 		if pt[i] != pt[j] {
 			return false
 		}
-		i = i + 1
+		i++
 	}
 	return true
 }

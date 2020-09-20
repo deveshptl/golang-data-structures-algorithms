@@ -124,16 +124,12 @@ func main() {
 		switch choice {
 		case 1:
 			nodeInsert()
-			break
 		case 2:
 			nodeDelete()
-			break
 		case 3:
 			l.Reverse()
-			break
 		case 4:
 			display()
-			break
 		case 5:
 			i = 1
 		default:

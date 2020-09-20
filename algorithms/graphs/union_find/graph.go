@@ -45,8 +45,7 @@ func addEdgeToGraph(fromVtx, toVtx string) {
 	graph[fromVtx] = append(graph[fromVtx], toVtx)
 	graph[toVtx] = append(graph[toVtx], fromVtx)
 	uniqueEdges = append(uniqueEdges, Edge{src: fromVtx, dest: toVtx})
-	return
-}
+	}
 
 func addVertex() {
 	var vtxName string
